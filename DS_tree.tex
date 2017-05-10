@@ -1,0 +1,228 @@
+\documentclass[11pt,]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
+\usepackage[]{mathpazo}
+
+
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+
+
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\renewenvironment{abstract}
+ {{%
+    \setlength{\leftmargin}{0mm}
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \relax}
+ {\endlist}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+    {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+}
+%\fi
+\makeatother
+
+
+
+
+\setcounter{secnumdepth}{0}
+
+
+
+\title{Using microbial composition within sputum transcriptome data to stratify
+patients by asthma severity  }
+
+
+
+\author{\Large Nneoma Adaku\vspace{0.05in} \newline\normalsize\emph{}   \and \Large Daniel J Spakowicz\vspace{0.05in} \newline\normalsize\emph{Program in Computational Biology and Bioinformatics, Yale University,
+New Haven, CT}   \and \Large Scott Strobel\vspace{0.05in} \newline\normalsize\emph{Department of Molecular Biophysics and Biochemistry; Yale University,
+New Haven, CT}   \and \Large Faye Rogers\vspace{0.05in} \newline\normalsize\emph{}  }
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\date{}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\itshape}
+\titleformat*{\subsubsection}{\normalsize\itshape}
+\titleformat*{\paragraph}{\normalsize\itshape}
+\titleformat*{\subparagraph}{\normalsize\itshape}
+
+
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+
+
+
+\newtheorem{hypothesis}{Hypothesis}
+\usepackage{setspace}
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+}
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Nneoma Adaku () and Daniel J Spakowicz (Program in Computational Biology and Bioinformatics, Yale University,
+New Haven, CT) and Scott Strobel (Department of Molecular Biophysics and Biochemistry; Yale University,
+New Haven, CT) and Faye Rogers ()},
+             pdfkeywords = {asthma, microbiome, RNAseq, metatranscriptomics},  
+            pdftitle={Using microbial composition within sputum transcriptome data to stratify
+patients by asthma severity},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+
+
+\begin{document}
+	
+% \pagenumbering{arabic}% resets `page` counter to 1 
+%
+% \maketitle
+
+{% \usefont{T1}{pnc}{m}{n}
+\setlength{\parindent}{0pt}
+\thispagestyle{plain}
+{\fontsize{18}{20}\selectfont\raggedright 
+\maketitle  % title \par  
+
+}
+
+{
+   \vskip 13.5pt\relax \normalsize\fontsize{11}{12} 
+\textbf{\authorfont Nneoma Adaku} \hskip 15pt \emph{\small }   \par \textbf{\authorfont Daniel J Spakowicz} \hskip 15pt \emph{\small Program in Computational Biology and Bioinformatics, Yale University,
+New Haven, CT}   \par \textbf{\authorfont Scott Strobel} \hskip 15pt \emph{\small Department of Molecular Biophysics and Biochemistry; Yale University,
+New Haven, CT}   \par \textbf{\authorfont Faye Rogers} \hskip 15pt \emph{\small }   
+
+}
+
+}
+
+
+
+
+
+\vskip 6.5pt
+
+\noindent \doublespacing \section{Introduction}\label{introduction}
+
+This is the script used to build a tree for Nneoma's fungus and assign
+its taxonomy.
+
+I started by rolling through the databases from the recent review
+\url{http://jcm.asm.org/content/55/4/1011.full} to check if any would be
+useful for this project.
+
+\begin{itemize}
+\tightlist
+\item
+  BOLD systems
+  \url{http://v4.boldsystems.org/index.php/IDS_OpenIdEngine} only have
+  ITS identification.
+\item
+  Looks like this is a good place for morphological features
+  \url{https://aftol.umn.edu/} and can even make a nexus file to include
+  in the tree -- but aftol has been lost? (goes to godaddy
+  website\ldots{})
+\item
+  BROAD doesn't have an identification portal
+\item
+  EZBioCloud doesn't have a fungal id section
+\item
+  FungiDB is just genomics
+\item
+  UNITE is just ITS
+\item
+  IndexFungorum doesn't have an id search (but could be useful for
+  morphology)
+\item
+  CBS can be searched directly for LSU and there are lots of good hits.
+  However, I'd rather find a paper that has gone through the effort of
+  identifying isolates with multiple loci
+\item
+  SILVA has an LSU search \url{https://www.arb-silva.de/}
+\item
+  Identity: 43.61, LCA tax SILVA: None
+\item
+  SSU Iden: 99.37, LCA tax. SILVA: None
+\item
+  RDP \url{http://rdp.cme.msu.edu/classifier/}
+\item
+  E14504F-LSU Root(100\%) Fungi(100\%) Basidiomycota(100\%)
+  Agaricomycetes(100\%) Cantharellales(100\%) Ceratobasidiaceae(100\%)
+  Thanatephorus(100\%)
+\end{itemize}
+
+The RDP result is strong, with 100\% confidence in the genus
+Thanatephorus. The CBS searches also found organisms of either
+Thanatephorus (telomorph) or Rhizoctonia (anamorph). This will very
+likely be the genus to which E14504F belongs. In addition, Nneoma and I
+found a few papers that deal with isolates of Rhizoctonia/Thanatephorus:
+
+\begin{itemize}
+\tightlist
+\item
+  \citep{gonzalez_ribosomal_2001} has a bunch of Thanatephorus isolates
+  with genbank accession numbers for ITS and 28S, but nothing outside
+  the genus (which is necessary to demonstrate the circumscription in
+  this case).
+\item
+  \citep{tupac_otero_diversity_2002} just have ITS and have several
+  genera that were isolated from orchids. It's more orchid-centric than
+  fungus-centric.
+\item
+  \citep{lopez-chavez_proteomic_2016} defines a Thanatephorus isolate
+  using ITS alone. The tree shows weak node support separating
+  Thanatephorus from Ceratobasidium, but clearly their isolate is
+  closest to a Thana.
+\item
+  \citep{gonzalez_phylogenetic_2016} does a really nice job of creating
+  a multi-locus tree. This should be the model going forward.
+\end{itemize}
+
+\section{Methods}\label{methods}
+
+I converted the table of genbank accession numbers from
+\citep{gonzalez_phylogenetic_2016} to a google spreadsheet.
+
+Here are the files that Nneoma created using the Staden package (pregap
+\& gap). As soon as these have genbank accession numbers I'll add them
+to the table so that they can be pulled with the other sequences from
+the table.
+
+\newpage
+\singlespacing 
+\renewcommand\refname{Results and Discussion}
+\bibliography{Nneoma.bib}
+
+\end{document}

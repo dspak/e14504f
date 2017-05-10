@@ -1,0 +1,129 @@
+---
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    citation_package: natbib
+    keep_tex: true
+    fig_caption: true
+    # latex_engine: pdflatex
+    # template: svm-latex-ms.tex
+# title: "Using microbial composition within sputum transcriptome data to stratify patients by asthma severity"
+# author:
+# - name: Nneoma Adaku
+#   affiliation: 
+# - name: Daniel J Spakowicz
+#   affiliation: Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT
+# - name: Scott Strobel
+#   affiliation: Department of Molecular Biophysics and Biochemistry; Yale University, New Haven, CT
+# - name: Faye Rogers
+#   affiliation: 
+# abstract: ""
+keywords: "asthma, microbiome, RNAseq, metatranscriptomics"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+geometry: margin=1in
+fontfamily: mathpazo
+fontsize: 11pt
+spacing: double
+bibliography: Nneoma.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+# Load the required packages
+list.of.packages <- c("seqinr", "googlesheets", "tidyverse", "httpuv", "rentrez", "ape")
+new.packages <- list.of.packages[!(list.of.packages %in% 
+                                     installed.packages()[,"Package"])]
+
+# Install missing packages
+if (length(new.packages)) install.packages(new.packages, 
+                                           repos = "http://cran.rstudio.com/")
+# Load required packages
+lapply(list.of.packages, require, character.only = TRUE)
+
+# source("https://bioconductor.org/biocLite.R")
+# biocLite("muscle")
+# library(muscle)
+
+# Set seed
+set.seed(12345)
+```
+
+# Introduction
+
+This is the script used to build a tree for Nneoma's fungus and assign its taxonomy.
+
+I started by rolling through the databases from the recent review http://jcm.asm.org/content/55/4/1011.full to check if any would be useful for this project.
+
+* BOLD systems http://v4.boldsystems.org/index.php/IDS_OpenIdEngine only have ITS identification.
+* Looks like this is a good place for morphological features https://aftol.umn.edu/ and can even make a nexus file to include in the tree -- but aftol has been lost? (goes to godaddy website...)
+* BROAD doesn't have an identification portal
+* EZBioCloud doesn't have a fungal id section
+* FungiDB is just genomics
+* UNITE is just ITS
+* IndexFungorum doesn't have an id search (but could be useful for morphology)
+* CBS can be searched directly for LSU and there are lots of good hits. However, I'd rather find a paper that has gone through the effort of identifying isolates with multiple loci
+* SILVA has an LSU search https://www.arb-silva.de/ 
+  * Identity: 43.61, LCA tax SILVA: None
+  * SSU Iden: 99.37, LCA tax. SILVA: None
+* RDP http://rdp.cme.msu.edu/classifier/ 
+  * E14504F-LSU     Root(100%) Fungi(100%) Basidiomycota(100%) Agaricomycetes(100%) Cantharellales(100%) Ceratobasidiaceae(100%) Thanatephorus(100%)
+
+The RDP result is strong, with 100% confidence in the genus Thanatephorus. The CBS searches also found organisms of either Thanatephorus (telomorph) or Rhizoctonia (anamorph). This will very likely be the genus to which E14504F belongs. In addition, Nneoma and I found a few papers that deal with isolates of Rhizoctonia/Thanatephorus:
+
+* [@gonzalez_ribosomal_2001] has a bunch of Thanatephorus isolates with genbank accession numbers for ITS and 28S, but nothing outside the genus (which is necessary to demonstrate the circumscription in this case).
+* [@tupac_otero_diversity_2002] just have ITS and have several genera that were isolated from orchids. It's more orchid-centric than fungus-centric.
+* [@lopez-chavez_proteomic_2016] defines a Thanatephorus isolate using ITS alone. The tree shows weak node support separating Thanatephorus from Ceratobasidium, but clearly their isolate is closest to a Thana. 
+* [@gonzalez_phylogenetic_2016] does a really nice job of creating a multi-locus tree. This should be the model going forward. 
+
+# Methods
+
+I converted the table of genbank accession numbers from [@gonzalez_phylogenetic_2016] to a google spreadsheet. 
+
+```{r pull sequences from google sheets}
+# Load table into dataframe
+sheet <- gs_title("E14504F")
+x <- gs_read(sheet)
+
+# Convert hyphen-only columns to NA
+x <- data.frame(apply(x, 2, function(x) gsub("^-$", NA, x)), as.is = TRUE)
+
+# Take in a character vector of genbank accession numbers and return a fasta file in ape format
+RetrieveSequences <- function(charvec){
+  try({
+    string <- entrez_fetch(db = "nucleotide", id = charvec, rettype = "fasta")
+    lsu <- unlist(strsplit(string, split = "\n"))
+    temp <- tempfile()
+    write(lsu, temp)
+    lsu <- ape::read.dna(temp, format = "fasta")
+    return(lsu)
+  }, silent = TRUE)
+}
+
+# Retrieve all sequence into a list
+loci <- colnames(x[,5:11])
+fastas <- list()
+for (i in loci) {
+  fastas[[i]] <- RetrieveSequences(x[,grep(i, colnames(x))])
+}
+# Remove those without any sequences
+fastas <- fastas[-(which(sapply(fastas, class) == "try-error"))]
+```
+
+Here are the files that Nneoma created using the Staden package (pregap & gap). As soon as these have genbank accession numbers I'll add them to the table so that they can be pulled with the other sequences from the table.
+
+```{r join in fasta files without accession numbers}
+# Read in Nneoma's files
+lsu <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504F LSU FULL.fasta", format = "fasta")
+# rpb1 <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504 RPB1.fasta")
+rpb2 <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504F RPB2.fasta", format = "fasta")
+# ssu <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504F SSU ver2.fasta")
+tef1 <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504F TEF1.fasta", format = "fasta")
+```
+
+```{r alignment}
+# Align sequences
+alns <- lapply(fastas, ape::muscle)
+```
+
+# Results and Discussion
