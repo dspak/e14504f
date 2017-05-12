@@ -123,7 +123,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{May 10, 2017}
+  \date{May 11, 2017}
 
 
 \begin{document}
@@ -210,94 +210,254 @@ found a few papers that deal with isolates of Rhizoctonia/Thanatephorus:
 I converted the table of genbank accession numbers from
 \citep{gonzalez_phylogenetic_2016} to a google spreadsheet.
 
+Here are the files that Nneoma created using the Staden package (pregap
+\& gap). As soon as these have genbank accession numbers I'll add them
+to the table so that they can be pulled with the other sequences from
+the table and remove this code block and the merge code block.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{files <-}\StringTok{ }\KeywordTok{list.files}\NormalTok{(}\DataTypeTok{path =} \StringTok{"~/Dropbox/Rainforest project/E14504F sequences/"}\NormalTok{, }\DataTypeTok{pattern =} \StringTok{"*.fasta"}\NormalTok{, }\DataTypeTok{full.names =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{ofastas <-}\StringTok{ }\KeywordTok{list}\NormalTok{()}
+\NormalTok{for (f in files) \{}
+  \NormalTok{tmp <-}\StringTok{ }\KeywordTok{readLines}\NormalTok{(f)}
+  \NormalTok{tmp[}\DecValTok{2}\NormalTok{:}\KeywordTok{length}\NormalTok{(tmp)] <-}\StringTok{ }\KeywordTok{toupper}\NormalTok{(tmp[}\DecValTok{2}\NormalTok{:}\KeywordTok{length}\NormalTok{(tmp)])}
+  \NormalTok{ofastas[[f]] <-}\StringTok{ }\NormalTok{tmp}
+\NormalTok{\}}
+
+\CommentTok{# Adjust names of list}
+\NormalTok{CleanPaths <-}\StringTok{ }\NormalTok{function(names)\{}
+  \NormalTok{tmp <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{".*E14504F? (.*)}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{.fasta"}\NormalTok{, }\StringTok{"}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{1"}\NormalTok{, names)}
+  \NormalTok{tmp <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{" partial| FULL| ver2"}\NormalTok{, }\StringTok{"}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{1"}\NormalTok{, tmp)}
+  \KeywordTok{return}\NormalTok{(tmp)}
+\NormalTok{\}}
+\NormalTok{names <-}\StringTok{ }\KeywordTok{CleanPaths}\NormalTok{(}\KeywordTok{names}\NormalTok{(ofastas))}
+\KeywordTok{names}\NormalTok{(ofastas) <-}\StringTok{ }\NormalTok{names}
+
+\CommentTok{# Cat ITS1 and ITS2 sep by 100 N's and remove ITS2}
+\NormalTok{its <-}\StringTok{ }\KeywordTok{grep}\NormalTok{(}\StringTok{"ITS"}\NormalTok{, }\KeywordTok{names}\NormalTok{(ofastas))}
+\NormalTok{ofastas[[its[}\DecValTok{1}\NormalTok{]]] <-}\StringTok{ }\KeywordTok{c}\NormalTok{(ofastas[[its[}\DecValTok{1}\NormalTok{]]], }\KeywordTok{paste}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\StringTok{"N"}\NormalTok{, }\DecValTok{100}\NormalTok{), }\DataTypeTok{collapse =} \StringTok{""}\NormalTok{), ofastas[[its[}\DecValTok{2}\NormalTok{]]][}\DecValTok{2}\NormalTok{])}
+\NormalTok{ofastas <-}\StringTok{ }\NormalTok{ofastas[-its[}\DecValTok{2}\NormalTok{]]}
+\KeywordTok{names}\NormalTok{(ofastas)[}\KeywordTok{grep}\NormalTok{(}\StringTok{"ITS"}\NormalTok{, }\KeywordTok{names}\NormalTok{(ofastas))] <-}\StringTok{ "ITS"}
+\end{Highlighting}
+\end{Shaded}
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{# Load table into dataframe}
 \NormalTok{sheet <-}\StringTok{ }\KeywordTok{gs_title}\NormalTok{(}\StringTok{"E14504F"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Sheet successfully identified: "E14504F"
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \NormalTok{x <-}\StringTok{ }\KeywordTok{gs_read}\NormalTok{(sheet)}
-\end{Highlighting}
-\end{Shaded}
 
-\begin{verbatim}
-## Accessing worksheet titled 'Sheet1'.
-\end{verbatim}
-
-\begin{verbatim}
-## Parsed with column specification:
-## cols(
-##   Name = col_character(),
-##   `Voucher ID` = col_character(),
-##   Host = col_character(),
-##   `Geographic Origin` = col_character(),
-##   ITS = col_character(),
-##   SSU = col_character(),
-##   LSU = col_character(),
-##   RPB1 = col_character(),
-##   RPB2 = col_character(),
-##   TEF1 = col_character(),
-##   ATP6 = col_character(),
-##   Reference = col_character(),
-##   Notes = col_character()
-## )
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \CommentTok{# Convert hyphen-only columns to NA}
 \NormalTok{x <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\KeywordTok{apply}\NormalTok{(x, }\DecValTok{2}\NormalTok{, function(x) }\KeywordTok{gsub}\NormalTok{(}\StringTok{"^-$"}\NormalTok{, }\OtherTok{NA}\NormalTok{, x)), }\DataTypeTok{as.is =} \OtherTok{TRUE}\NormalTok{)}
 
 \CommentTok{# Take in a character vector of genbank accession numbers and return a fasta file in ape format}
-\NormalTok{RetrieveSequences <-}\StringTok{ }\NormalTok{function(charvec)\{}
+\NormalTok{RetrieveSequencesAsString <-}\StringTok{ }\NormalTok{function(charvec)\{}
   \KeywordTok{try}\NormalTok{(\{}
     \NormalTok{string <-}\StringTok{ }\KeywordTok{entrez_fetch}\NormalTok{(}\DataTypeTok{db =} \StringTok{"nucleotide"}\NormalTok{, }\DataTypeTok{id =} \NormalTok{charvec, }\DataTypeTok{rettype =} \StringTok{"fasta"}\NormalTok{)}
-    \NormalTok{lsu <-}\StringTok{ }\KeywordTok{unlist}\NormalTok{(}\KeywordTok{strsplit}\NormalTok{(string, }\DataTypeTok{split =} \StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{))}
-    \NormalTok{temp <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{()}
-    \KeywordTok{write}\NormalTok{(lsu, temp)}
-    \NormalTok{lsu <-}\StringTok{ }\NormalTok{ape::}\KeywordTok{read.dna}\NormalTok{(temp, }\DataTypeTok{format =} \StringTok{"fasta"}\NormalTok{)}
-    \KeywordTok{return}\NormalTok{(lsu)}
+    \NormalTok{string <-}\StringTok{ }\KeywordTok{unlist}\NormalTok{(}\KeywordTok{strsplit}\NormalTok{(string, }\DataTypeTok{split =} \StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{))}
+    \KeywordTok{return}\NormalTok{(string)}
   \NormalTok{\}, }\DataTypeTok{silent =} \OtherTok{TRUE}\NormalTok{)}
 \NormalTok{\}}
 
 \CommentTok{# Retrieve all sequence into a list}
 \NormalTok{loci <-}\StringTok{ }\KeywordTok{colnames}\NormalTok{(x[,}\DecValTok{5}\NormalTok{:}\DecValTok{11}\NormalTok{])}
-\NormalTok{fastas <-}\StringTok{ }\KeywordTok{list}\NormalTok{()}
+\NormalTok{gfastas <-}\StringTok{ }\KeywordTok{list}\NormalTok{()}
 \NormalTok{for (i in loci) \{}
-  \NormalTok{fastas[[i]] <-}\StringTok{ }\KeywordTok{RetrieveSequences}\NormalTok{(x[,}\KeywordTok{grep}\NormalTok{(i, }\KeywordTok{colnames}\NormalTok{(x))])}
+  \NormalTok{gfastas[[i]] <-}\StringTok{ }\KeywordTok{RetrieveSequencesAsString}\NormalTok{(x[,}\KeywordTok{grep}\NormalTok{(i, }\KeywordTok{colnames}\NormalTok{(x))])}
 \NormalTok{\}}
 \CommentTok{# Remove those without any sequences}
-\NormalTok{fastas <-}\StringTok{ }\NormalTok{fastas[-(}\KeywordTok{which}\NormalTok{(}\KeywordTok{sapply}\NormalTok{(fastas, class) ==}\StringTok{ "try-error"}\NormalTok{))]}
-\end{Highlighting}
-\end{Shaded}
-
-Here are the files that Nneoma created using the Staden package (pregap
-\& gap). As soon as these have genbank accession numbers I'll add them
-to the table so that they can be pulled with the other sequences from
-the table.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# Read in Nneoma's files}
-\NormalTok{lsu <-}\StringTok{ }\KeywordTok{read.dna}\NormalTok{(}\DataTypeTok{file =} \StringTok{"~/Dropbox/Rainforest project/E14504F sequences/E14504F LSU FULL.fasta"}\NormalTok{, }\DataTypeTok{format =} \StringTok{"fasta"}\NormalTok{)}
-\CommentTok{# rpb1 <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504 RPB1.fasta")}
-\NormalTok{rpb2 <-}\StringTok{ }\KeywordTok{read.dna}\NormalTok{(}\DataTypeTok{file =} \StringTok{"~/Dropbox/Rainforest project/E14504F sequences/E14504F RPB2.fasta"}\NormalTok{, }\DataTypeTok{format =} \StringTok{"fasta"}\NormalTok{)}
-\CommentTok{# ssu <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504F SSU ver2.fasta")}
-\NormalTok{tef1 <-}\StringTok{ }\KeywordTok{read.dna}\NormalTok{(}\DataTypeTok{file =} \StringTok{"~/Dropbox/Rainforest project/E14504F sequences/E14504F TEF1.fasta"}\NormalTok{, }\DataTypeTok{format =} \StringTok{"fasta"}\NormalTok{)}
+\NormalTok{gfastas <-}\StringTok{ }\NormalTok{gfastas[-(}\KeywordTok{which}\NormalTok{(}\KeywordTok{sapply}\NormalTok{(gfastas, class) ==}\StringTok{ "try-error"}\NormalTok{))]}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\NormalTok{bfastas <-}\StringTok{ }\KeywordTok{list}\NormalTok{()}
+\NormalTok{for (n in }\KeywordTok{names}\NormalTok{(gfastas))\{}
+  \NormalTok{if (n %in%}\StringTok{ }\KeywordTok{names}\NormalTok{(ofastas)) \{}
+    \NormalTok{bfastas[[n]] <-}\StringTok{ }\KeywordTok{c}\NormalTok{(gfastas[[n]], ofastas[[}\KeywordTok{which}\NormalTok{(}\KeywordTok{names}\NormalTok{(ofastas) %in%}\StringTok{ }\NormalTok{n)]])}
+  \NormalTok{\} else \{}
+    \NormalTok{bfastas[[n]] <-}\StringTok{ }\NormalTok{gfastas[[n]]}
+  \NormalTok{\}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Read in each string as a fasta file}
+\NormalTok{fastas <-}\StringTok{ }\KeywordTok{list}\NormalTok{()}
+\NormalTok{for (i in }\DecValTok{1}\NormalTok{:}\KeywordTok{length}\NormalTok{(bfastas)) \{}
+  \NormalTok{temp <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{()}
+  \KeywordTok{write}\NormalTok{(bfastas[[i]], temp)}
+  \NormalTok{fastas[[i]] <-}\StringTok{ }\KeywordTok{read.FASTA}\NormalTok{(}\DataTypeTok{file =} \NormalTok{temp)}
+\NormalTok{\}}
+
 \CommentTok{# Align sequences}
 \NormalTok{alns <-}\StringTok{ }\KeywordTok{lapply}\NormalTok{(fastas, ape::muscle)}
+
+\CommentTok{# Remove gaps present in 30% of the columns}
+\NormalTok{rmgaps <-}\StringTok{ }\KeywordTok{lapply}\NormalTok{(alns, function(x) }\KeywordTok{del.colgapsonly}\NormalTok{(x, }\DataTypeTok{threshold =} \FloatTok{0.3}\NormalTok{))}
+\KeywordTok{names}\NormalTok{(rmgaps) <-}\StringTok{ }\KeywordTok{names}\NormalTok{(bfastas)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{lapply}\NormalTok{(rmgaps, function(x) }\KeywordTok{image.DNAbin}\NormalTok{(x, }\DataTypeTok{show.labels =} \OtherTok{FALSE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{DS_tree_files/figure-latex/visualize alignments-1.pdf}
+\includegraphics{DS_tree_files/figure-latex/visualize alignments-2.pdf}
+\includegraphics{DS_tree_files/figure-latex/visualize alignments-3.pdf}
+\includegraphics{DS_tree_files/figure-latex/visualize alignments-4.pdf}
+\includegraphics{DS_tree_files/figure-latex/visualize alignments-5.pdf}
+
+\begin{verbatim}
+## $ITS
+## $ITS$rect
+## $ITS$rect$w
+## [1] 565.4039
+## 
+## $ITS$rect$h
+## [1] 10.82707
+## 
+## $ITS$rect$left
+## [1] -7.951949
+## 
+## $ITS$rect$top
+## [1] 85.99098
+## 
+## 
+## $ITS$text
+## $ITS$text$x
+## [1]  23.35984 103.01355 182.66725 262.32096 341.97467 421.62837 501.28208
+## 
+## $ITS$text$y
+## [1] 80.57745 80.57745 80.57745 80.57745 80.57745 80.57745 80.57745
+## 
+## 
+## 
+## $LSU
+## $LSU$rect
+## $LSU$rect$w
+## [1] 670.4516
+## 
+## $LSU$rect$h
+## [1] 7.218045
+## 
+## $LSU$rect$left
+## [1] -9.475808
+## 
+## $LSU$rect$top
+## [1] 57.51256
+## 
+## 
+## $LSU$text
+## $LSU$text$x
+## [1]  27.65347 122.10623 216.55898 311.01174 405.46450 499.91725 594.37001
+## 
+## $LSU$text$y
+## [1] 53.90353 53.90353 53.90353 53.90353 53.90353 53.90353 53.90353
+## 
+## 
+## 
+## $RPB2
+## $RPB2$rect
+## $RPB2$rect$w
+## [1] 500.7916
+## 
+## $RPB2$rect$h
+## [1] 8.571429
+## 
+## $RPB2$rect$left
+## [1] 32.85418
+## 
+## $RPB2$rect$top
+## [1] 68.19196
+## 
+## 
+## $RPB2$text
+## $RPB2$text$x
+## [1]  65.13555 147.25577 229.37598 311.49620 393.61641 475.73663
+## 
+## $RPB2$text$y
+## [1] 63.90625 63.90625 63.90625 63.90625 63.90625 63.90625
+## 
+## 
+## 
+## $TEF1
+## $TEF1$rect
+## $TEF1$rect$w
+## [1] 376.0361
+## 
+## $TEF1$rect$h
+## [1] 7.819549
+## 
+## $TEF1$rect$left
+## [1] 24.73194
+## 
+## $TEF1$rect$top
+## [1] 62.25896
+## 
+## 
+## $TEF1$text
+## $TEF1$text$x
+## [1]  48.97148 110.63419 172.29689 233.95960 295.62231 357.28501
+## 
+## $TEF1$text$y
+## [1] 58.34918 58.34918 58.34918 58.34918 58.34918 58.34918
+## 
+## 
+## 
+## $ATP6
+## $ATP6$rect
+## $ATP6$rect$w
+## [1] 579.538
+## 
+## $ATP6$rect$h
+## [1] 6.015038
+## 
+## $ATP6$rect$left
+## [1] 37.98099
+## 
+## $ATP6$rect$top
+## [1] 48.01975
+## 
+## 
+## $ATP6$text
+## $ATP6$text$x
+## [1]  75.3384 170.3715 265.4046 360.4377 455.4708 550.5040
+## 
+## $ATP6$text$y
+## [1] 45.01223 45.01223 45.01223 45.01223 45.01223 45.01223
+\end{verbatim}
+
+I can't figure out how to add titles in \texttt{image.DNAbin()}, but the
+order is ``ITS'' ``LSU'' ``RPB2'' ``TEF1'' ``ATP6''. The ITS looks to
+have a few orgs that might be revcomps, maybe three. I'm not sure how
+best to identify those and replace them in this format. It looks like
+the N length is short by \textasciitilde{} 20nt.
+
+\subsection{Alternative methods}\label{alternative-methods}
+
+\begin{itemize}
+\tightlist
+\item
+  retreive Treebase file and add E14504F sequences to those alignments
+\item
+  This is becomeing increasingly attractive given the seemingly large
+  fraction of reverse complements observed. Particularly now that the
+  ITS1 and ITS2 sequences are available, all sections except atp6 would
+  be usable. It's worth taking the time to explore how to add one more
+  sequence onto an existing alignment in R.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{search_treebase}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
 

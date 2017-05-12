@@ -28,10 +28,11 @@ bibliography: Nneoma.bib
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set()
+knitr::opts_chunk$set(message = FALSE)
 
 # Load the required packages
-list.of.packages <- c("seqinr", "googlesheets", "tidyverse", "httpuv", "rentrez", "ape")
+list.of.packages <- c("seqinr", "googlesheets", "tidyverse", "httpuv", "rentrez",
+                      "ape", "treebase")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 
@@ -64,8 +65,8 @@ I started by rolling through the databases from the recent review http://jcm.asm
 * IndexFungorum doesn't have an id search (but could be useful for morphology)
 * CBS can be searched directly for LSU and there are lots of good hits. However, I'd rather find a paper that has gone through the effort of identifying isolates with multiple loci
 * SILVA has an LSU search https://www.arb-silva.de/ 
-  * Identity: 43.61, LCA tax SILVA: None
-  * SSU Iden: 99.37, LCA tax. SILVA: None
+** Identity: 43.61, LCA tax SILVA: None
+** SSU Iden: 99.37, LCA tax. SILVA: None
 * RDP http://rdp.cme.msu.edu/classifier/ 
   * E14504F-LSU     Root(100%) Fungi(100%) Basidiomycota(100%) Agaricomycetes(100%) Cantharellales(100%) Ceratobasidiaceae(100%) Thanatephorus(100%)
 
@@ -80,7 +81,36 @@ The RDP result is strong, with 100% confidence in the genus Thanatephorus. The C
 
 I converted the table of genbank accession numbers from [@gonzalez_phylogenetic_2016] to a google spreadsheet. 
 
-```{r pull sequences from google sheets}
+Here are the files that Nneoma created using the Staden package (pregap & gap). As soon as these have genbank accession numbers I'll add them to the table so that they can be pulled with the other sequences from the table and remove this code block and the merge code block.
+
+```{r read fastas as a list of strings}
+files <- list.files(path = "~/Dropbox/Rainforest project/E14504F sequences/", 
+                    pattern = "*.fasta", full.names = TRUE)
+ofastas <- list()
+for (f in files) {
+  tmp <- readLines(f)
+  tmp[2:length(tmp)] <- toupper(tmp[2:length(tmp)])
+  ofastas[[f]] <- tmp
+}
+
+# Adjust names of list
+CleanPaths <- function(names){
+  tmp <- gsub(".*E14504F? (.*)\\.fasta", "\\1", names)
+  tmp <- gsub(" partial| FULL| ver2", "\\1", tmp)
+  return(tmp)
+}
+names <- CleanPaths(names(ofastas))
+names(ofastas) <- names
+
+# Cat ITS1 and ITS2 sep by 100 N's and remove ITS2
+its <- grep("ITS", names(ofastas))
+ofastas[[its[1]]] <- c(ofastas[[its[1]]], paste(rep("N", 100), collapse = ""), 
+                       ofastas[[its[2]]][2])
+ofastas <- ofastas[-its[2]]
+names(ofastas)[grep("ITS", names(ofastas))] <- "ITS"
+```
+
+```{r pull sequences from google sheets as a list of strings}
 # Load table into dataframe
 sheet <- gs_title("E14504F")
 x <- gs_read(sheet)
@@ -88,43 +118,95 @@ x <- gs_read(sheet)
 # Convert hyphen-only columns to NA
 x <- data.frame(apply(x, 2, function(x) gsub("^-$", NA, x)), as.is = TRUE)
 
-# Take in a character vector of genbank accession numbers and return a fasta file in ape format
-RetrieveSequences <- function(charvec){
+# Take in a character vector of genbank accession numbers and return a fasta 
+# file in ape format
+RetrieveSequencesAsString <- function(charvec){
   try({
     string <- entrez_fetch(db = "nucleotide", id = charvec, rettype = "fasta")
-    lsu <- unlist(strsplit(string, split = "\n"))
-    temp <- tempfile()
-    write(lsu, temp)
-    lsu <- ape::read.dna(temp, format = "fasta")
-    return(lsu)
+    string <- unlist(strsplit(string, split = "\n"))
+    return(string)
   }, silent = TRUE)
 }
 
 # Retrieve all sequence into a list
 loci <- colnames(x[,5:11])
-fastas <- list()
+gfastas <- list()
 for (i in loci) {
-  fastas[[i]] <- RetrieveSequences(x[,grep(i, colnames(x))])
+  gfastas[[i]] <- RetrieveSequencesAsString(x[,grep(i, colnames(x))])
 }
 # Remove those without any sequences
-fastas <- fastas[-(which(sapply(fastas, class) == "try-error"))]
+gfastas <- gfastas[-(which(sapply(gfastas, class) == "try-error"))]
 ```
 
-Here are the files that Nneoma created using the Staden package (pregap & gap). As soon as these have genbank accession numbers I'll add them to the table so that they can be pulled with the other sequences from the table.
-
-```{r join in fasta files without accession numbers}
-# Read in Nneoma's files
-lsu <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504F LSU FULL.fasta", format = "fasta")
-# rpb1 <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504 RPB1.fasta")
-rpb2 <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504F RPB2.fasta", format = "fasta")
-# ssu <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504F SSU ver2.fasta")
-tef1 <- read.dna(file = "~/Dropbox/Rainforest project/E14504F sequences/E14504F TEF1.fasta", format = "fasta")
+```{r merge e145 fastas with genbank fastas}
+bfastas <- list()
+for (n in names(gfastas)){
+  if (n %in% names(ofastas)) {
+    bfastas[[n]] <- c(gfastas[[n]], ofastas[[which(names(ofastas) %in% n)]])
+  } else {
+    bfastas[[n]] <- gfastas[[n]]
+  }
+}
 ```
 
-```{r alignment, eval=FALSE}
+
+```{r alignment}
+# Read in each string as a fasta file
+fastas <- list()
+for (i in 1:length(bfastas)) {
+  temp <- tempfile()
+  write(bfastas[[i]], temp)
+  fastas[[i]] <- read.FASTA(file = temp)
+}
+
 # Align sequences
 alns <- lapply(fastas, ape::muscle)
+
+# Remove gaps present in 30% of the columns
+rmgaps <- lapply(alns, function(x) del.colgapsonly(x, threshold = 0.3))
+names(rmgaps) <- names(bfastas)
 ```
+
+```{r visualize alignments, message=FALSE}
+lapply(rmgaps, function(x) image.DNAbin(x, show.labels = FALSE))
+```
+
+I can't figure out how to add titles in `image.DNAbin()`, but the order is "ITS"  "LSU"  "RPB2" "TEF1" "ATP6". The ITS looks to have a few orgs that might be revcomps, maybe three. I'm not sure how best to identify those and replace them in this format. It looks like the N length is short by ~ 20nt.
+
+```{r reverse complement, eval=FALSE}
+
+```
+
+```{r substitution models, eval=FALSE}
+
+```
+
+```{r individual locus trees, eval=FALSE}
+
+```
+
+```{r interleaving, eval=FALSE}
+
+```
+
+```{r combined tree, eval=FALSE}
+
+```
+
+## Alternative methods
+
+* retreive Treebase file and add E14504F sequences to those alignments
+** This is becoming increasingly attractive given the seemingly large fraction of reverse complements observed. Particularly now that the ITS1 and ITS2 sequences are available, all sections except atp6 would be usable. It's worth taking the time to explore how to add one more sequence onto an existing alignment in R.
+
+```{r treebase, eval=FALSE}
+# Retrieve Gonzalez study
+search <- search_treebase(input = "S15006", by = "id.study")
+plot(search[[1]], cex = 0.3)
+phylo_metadata()
+
+```
+
+Where's the alignment?
 
 # Results and Discussion
 
