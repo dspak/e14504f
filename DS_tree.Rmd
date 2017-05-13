@@ -32,7 +32,7 @@ knitr::opts_chunk$set(message = FALSE)
 
 # Load the required packages
 list.of.packages <- c("seqinr", "googlesheets", "tidyverse", "httpuv", "rentrez",
-                      "ape", "treebase")
+                      "ape", "treebase", "ips")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 
@@ -200,9 +200,51 @@ I can't figure out how to add titles in `image.DNAbin()`, but the order is "ITS"
 
 ```{r treebase, eval=FALSE}
 # Retrieve Gonzalez study
-search <- search_treebase(input = "S15006", by = "id.study")
-plot(search[[1]], cex = 0.3)
-phylo_metadata()
+# Retd from https://treebase.org/treebase-web/search/study/matrices.html?id=15006 on 12 May 2017
+nexlines <- readLines("1_1489744745_5LOCI_Cantharelloid_Ceratobasidiaceae.nexorg")
+
+ConvertNexusToAln <- function(nexlines){
+  start <- grep("MATRIX", nexlines)+1
+  end <- min(grep("END;", nexlines[start:length(nexlines)], fixed = TRUE))
+  aln <- nexlines[start : ((start + end)-3)]
+  aln <- gsub("^\t", ">", aln)
+  aln <- unlist(strsplit(aln, split = " {2,}"))
+  aln <- gsub(" ", "_", aln)
+  aln <- gsub("'", "", aln)
+  return(aln)
+}
+aln <- ConvertNexusToAln(nexlines)
+
+# Write alignment to file
+writeLines(aln, "gonzalez_phylogenetic_2016.afa")
+
+# Concatenate E14504F fastas for alignment
+# order is partition Names = 4 : ITSLSU , RPB2 , EF1a , ATP6;
+SingleFasta <- function(ofasta){
+  e145 <- c(ofastas[["ITS"]], ofastas[["LSU"]], 
+            ofastas[["RPB2"]], ofastas[["TEF1"]])
+  e145 <- e145[-grep(">", e145)]
+  e145 <- c(">E14504F", e145)
+  return(e145)
+}
+e145 <- SingleFasta(ofasta)
+writeLines(e145, "e14504f_gonzalez_loci.fa")
+
+# System call for muscle (arg isn't available in the R version yet)
+system({
+  "muscle -profile -in1 gonzalez_phylogenetic_2016.afa -in2 e14504f_gonzalez_loci.fa -out combined.afa"
+})
+
+# system({
+#   "muscle -in combined.afa -out refined.afa -refine"
+# })
+nexlines
+newaln <- read.fasta("combined.afa")
+write.nexus.data(newaln, "combined.nex", interleaved = FALSE)
+
+x <- read.nex("combined.nex")
+
+mrbayes(x, "combined_bayes.nex")
 
 ```
 
