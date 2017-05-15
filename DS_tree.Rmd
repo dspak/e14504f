@@ -235,20 +235,57 @@ system({
   "muscle -profile -in1 gonzalez_phylogenetic_2016.afa -in2 e14504f_gonzalez_loci.fa -out combined.afa"
 })
 
+# This step adds ~1k characters onto the alignment... not sure what it's 
+# doing and the documentation is terrible
 # system({
 #   "muscle -in combined.afa -out refined.afa -refine"
 # })
-nexlines
+
+# Convert to nexus
 newaln <- read.fasta("combined.afa")
 write.nexus.data(newaln, "combined.nex", interleaved = FALSE)
 
+# Append a mr bayes block at the end of the nexus file
 x <- read.nex("combined.nex")
-
 mrbayes(x, "combined_bayes.nex")
+
+# Write Mr Bayes submission file to move to Grace and run there.
+fileConn <- file("mrbayes_e14504f_gonzalez.sh")
+writeLines(c("#!/bin/bash", 
+             "#SBATCH --ntasks=10 --nodes=1",
+             "#SBATCH --time=12:00:00",
+             "#SBATCH --job-name=mrbayes_e14504f",
+             "#SBATCH --mail-user=daniel.spakowicz@yale.edu",
+             "#SBATCH --mail-type=ALL",
+             "",
+             "# Produced by DS_tree.Rmd",
+             "# Dan Spakowicz",
+             "# 14 May 2017",
+             "# Submission file for the MrBayes analysis of the E14504F tree, using [@gonzalez_phylogenetic_2016] alignment as a reference",
+             "",
+             "cd /project/fas/gerstein/djs88/e14504f",
+             "module load Apps/MrBayes/3.2.2",
+             "mb combined_bayes.nex"), fileConn)
+close(fileConn)
+
+# Causes a public key error -- have to copy into terminal
+# system({
+#   "scp /Users/danielspakowicz/Dropbox/Rainforest\ project/tree/combined_bayes.nex djs88@grace-next.hpc.yale.edu:/project/fas/gerstein/djs88/e14504f/"
+# })
+# system({
+#   "scp /Users/danielspakowicz/Dropbox/Rainforest\ project/tree/mrbayes_e14504f_gonzalez.sh djs88@grace-next.hpc.yale.edu:/project/fas/gerstein/djs88/e14504f/"
+# })
 
 ```
 
-Where's the alignment?
+```{r, eval=FALSE}
+# WARNING : This step takes ~5 hours. Set to eval=FALSE by default
+# system({
+#   "mb combined_bayes.nex"
+# })
+```
+
+After a few segmentation faults I decided to push this to grace to run there, and just have it write the slurm submission and scp the files from this script. 
 
 # Results and Discussion
 
