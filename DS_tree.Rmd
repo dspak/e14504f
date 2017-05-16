@@ -32,7 +32,7 @@ knitr::opts_chunk$set(message = FALSE)
 
 # Load the required packages
 list.of.packages <- c("seqinr", "googlesheets", "tidyverse", "httpuv", "rentrez",
-                      "ape", "treebase", "ips")
+                      "ape", "treebase", "ips", "ggtree")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 
@@ -45,6 +45,9 @@ lapply(list.of.packages, require, character.only = TRUE)
 # source("https://bioconductor.org/biocLite.R")
 # biocLite("muscle")
 # library(muscle)
+# 
+source("https://bioconductor.org/biocLite.R")
+biocLite("ggtree")
 
 # Set seed
 set.seed(12345)
@@ -229,7 +232,9 @@ SingleFasta <- function(ofasta){
 }
 e145 <- SingleFasta(ofasta)
 writeLines(e145, "e14504f_gonzalez_loci.fa")
+```
 
+```{r align with muscle}
 # System call for muscle (arg isn't available in the R version yet)
 system({
   "muscle -profile -in1 gonzalez_phylogenetic_2016.afa -in2 e14504f_gonzalez_loci.fa -out combined.afa"
@@ -249,6 +254,27 @@ write.nexus.data(newaln, "combined.nex", interleaved = FALSE)
 x <- read.nex("combined.nex")
 mrbayes(x, "combined_bayes.nex")
 
+# Write phylip file for raxml tree
+write.phy(x, "combined_raxml.phy")
+# Read in phy file to file "y" in sequence 4
+y <- readLines("combined_raxml.phy")
+y <- gsub("y", "n", y)
+# Re-write phy file
+writeLines(y, "combined_raxml.phy")
+```
+
+```{r RAxML, eval=FALSE}
+# Call RAxML (takes ~20 min)
+system({
+  "raxmlHPC-AVX -s combined_raxml.phy -m GTRGAMMA -n comb_1 -p 12345 -x 12345 -# 100"
+})
+system({
+  "raxmlHPC-AVX -m GTRGAMMA -J MRE -z RAxML_bootstrap.comb_1 -n tre"
+})
+
+```
+
+```{r bayes block}
 # Write Mr Bayes submission file to move to Grace and run there.
 fileConn <- file("mrbayes_e14504f_gonzalez.sh")
 writeLines(c("#!/bin/bash", 
@@ -273,7 +299,7 @@ close(fileConn)
 #   "scp /Users/danielspakowicz/Dropbox/Rainforest\ project/tree/combined_bayes.nex djs88@grace-next.hpc.yale.edu:/project/fas/gerstein/djs88/e14504f/"
 # })
 # system({
-#   "scp /Users/danielspakowicz/Dropbox/Rainforest\ project/tree/mrbayes_e14504f_gonzalez.sh djs88@grace-next.hpc.yale.edu:/project/fas/gerstein/djs88/e14504f/"
+#   "scp /Users/danielspakowicz/Dropbox/Rainforest\ project/tree/mrbayes_e14504f_gonzalez.sh djs88@grace-next.hpc.yale.edu:/gpfs/home/fas/gerstein/djs88/myscripts/projects/e14504f/"
 # })
 
 ```
@@ -285,7 +311,36 @@ close(fileConn)
 # })
 ```
 
+```{r tree visualization}
+z <- read.tree("RAxML_MajorityRuleExtendedConsensusTree.tre")
+ggplot(z) +
+  ggtree::geom_tree() +
+  ggtree::geom_tiplab(size = 2)
+```
+
+
 After a few segmentation faults I decided to push this to grace to run there, and just have it write the slurm submission and scp the files from this script. 
+
+## Morphological analysis
+https://aftol.umn.edu/species/Thanatephorus_cucumeris 
+
+Look for uniperforate septa with swollen margin 
+
+Have to distinguish it from other members of Ceratobasidaceae, namely https://aftol.umn.edu/species/Ceratobasidium_cornigerum
+
+Oh damn they're very similar. Looks like the difference is determined by electron microscopy, in the substructure of the pore cap. Namely, Ceratobasidium has a cap with uniform electron-dense contents and Thanatephorus has a cap with three internal layers (central electron-dense layer between two less electron dense layers). Well that's not super helpful. 
+
+Directly copied from wikipedia
+>> R. solani does not produce spores, hence is identified only from mycelial characteristics or DNA analysis. Its hyphal cells are multinucleated. It produces white to deep brown mycelium when grown on an artificial medium. The hyphae are 4–15 μm wide and tend to branch at right angles. A septum near each hyphal branch and a slight constriction at the branch are diagnostic. R. solani is subdivided into anastomosis groups based on hyphal fusion between compatible strains.[12][13] 
+
+The teleomorph of R. solani is Thanatephorus cucumeris. It forms club-shaped basidia with four apical sterigmata on which oval, hyaline basidiospores are borne.
+
+Nice pictures here http://www.apsnet.org/edcenter/intropp/lessons/fungi/Basidiomycetes/Pages/Rhizoctonia.aspx
+"Rhizoctonia species can be divided into two groups based on the number of nuclei present in cells of the hyphae. This characteristic can be assessed by staining hyphae with a fluorescent dye that binds specifically to the DNA in the nucleus. Binucleate Rhizoctonia species have two nuclei in each cell (Figure 23). Rhizoctonia cerealis is the only binucleate species that causes turfgrass disease. Multinucleate species have three or more nuclei in each cell (Figure 24). Rhizoctonia solani, R. zeae, and R. oryzae are multinucleate species."
+
+"Rhizoctonia solani forms colonies on potato dextrose agar (PDA) that range in color from buff to black (Figure 25). Sclerotia are produced on the surface of cultures after 4 to 6 weeks, and are irregularly shaped, light tan to black, and usually >1 mm (0.04 in.) in width (Figure 26). The optimum temperature for growth of R. solani in pure culture ranges from 18ºC (64.4ºF) to 28ºC (82.4ºF). This species is divided into 11 AGs. Isolates in AGs 1 and 2 are commonly associated with turfgrass disease."
+
+
 
 # Results and Discussion
 
