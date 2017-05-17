@@ -1,6 +1,6 @@
 #NEXUS
 
-[created by ips on Wed May 17 00:23:41 2017]
+[created by ips on Wed May 17 00:24:23 2017]
 
 begin data;
 	dimensions ntax=50 nchar=992;
@@ -62,5 +62,5 @@ end;
 begin mrbayes;
 	lset nst=6 rates=invgamma ngammacat=4;
 	mcmc nruns=2 ngen=1000000 printfreq=100 samplefreq=10 nchains=4 savebrlens=yes temp=0.2;
-	sumt filename=combined_bayes.nex burnin=10 contype=allcompat;
+	sumt filename=combined_bayes_its2lsu.nex burnin=10 contype=allcompat;
 end;

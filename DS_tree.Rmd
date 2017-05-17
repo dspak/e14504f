@@ -32,7 +32,7 @@ knitr::opts_chunk$set(message = FALSE)
 
 # Load the required packages
 list.of.packages <- c("seqinr", "googlesheets", "tidyverse", "httpuv", "rentrez",
-                      "ape", "treebase", "ips", "ggtree")
+                      "ape", "treebase", "ips", "ggtree", "ggtree", "Biostrings")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 
@@ -46,8 +46,9 @@ lapply(list.of.packages, require, character.only = TRUE)
 # biocLite("muscle")
 # library(muscle)
 # 
-source("https://bioconductor.org/biocLite.R")
-biocLite("ggtree")
+# source("https://bioconductor.org/biocLite.R")
+# biocLite("ggtree")
+
 
 # Set seed
 set.seed(12345)
@@ -86,6 +87,11 @@ I converted the table of genbank accession numbers from [@gonzalez_phylogenetic_
 
 Here are the files that Nneoma created using the Staden package (pregap & gap). As soon as these have genbank accession numbers I'll add them to the table so that they can be pulled with the other sequences from the table and remove this code block and the merge code block.
 
+## Version notes
+ITS1, RPB2 and TEF1 did not align well with the Gonzalez et al set [-@gonzalez_phylogenetic_2016]. Reverse complement and re-check the alignment. 
+
+## Read in fastas
+
 ```{r read fastas as a list of strings}
 files <- list.files(path = "~/Dropbox/Rainforest project/E14504F sequences/", 
                     pattern = "*.fasta", full.names = TRUE)
@@ -105,12 +111,47 @@ CleanPaths <- function(names){
 names <- CleanPaths(names(ofastas))
 names(ofastas) <- names
 
-# Cat ITS1 and ITS2 sep by 100 N's and remove ITS2
-its <- grep("ITS", names(ofastas))
-ofastas[[its[1]]] <- c(ofastas[[its[1]]], paste(rep("N", 100), collapse = ""), 
-                       ofastas[[its[2]]][2])
-ofastas <- ofastas[-its[2]]
-names(ofastas)[grep("ITS", names(ofastas))] <- "ITS"
+# Collapse sequence to one line
+CollapseTwoLines <- function(fastaString){
+  if (length(fastaString) > 2) {
+    x <- fastaString
+    y <- x[2:length(x)]
+    y <- paste(y, collapse = "")
+    z <- c(x[1], y)
+    return(z)
+  } else {
+    return(fastaString)
+  }
+}
+# Iterate function over the list
+for (i in names(ofastas)) {
+  ofastas[[i]] <- CollapseTwoLines(ofastas[[i]])
+}
+
+# # RevComp ITS1, RPB2 and TEF1
+# # It turns out this didn't help the alignment
+# trc <- c("ITS1", "RPB2", "TEF1")
+# for (i in trc) {
+#   # Collapse sequence to one line
+#   if (length(ofastas[[i]]) > 2) {
+#     x <- ofastas[[i]]
+#     y <- x[2:length(x)]
+#     y <- paste(y, collapse = "")
+#     z <- c(x[1], y)
+#     ofastas[[i]] <- z
+#   }
+#   # Reverse complement and return
+#   x <- DNAString(ofastas[[i]][2])
+#   ofastas[[i]][2] <- as.character(reverseComplement(x))
+# }
+
+# # Cat ITS1 and ITS2 sep by 100 N's and remove ITS2
+# # Removed this step because ITS1 is not aligning to Gonzalez et al even after rev comp
+# its <- grep("ITS", names(ofastas))
+# ofastas[[its[1]]] <- c(ofastas[[its[1]]], paste(rep("N", 100), collapse = ""), 
+#                        ofastas[[its[2]]][2])
+# ofastas <- ofastas[-its[2]]
+# names(ofastas)[grep("ITS", names(ofastas))] <- "ITS"
 ```
 
 ```{r pull sequences from google sheets as a list of strings}
@@ -152,7 +193,7 @@ for (n in names(gfastas)){
 }
 ```
 
-
+## Alignments and Model Selection
 ```{r alignment}
 # Read in each string as a fasta file
 fastas <- list()
@@ -201,6 +242,8 @@ I can't figure out how to add titles in `image.DNAbin()`, but the order is "ITS"
 * retreive Treebase file and add E14504F sequences to those alignments
 ** This is becoming increasingly attractive given the seemingly large fraction of reverse complements observed. Particularly now that the ITS1 and ITS2 sequences are available, all sections except atp6 would be usable. It's worth taking the time to explore how to add one more sequence onto an existing alignment in R.
 
+However, upon completing this it appears the sequenced regions of ITS1, RPB2 and TEF1 are quite (and quite surprisingly) distinct. Looks like we may have to go back to the drawing board (which is above, and possibly with new sequences).
+
 ```{r treebase, eval=FALSE}
 # Retrieve Gonzalez study
 # Retd from https://treebase.org/treebase-web/search/study/matrices.html?id=15006 on 12 May 2017
@@ -230,14 +273,29 @@ SingleFasta <- function(ofasta){
   e145 <- c(">E14504F", e145)
   return(e145)
 }
-e145 <- SingleFasta(ofasta)
+e145 <- SingleFasta(ofastas)
 writeLines(e145, "e14504f_gonzalez_loci.fa")
+
+its2_lsu_Ns <- function(ofastas) {
+  e145 <- c(paste(rep("N", nchar(ofastas[["ITS1"]][2])), collapse = ""),
+            paste(rep("N", 100), collapse = ""),
+            ofastas[["ITS2"]], 
+            paste(rep("N", 100), collapse = ""),
+            ofastas[["LSU"]], 
+            paste(rep("N", nchar(ofastas[["RPB2"]][2])), collapse = ""),
+            paste(rep("N", nchar(ofastas[["TEF1"]][2])), collapse = ""))
+  e145 <- e145[-grep(">", e145)]
+  e145 <- c(">E14504F", e145)
+  return(e145)
+}
+e145_itslsu <- its2_lsu_Ns(ofastas)
+writeLines(e145_itslsu, "e14504f_gonzalez_itslsu.fa")
 ```
 
-```{r align with muscle}
+```{r align to alignment with muscle}
 # System call for muscle (arg isn't available in the R version yet)
 system({
-  "muscle -profile -in1 gonzalez_phylogenetic_2016.afa -in2 e14504f_gonzalez_loci.fa -out combined.afa"
+  "muscle -profile -in1 gonzalez_phylogenetic_2016.afa -in2 e14504f_gonzalez_itslsu.fa -out combined.afa"
 })
 
 # This step adds ~1k characters onto the alignment... not sure what it's 
@@ -245,6 +303,7 @@ system({
 # system({
 #   "muscle -in combined.afa -out refined.afa -refine"
 # })
+
 
 # Convert to nexus
 newaln <- read.fasta("combined.afa")
@@ -263,6 +322,36 @@ y <- gsub("y", "n", y)
 writeLines(y, "combined_raxml.phy")
 ```
 
+```{r subset gonzalex el al alignment to its2 and lsu}
+# Read in fasta file
+x <- seqinr::read.fasta("combined.afa")
+# Subset to aligned coordinates
+# Found these coordinates by visualizing with Jalview, looking for where E14504F 
+# matches the other alignments
+y <- lapply(x, function(x) x[286:1343])
+# Write output to file to bring into ape for gap cleaning
+seqinr::write.fasta(sequences = y, names = names(y), nbchar = 80, 
+                    file.out = "combined_its2lsu.fa")
+
+# Read into ape for gap cleaning
+y <- seqinr::read.alignment("combined_its2lsu.fa", format = "fasta")
+# Remove gaps
+y <- ape::del.colgapsonly(y, threshold = 0.3)
+# Write output
+y <- ape::write.dna(y, format = "fasta", file = "combined_its2lsu.fa")
+
+# Write input files for bayes and raxml
+# Read into ips
+x <- ips::read.fas(x = "combined_its2lsu.fa")
+# Append a mr bayes block at the end of the nexus file
+ips::mrbayes(x, "combined_bayes_its2lsu.nex")
+
+# Write phylip file for raxml tree
+ips::write.phy(x, "combined_raxml_its2lsu.phy")
+```
+
+
+
 ```{r RAxML, eval=FALSE}
 # Call RAxML (takes ~20 min)
 system({
@@ -274,7 +363,7 @@ system({
 
 ```
 
-```{r bayes block}
+```{r bayes submission file}
 # Write Mr Bayes submission file to move to Grace and run there.
 fileConn <- file("mrbayes_e14504f_gonzalez.sh")
 writeLines(c("#!/bin/bash", 
@@ -345,3 +434,4 @@ Nice pictures here http://www.apsnet.org/edcenter/intropp/lessons/fungi/Basidiom
 # Results and Discussion
 
 # References
+
