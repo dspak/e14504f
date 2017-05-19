@@ -111,7 +111,7 @@ CleanPaths <- function(names){
 names <- CleanPaths(names(ofastas))
 names(ofastas) <- names
 
-# Collapse sequence to one line
+# Collapse sequences to one line header, one line sequence
 CollapseTwoLines <- function(fastaString){
   if (length(fastaString) > 2) {
     x <- fastaString
@@ -128,7 +128,7 @@ for (i in names(ofastas)) {
   ofastas[[i]] <- CollapseTwoLines(ofastas[[i]])
 }
 
-# # RevComp ITS1, RPB2 and TEF1
+# # Reverse Complement ITS1, RPB2 and TEF1
 # # It turns out this didn't help the alignment
 # trc <- c("ITS1", "RPB2", "TEF1")
 # for (i in trc) {
@@ -154,7 +154,7 @@ for (i in names(ofastas)) {
 # names(ofastas)[grep("ITS", names(ofastas))] <- "ITS"
 ```
 
-```{r pull sequences from google sheets as a list of strings}
+```{r pull sequences from google sheets and retrieve from Genbank}
 # Load table into dataframe
 sheet <- gs_title("E14504F")
 x <- gs_read(sheet)
@@ -182,7 +182,7 @@ for (i in loci) {
 gfastas <- gfastas[-(which(sapply(gfastas, class) == "try-error"))]
 ```
 
-```{r merge e145 fastas with genbank fastas}
+```{r merge Nneomas e14504f fastas with genbank fastas from table}
 bfastas <- list()
 for (n in names(gfastas)){
   if (n %in% names(ofastas)) {
@@ -194,13 +194,13 @@ for (n in names(gfastas)){
 ```
 
 ## Alignments and Model Selection
-```{r alignment}
+```{r alignment each locus}
 # Read in each string as a fasta file
 fastas <- list()
 for (i in 1:length(bfastas)) {
   temp <- tempfile()
   write(bfastas[[i]], temp)
-  fastas[[i]] <- read.FASTA(file = temp)
+  fastas[[i]] <- ape::read.FASTA(file = temp)
 }
 
 # Align sequences
@@ -209,6 +209,10 @@ alns <- lapply(fastas, ape::muscle)
 # Remove gaps present in 30% of the columns
 rmgaps <- lapply(alns, function(x) del.colgapsonly(x, threshold = 0.3))
 names(rmgaps) <- names(bfastas)
+# Write alignments to files for visualization in Jalview
+for (i in names(rmgaps)) {
+  ape::write.dna(rmgaps[[i]], format = "fasta", file = paste("indiv_alignments/combined_", i, ".afa", sep = ""))
+}
 ```
 
 ```{r visualize alignments, message=FALSE}
@@ -218,8 +222,80 @@ lapply(rmgaps, function(x) image.DNAbin(x, show.labels = FALSE))
 I can't figure out how to add titles in `image.DNAbin()`, but the order is "ITS"  "LSU"  "RPB2" "TEF1" "ATP6". The ITS looks to have a few orgs that might be revcomps, maybe three. I'm not sure how best to identify those and replace them in this format. It looks like the N length is short by ~ 20nt.
 
 ```{r reverse complement, eval=FALSE}
+# Read in Nneoma's fastas in seqinr format
+ffastas <- list()
+for (f in files) {
+  ffastas[[f]] <- seqinr::read.fasta(file = f)
+}
+names(ffastas) <- names
+
+# Read in Genbank fastas in seqinr format
+ggfastas <- list()
+for (g in 1:length(gfastas)){
+  temp <- tempfile()
+  write(gfastas[[i]], temp)
+  ggfastas[[g]] <- seqinr::read.fasta(file = temp)
+}
+names(ggfastas) <- names(gfastas)
+
+# Make the two lists have the same loci
+# Remove ITS1 (which wasn't aligning well)
+torm <- c("RPB1", "ITS1", "SSU")
+ffastas <- ffastas[-(which(names(ffastas) %in% torm))]
+# Rename ITS2 to ITS
+names(ffastas)[grep("ITS", names(ffastas))] <- "ITS"
+
+# Pairwise alignment of Nneoma's sequence and each Gebank, output score
+
+# Parameters for the alignment
+sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
+
+colnames(sigma) <- tolower(colnames(sigma))
+rownames(sigma) <- tolower(rownames(sigma))
+
+sigma
+scores <- list()
+for (i in names(ffastas)) {
+  # Select the matching ggfastas list component as n
+  n <- names(ggfastas)[grep(i, names(ggfastas))]
+  # Iterate over all sequences in n
+  for (j in 1:length(ggfastas[[n]])) {
+    x <- ffastas[[i]][[1]]
+    y <- ggfastas[[n]][j][[1]]
+    # Ensure the lengths are equal
+    if (length(y) > length(x)) {
+      y <- y[1:length(x)]
+    } else {
+      x <- x[1:length(y)]
+    }
+    tmp <- pairwiseAlignment(x, y, type = "local", substitutionMatrix = sigma,
+                             gapOpening = -2, gapExtension = -8, scoreOnly = TRUE)
+    scores[[i]][j] <- max(tmp)
+  }
+}
+
+scores[[1]]
+
+names(ggfastas)
+names(ffastas)
+ggfastas[["LSU"]]
+tmp <- pairwiseAlignment(x, y, type = "local", scoreOnly = FALSE)
+print(tmp)
+tmp@score
+max(tmp@score)
+hist(tmp@score)
+?pairwiseAlignment
+tmp@score
+j <- 1
+grep(i, names(ggfastas))
+names(ggfastas) %in% i
+names(ggfastas[[1]])
+```
+
+```{r re-align and compare visualizations}
 
 ```
+
 
 ```{r substitution models, eval=FALSE}
 
@@ -242,7 +318,7 @@ I can't figure out how to add titles in `image.DNAbin()`, but the order is "ITS"
 * retreive Treebase file and add E14504F sequences to those alignments
 ** This is becoming increasingly attractive given the seemingly large fraction of reverse complements observed. Particularly now that the ITS1 and ITS2 sequences are available, all sections except atp6 would be usable. It's worth taking the time to explore how to add one more sequence onto an existing alignment in R.
 
-However, upon completing this it appears the sequenced regions of ITS1, RPB2 and TEF1 are quite (and quite surprisingly) distinct. Looks like we may have to go back to the drawing board (which is above, and possibly with new sequences).
+However, upon completing this it appears the sequenced regions of ITS1, RPB2 and TEF1 are quite (and quite surprisingly) distinct. This includes checking alignments with both directions of those sequences (forward and reverse complements). Strangely, The RPB2 alignment looks fine when done with just that locus, though about half of the sequences look to be reverse complemented. Looks like we may have to go back to the drawing board (which is above, and possibly with new sequences).
 
 ```{r treebase, eval=FALSE}
 # Retrieve Gonzalez study
@@ -274,7 +350,7 @@ SingleFasta <- function(ofasta){
   return(e145)
 }
 e145 <- SingleFasta(ofastas)
-writeLines(e145, "e14504f_gonzalez_loci.fa")
+writeLines(e145, "e14504f_gonzalez_allloci.fa")
 
 its2_lsu_Ns <- function(ofastas) {
   e145 <- c(paste(rep("N", nchar(ofastas[["ITS1"]][2])), collapse = ""),
@@ -295,6 +371,9 @@ writeLines(e145_itslsu, "e14504f_gonzalez_itslsu.fa")
 ```{r align to alignment with muscle}
 # System call for muscle (arg isn't available in the R version yet)
 system({
+  "muscle -profile -in1 gonzalez_phylogenetic_2016.afa -in2 e14504f_gonzalez_allloci.fa -out combined.afa"
+})
+system({
   "muscle -profile -in1 gonzalez_phylogenetic_2016.afa -in2 e14504f_gonzalez_itslsu.fa -out combined.afa"
 })
 
@@ -303,7 +382,6 @@ system({
 # system({
 #   "muscle -in combined.afa -out refined.afa -refine"
 # })
-
 
 # Convert to nexus
 newaln <- read.fasta("combined.afa")
@@ -401,9 +479,29 @@ close(fileConn)
 ```
 
 ```{r tree visualization}
-z <- read.tree("RAxML_MajorityRuleExtendedConsensusTree.tre")
+z <- read.tree("~/Documents/projects_notbackedup/e14504f/RAxML_MajorityRuleExtendedConsensusTree.tre")
 ggplot(z) +
-  ggtree::geom_tree() +
+  ggtree::geom_tree(layout = "circular") +
+  ggtree::geom_tiplab(size = 2)
+
+z <- read.tree("~/Documents/projects_notbackedup/e14504f/RAxML_MajorityRuleConsensusTree.tre2")
+ggplot(z) +
+  ggtree::geom_tree(layout = "circular") +
+  ggtree::geom_tiplab(size = 2)
+
+z <- read.tree("~/Documents/projects_notbackedup/e14504f/RAxML_StrictConsensusTree.tre3")
+ggplot(z) +
+  ggtree::geom_tree(layout = "circular") +
+  ggtree::geom_tiplab(size = 2)
+
+z <- read.tree("~/Documents/projects_notbackedup/e14504f/RAxML_MajorityRuleExtendedConsensusTree.tre4")
+ggplot(z) +
+  ggtree::geom_tree(layout = "circular") +
+  ggtree::geom_tiplab(size = 2)
+
+z <- read.tree("~/Documents/projects_notbackedup/e14504f/combined_bayes_its2lsu.nex.con.tre")
+ggplot(z) +
+  ggtree::geom_tree(layout = "circular") +
   ggtree::geom_tiplab(size = 2)
 ```
 
