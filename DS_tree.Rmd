@@ -32,7 +32,8 @@ knitr::opts_chunk$set(message = FALSE)
 
 # Load the required packages
 list.of.packages <- c("seqinr", "googlesheets", "tidyverse", "httpuv", "rentrez",
-                      "ape", "treebase", "ips", "ggtree", "ggtree", "Biostrings")
+                      "ape", "treebase", "ips", "ggtree", "ggtree", "Biostrings",
+                      "msa")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 
@@ -44,11 +45,8 @@ lapply(list.of.packages, require, character.only = TRUE)
 
 # source("https://bioconductor.org/biocLite.R")
 # biocLite("muscle")
-# library(muscle)
-# 
-# source("https://bioconductor.org/biocLite.R")
 # biocLite("ggtree")
-
+# biocLite("msa")
 
 # Set seed
 set.seed(12345)
@@ -98,7 +96,7 @@ files <- list.files(path = "~/Dropbox/Rainforest project/E14504F sequences/",
 ofastas <- list()
 for (f in files) {
   tmp <- readLines(f)
-  tmp[2:length(tmp)] <- toupper(tmp[2:length(tmp)])
+  tmp[2:length(tmp)] <- tolower(tmp[2:length(tmp)])
   ofastas[[f]] <- tmp
 }
 
@@ -127,6 +125,9 @@ CollapseTwoLines <- function(fastaString){
 for (i in names(ofastas)) {
   ofastas[[i]] <- CollapseTwoLines(ofastas[[i]])
 }
+
+# Remove any non-ACTGN nucleotides
+ofastas <- lapply(ofastas, function(x) gsub("^[^>](.*)[^actgn]", "\\1n", x))
 
 # # Reverse Complement ITS1, RPB2 and TEF1
 # # It turns out this didn't help the alignment
@@ -180,21 +181,72 @@ for (i in loci) {
 }
 # Remove those without any sequences
 gfastas <- gfastas[-(which(sapply(gfastas, class) == "try-error"))]
+
+# Convert all to lowercase (needed for nucleotide substitution matrix)
+# and remove any nucleotides other than actg or n
+seqs <- list()
+ConvertToLowercase_actgn <- function(gfastas) {
+  seqs <- lapply(gfastas, function(x) grep("^[^>]", x))
+  for (i in 1:length(gfastas)) {
+    for (j in 1:length(seqs[[i]])) {
+      tmp <- tolower(gfastas[[i]][seqs[[i]][j]])
+      tmp <- unlist(strsplit(tmp, split = ""))
+      notn <- grep("[^actgn]", tmp)
+      tmp[notn] <- "n" 
+      tmp <- paste(tmp, collapse = "")
+      gfastas[[i]][seqs[[i]]][j] <- tmp
+    }
+  }
+  return(gfastas)
+}
+gfastas <- ConvertToLowercase_actgn(gfastas)
+
 ```
 
-```{r merge Nneomas e14504f fastas with genbank fastas from table}
+
+```{r reverse complement all sequences}
+# Read in each string to ape as a fasta file
+grfastas <- list()
+for (i in 1:length(gfastas)) {
+  temp <- tempfile()
+  write(gfastas[[i]], temp)
+  grfastas[[i]] <- ape::read.FASTA(file = temp)
+}
+names(grfastas) <- names(gfastas)
+
+# Reverse complement all sequences
+grfastas <- lapply(grfastas, ape::complement)
+
+# Write each to fasta and read back in as string
+for (i in names(grfastas)) {
+  ape::write.dna(x = grfastas[[i]], temp, format = "fasta")
+  grfastas[[i]] <- readLines(temp)
+}
+```
+
+```{r merge Nneomas e14504f fastas with genbank forward and reverse complements}
 bfastas <- list()
 for (n in names(gfastas)){
   if (n %in% names(ofastas)) {
-    bfastas[[n]] <- c(gfastas[[n]], ofastas[[which(names(ofastas) %in% n)]])
+    bfastas[[n]] <- c(ofastas[[which(names(ofastas) %in% n)]], gfastas[[n]])
   } else {
     bfastas[[n]] <- gfastas[[n]]
   }
 }
+
+brfastas <- list()
+for (n in names(grfastas)){
+  if (n %in% names(ofastas)) {
+    brfastas[[n]] <- c(ofastas[[which(names(ofastas) %in% n)]], grfastas[[n]])
+  } else {
+    brfastas[[n]] <- grfastas[[n]]
+  }
+}
 ```
 
-## Alignments and Model Selection
-```{r alignment each locus}
+## Alignments for distance checking
+
+```{r alignment each locus, eval=FALSE}
 # Read in each string as a fasta file
 fastas <- list()
 for (i in 1:length(bfastas)) {
@@ -206,6 +258,57 @@ for (i in 1:length(bfastas)) {
 # Align sequences
 alns <- lapply(fastas, ape::muscle)
 
+# Read in each string as a fasta file
+rfastas <- list()
+for (i in 1:length(brfastas)) {
+  temp <- tempfile()
+  write(brfastas[[i]], temp)
+  rfastas[[i]] <- ape::read.FASTA(file = temp)
+}
+
+# Align sequences
+ralns <- lapply(rfastas, ape::muscle)
+```
+
+```{r score the alignments}
+# Distance calculation for each alignment
+fdist <- lapply(alns, function(x) dist.dna(x, as.matrix = TRUE))
+rdist <- lapply(ralns, function(x) dist.dna(x, as.matrix = TRUE))
+names(fdist) <- names(rdist) <- names(gfastas)
+
+# Retrieve the E14504F distance (when it's in the sequence)
+compdist <- list()
+for (i in names(fdist)) {
+  # f <- fdist[[i]][,grep("E14504F", colnames(fdist[[i]]))]
+  # r <- rdist[[i]][,grep("E14504F", colnames(rdist[[i]]))]
+  f <- fdist[[i]][,1]
+  r <- rdist[[i]][,1]
+  f <- data.frame(taxon = rownames(fdist[[i]]), forward = f)
+  r <- data.frame(taxon = rownames(rdist[[i]]), revcomp = r)
+  compdist[[i]] <- full_join(f, r, by = "taxon")
+}
+
+# Plot the results for each alignment
+for (i in names(compdist)) {
+  toplot <- compdist[[i]] %>%
+    gather(key = "direction", value = "distance" , -taxon)
+  
+  ggplot(toplot, aes(x = taxon, y = distance)) +
+    geom_point(aes(color = direction)) +
+    theme_bw() +
+    labs(x = "Taxon", y = "Distance",
+         title = paste("Forward vs Rev Comp alignments to E14504F: ", i, 
+                       sep = "")) +
+    ggsave(paste("indiv_alignments/directionComp_", i, ".pdf", sep = ""), 
+           height = 4, width = 8)
+}
+```
+
+```{r retrieve the optimal direction for each sequence}
+
+```
+
+```{r remove gaps}
 # Remove gaps present in 30% of the columns
 rmgaps <- lapply(alns, function(x) del.colgapsonly(x, threshold = 0.3))
 names(rmgaps) <- names(bfastas)
@@ -221,7 +324,10 @@ lapply(rmgaps, function(x) image.DNAbin(x, show.labels = FALSE))
 
 I can't figure out how to add titles in `image.DNAbin()`, but the order is "ITS"  "LSU"  "RPB2" "TEF1" "ATP6". The ITS looks to have a few orgs that might be revcomps, maybe three. I'm not sure how best to identify those and replace them in this format. It looks like the N length is short by ~ 20nt.
 
-```{r reverse complement, eval=FALSE}
+
+
+
+```{r find optimal alignment between forward and reverse complement, eval=FALSE}
 # Read in Nneoma's fastas in seqinr format
 ffastas <- list()
 for (f in files) {
@@ -245,21 +351,25 @@ ffastas <- ffastas[-(which(names(ffastas) %in% torm))]
 # Rename ITS2 to ITS
 names(ffastas)[grep("ITS", names(ffastas))] <- "ITS"
 
-# Pairwise alignment of Nneoma's sequence and each Gebank, output score
 
+# Pairwise alignment of Nneoma's sequence and each Gebank, output score
+#~~~~~
 # Parameters for the alignment
 sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
 
+# Convert to lowercase
 colnames(sigma) <- tolower(colnames(sigma))
 rownames(sigma) <- tolower(rownames(sigma))
+# Add in n's to table
+sigma <- cbind(sigma, n = rep(0, nrow(sigma)))
+sigma <- rbind(sigma, n = rep(0, ncol(sigma)))
 
-sigma
 scores <- list()
 for (i in names(ffastas)) {
-  # Select the matching ggfastas list component as n
-  n <- names(ggfastas)[grep(i, names(ggfastas))]
-  # Iterate over all sequences in n
-  for (j in 1:length(ggfastas[[n]])) {
+  # Select the matching ggfastas list component as n (grabs both ITS1 and ITS2 as ITS)
+  # n <- names(ggfastas)[grep(i, names(ggfastas))]
+  # # Iterate over all sequences in n
+  for (j in 1:length(ggfastas[[i]])) {
     x <- ffastas[[i]][[1]]
     y <- ggfastas[[n]][j][[1]]
     # Ensure the lengths are equal
@@ -268,13 +378,40 @@ for (i in names(ffastas)) {
     } else {
       x <- x[1:length(y)]
     }
-    tmp <- pairwiseAlignment(x, y, type = "local", substitutionMatrix = sigma,
+    try({tmp <- pairwiseAlignment(x, y, type = "local", substitutionMatrix = sigma,
                              gapOpening = -2, gapExtension = -8, scoreOnly = TRUE)
-    scores[[i]][j] <- max(tmp)
+    scores[[i]][j] <- max(tmp)})
   }
 }
 
-scores[[1]]
+
+x
+y
+i <- "RPB2"
+n <- 
+j <- 4
+y <- ggfastas[[n]][j][[1]]
+ggfastas[[n]]
+y
+
+writeLines(c(ofastas[[4]], gfastas[["LSU"]][1]))
+seqinr::write.fasta(c(ffastas[[4]], ggfastas[["LSU"]][1]), 
+                    names = c(names(ffastas[[4]]), names(ggfastas[["LSU"]][1])),
+                    file.out = temp)
+temp <- readDNAStringSet(temp)
+temp <- msa(temp, "Muscle")
+msaConservationScore(temp, sigma)
+
+sigmanucleotideSubstitutionMatrix(match = 1, mismatch = 0, baseOnly = FALSE, type = "DNA")
+
+temp
+ofastas[[4]][2]
+gfastas[["LSU"]]
+ffastas[[1]]
+names(ggfastas[[1]][2])
+msaConservationScore()
+
+
 
 names(ggfastas)
 names(ffastas)

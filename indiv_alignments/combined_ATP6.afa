@@ -47,8 +47,8 @@ tgtttatact tgcaaatgaa ctttctagag caatagacca tttagatgga actaattttc
 tattattact tgacacaaag tgtaaaccta gtgttaaaaa taataatact atagagtaaa
 gagctaagtt tgttaaagtt aaattaaaga aacctaatat aggtgcatta tccct
 >DQ301621.1 Thanatephorus cucumeris strain CBS 523.96 ATP synthase subunit 6-like (ATP6) gene, partial sequence; mitochondrial
-acgtaacc-t tgatgatgaa ctcctatttc taaaccgata attgctgtam atagcaaatg
-gtacaactgt taatattgca actaaaaymc tgctgctgaa catttggaat aagaaagttg
+acgtaacc-t tgatgatgaa ctcctatttc taaaccgata attgctgtan atagcaaatg
+gtacaactgt taatattgca actaaaannc tgctgctgaa catttggaat aagaaagttg
 ataaaatttt cattaaagtg tgacccgcca ttatattagc aaataatcga actcctaaag
 aaacagctcg ggccaggtaa gagattaact cgattaatac taataaagga actagggcaa
 gcggcgttcc ggatgggata aagaatgaga agaatcttac tttgtgaatt gataaagcta
@@ -81,7 +81,7 @@ ttatagtata attataaggt acatttccgg ttaggttagc aatgataatg aaaaagaata
 gagaatagat gaatggaaga tatacttcat tcgctgttcc tatttgatct ctaaccattg
 tgtttacact tgcaaatgaa ctttctagag caatagacca tttagatgga actaattttc
 tattattact tgacacaaag tgtaaaccta gtgttaataa taatagtact atagagtaaa
-gagctaagtt tgttaaagtt aaattaaaga aacctaatat aggtgcataa tycct
+gagctaagtt tgttaaagtt aaattaaaga aacctaatat aggtgcataa tncct
 >DQ301618.1 Thanatephorus cucumeris strain CBS 208.84 ATP synthase subunit 6 (ATP6) gene, partial cds; mitochondrial
 agataacttt gtataagaaa caccaatttc taatcctatg atagccacga atcccaaatg
 gtactaatgt aataactgca acaacaattc cactgttgaa caattggaat aggaatgttg
@@ -144,8 +144,8 @@ tattattact tgacacaaag tgtaaaccta gtgttaataa taatagtact atagagaaag
 gagctaagtt tgttaaagtt aaa-taaaga aacctaa--- ---------- -----
 >DQ301606.1 Thanatephorus cucumeris strain AG-4HGIII ATP synthase subunit 6-like (ATP6) gene, partial sequence; mitochondrial
 ---tttctat agatcat--- --tgaagtta caaact---- ---------- ----taatag
-gaattaatgc acctat---- attaggtttc tttaatttaa ctttacmaat agmtctttac
-gtactattat tattaaccca ggtttacact ttgtgtmaag taataa---- -----tagaa
+gaattaatgc acctat---- attaggtttc tttaatttaa ctttacnaat agntctttac
+gtactattat tattaaccca ggtttacact ttgtgtnaag taataa---- -----tagaa
 aattagttcc atctaat--- --ggtctatt gctctagaac aagtgtaaac acaatggtta
 ---gagatca aataggaaca gcgaatgaag tatatcttcc ttcatctatt ctctattcta
 tcattgctaa cctaacaggt aatgtgcctt ataactatac tataactaca tctatcgtag

@@ -1,7 +1,7 @@
 >KP171634.1 Thanatephorus pendulus strain AG-1-IA internal transcribed spacer 1, partial sequence; 5.8S ribosomal RNA gene, complete sequence; and internal transcribed spacer 2, partial sequence
 ---------- ---------- ---------- ---------- ---------- ----------
----------- ---------c tgtctactta atttacmcmc mctctactta atttaaactg
-aatgkaattg atgtaacgca tctaatacta agtttcaaca acggatctct tggctctcgc
+---------- ---------c tgtctactta atttacncnc nctctactta atttaaactg
+aatgnaattg atgtaacgca tctaatacta agtttcaaca acggatctct tggctctcgc
 atcgatgaag aacgcagcga aatgcgataa gtaatgtgaa ttgcagaatt cagtgaatca
 tcgaatcttt gaacgcacct tgcgctcctt ggtattcctt ggagcatgcc tgtttgagta
 tcatgaaatc ttcaaagtaa accttttgtt aattcaattg gtttactttg gttttggagg
@@ -21,18 +21,18 @@ gttccactcg gcgtgataag tatctatcgc tgaggacacc gtaaaaagtg gccaaggtaa
 atgcagacga accggttcta atagtccatt gacttggaca tttttatgat ccgatctcaa
 atcag-tagg actacccc
 >DQ279062.1 Ceratobasidium sp. CBS 140.82 18S ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence
--catttttgg gggccgctgg cgcatgtgca cgccttctct ttcatccaca cacamctgtg
-aacttgtgag acggatggtc cgtctatta- ---trcataa actcaataaa tataaatctg
+-catttttgg gggccgctgg cgcatgtgca cgccttctct ttcatccaca cacanctgtg
+aacttgtgag acggatggtc cgtctatta- ---tncataa actcaataaa tataaatctg
 aatgtaatcg atgtaacgca tct-aaacta agtttcaaca acggatctct tggctctcgc
 atcgatgaag aacgcagcga aatgcgataa gtaatgtgaa ttgcagaatt cagtgaatca
 tcgaatcttt gaacgcacct tgcgctcctt ggtattcctt ggagcatgcc tgtttgagta
 tcatgaaatt ctcagaataa atcttttgtt cattcgatcg atttattttg gacttggagg
 ---ctgcaga ttcacgtctg ctcctcttaa ttcattagct ggatctctgt ga---gctcg
 gttccactcg gcgtgataag tatcactcgc tgaggacact gtaaaaagtg gccggggt--
--tgtagttag ascgcttcta atagtcc--- --cttggaca tttttagagg gtgttcccag
+-tgtagttag ancgcttcta atagtcc--- --cttggaca tttttagagg gtgttcccag
 gagaagggca gggcccaa
 >DQ278991.1 Thanatephorus sp. CBS 207.84 18S ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence
----------a ttasggc--- --aacgtgca caccttctct ttcatctaca cacacctgtg
+---------a ttanggc--- --aacgtgca caccttctct ttcatctaca cacacctgtg
 aacctgtgag acagaacctc tgtctactta actcatataa actcaattta ttttaaaatg
 aatgtaatgg atgtaacaca tctaatacta agtttcaaca acggatctct tggctctcgc
 atcgatgaag aacgcagcga aatgcgataa gtaatgtgaa ttgcagaatt cagtgaatca
@@ -194,7 +194,7 @@ tcgaatcttt gaacgcacct tgcgctcctt ggtattcctt ggagcatgcc tgtttgagta
 tcatgaaatc ttcaaagtaa atcttttgtt aattcaattg gtctactttg gtattggagg
 tctttgcagc ttcacacctg ctcctctttg tgcattagct ggatctcagt gttatgcttg
 gttccactca gcgtgataaa tatctatcgc tgaggacact gtaaaaagtg gccaaggtaa
-atgcagatga accgcttsta atagtccatt gacttggrca at-ttatgat --gattc--a
+atgcagatga accgcttnta atagtccatt gacttggnca at-ttatgat --gattc--a
 atcaaggaa- --------
 >KP171638.1 Thanatephorus sp. AG-9 isolate S-21 internal transcribed spacer 1, partial sequence; 5.8S ribosomal RNA gene and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence
 ---------- ---------- ---------- ---------- ---------- ----------
@@ -277,7 +277,7 @@ atcaggtagg actacccg
 gtagagatcg ttgtagctgg gccatgtgca cgccttctct ttcatc-aca cacacctgtg
 cacctgttag acggtcttcc cgtcca--a- ---tacataa aatctatata ttt-aatcag
 aatgtaatcg atgtaacgca tctaa-acta agtttcaaca acggatctct tggctctcgc
-atcgatgaar aacgcagcga aatgcgataa gtaatgtgaa ttgcagaatt cagtgaatca
+atcgatgaan aacgcagcga aatgcgataa gtaatgtgaa ttgcagaatt cagtgaatca
 tcgaatcttt gaacgcacct tgcgctcctt ggtattcctc ggagcacgcc tgtttgagta
 tcatgaaatt ctcaaagcaa gtcttttgtt aattcaactg gtttgctttg gatttggagg
 tc-ttgcaga ttcacgtctg ctcctcttaa tgcattagct ggatctctat aaaacc---g
@@ -318,9 +318,9 @@ gttccactca gcgtgataag tatctatcgc tgaggacact gtaaaaggtg gccaaggtaa
 atgcagatga accgcttcta atagtccatt gacttggaca attttatgat ctgatctcaa
 atcaggtagg actacccg
 >DQ278934.1 Ceratobasidium sp. CBS 137.82 18S ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence
-gtagagttgg ttgtagcggc tggsagtgcr crccttstct ttcat-caca cacacctgtg
-aacctgtgag atagtacttc tgtctactka attcakatra ratcaattta atttaaaacg
-aatgtaatgg atgtracgca tckaatacta agtttcaaca acggatctct tggctctcgc
+gtagagttgg ttgtagcggc tggnagtgcn cnccttntct ttcat-caca cacacctgtg
+aacctgtgag atagtacttc tgtctactna attcanatna natcaattta atttaaaacg
+aatgtaatgg atgtnacgca tcnaatacta agtttcaaca acggatctct tggctctcgc
 atcgatgaag aacgcagcga aatgcgataa gtaatgtgaa ttgcagaatt cagtgaatca
 tcgaatcttt gaacgcacct tgcgctcctt ggtattcctt ggagcatgcc tgtttgagta
 tcatgaaatc ttcaaagtaa atcttttgtt aattcaattg gttcactttg gtattggagg
@@ -403,7 +403,7 @@ tcgaatcttt gaacgcacct tgcgctcctt ggtattcctt ggagcatgcc tgtttgagta
 tcatgaaatc ttcaaagtaa accttttgtt aattcaattg gcctactttg gtattggagg
 tctttgcagt ttcacaactg ctcctctttg ttcattagct ggatctcagt gttatgcttg
 gttccactcg gcgtgataag tatctatcgc tgaggacatt gt-aaaggtg gccaaggtaa
-aygcagatga accgcttcta acagtccatt gacttggaca a-tttatgat ctgatctcaa
+angcagatga accgcttcta acagtccatt gacttggaca a-tttatgat ctgatctcaa
 atcaggtagg actacccg
 >DQ278941.1 Ceratobasidium sp. CBS 476.82 18S ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence
 gtagagttgg ttgtagctgg cgcatgtgca caccttctct ttcatc-aca cacacctgtg
@@ -411,8 +411,8 @@ cacctgtgag acagagcctc tgtctactta attcacacaa actctattta ttataaaatg
 aatgtaattg atgtaacgca tctaatacta agtttcaaca acggatctct tggctctcgc
 atcgatgaag aacgcagcga aatgcgataa gtaatgtgaa ttgcagaatt cagtgaatca
 tcgaatcttt gaacgcacct tgcgctcctt ggtattcctt ggagcatgcc tgtttgagta
-tcatgaaatc ttcaaagtaa atcttttgtt aattcaaytg gtctactttg gtcttggagg
-ttattgcagc ttcacacctg ctcctctttg tkcattagct ggatctcagt gttatgcttg
+tcatgaaatc ttcaaagtaa atcttttgtt aattcaantg gtctactttg gtcttggagg
+ttattgcagc ttcacacctg ctcctctttg tncattagct ggatctcagt gttatgcttg
 gttccactca gcgtgataag tatctatcgc tgaggacact gtaacaggtg gccaagggaa
 atgcagatga gccgcttcta atcgtcctat tatttggaca aatttatgat ctgatctcaa
 atcagt--ag acagcc--
@@ -632,7 +632,7 @@ aatgcaa--- ----aacgca tttaatac-a actttcaaca acggatctct tggctctcgc
 atcgatgaag aacgcagcga aatgcgataa gtaatgtgaa ttgcagaatt cagtgaatca
 tcgaatcttt gaacgcacct tgcgctcctt ggcattccga ggagcatgct tgtttgagtg
 tcatggtatt ctcaacctcc gtatttaatt aatgcagttg g----gcttg gacttggagg
-tttttgcaga tagacatcag ctcctctaaa tgcattagct tggtaactg- agyatgttt-
+tttttgcaga tagacatcag ctcctctaaa tgcattagct tggtaactg- agnatgttt-
 --------ca acgtgataat tctacgttgc ttcatctc-- ------ggtg aacaa---aa
 atgt---tca a--gcttcta atcgtctcct g---gagaca tt-atctgat ctgacctcaa
 atcaagtagg actacccg
@@ -715,10 +715,10 @@ ttgcatgggt actgcttc-- ataaatcgtc g--caagaca tttatatgat ctgacctcaa
 atcaggtagg actacccg
 >JX968222.1 Conocybe microrrhiza strain NL-2180 internal transcribed spacer 1, partial sequence; 5.8S ribosomal RNA gene, complete sequence; and internal transcribed spacer 2, partial sequence
 acagagtagg ttgttgctgg cgcatgtgca cgcct----- gtcatctatt cctccatgtg
-cacttttgag gctggatatc tatttacccc agctcmatgg gcct------ -tttaaagcc
+cacttttgag gctggatatc tatttacccc agctcnatgg gcct------ -tttaaagcc
 cat---a--- ----aaccta tt--atacc- acttttagca accgaacttt tggctcctgg
-atyggttaag aacggaacca aatgggatta gtaatgggaa atggagaatt taatggatca
-tcgratcttt gaacgccccc tgggcttcct ggtatttcga ggagccagcc cgtttgaagg
+atnggttaag aacggaacca aatgggatta gtaatgggaa atggagaatt taatggatca
+tcgnatcttt gaacgccccc tgggcttcct ggtatttcga ggagccagcc cgtttgaagg
 gcattaaatt ttccaactta cacttttgt- -----ga--- -gttagattg gaagtggggg
 ttggtgtgga ttaattctca ctccctttaa tgcattagct ggatctctg- --catatctg
 actat---ca gtgtgataat tatctat-gc tgtagtcg-- ---------- ----------
@@ -734,7 +734,7 @@ tcattaactt ctcaatccta agtctttgt- gactaaa--- -------ttg gatgtggggg
 tttatgtggg ttta---cca ctcccctgaa tgtattagct ggatctttgc ---------a
 aaccaacttg gtatgataat tatctat-gc tga------- ------agtg t---------
 atgcataggg actgctttca accgtctact tacgtggaca ct----tgaa ttgacctcaa
-wccaggtaga ataacc--
+nccaggtaga ataacc--
 >JX968165.1 Conocybe inopinata strain WU27544 internal transcribed spacer 1, partial sequence; 5.8S ribosomal RNA gene, complete sequence; and internal transcribed spacer 2, partial sequence
 aaacttgaag ttgtagctgg cgcatgtgca cattgtatct tccacccgca tagttctgtg
 aagttttg-- aca---tttc tgttt-ctca a--tacatac acc--attaa tgttaaa--g
