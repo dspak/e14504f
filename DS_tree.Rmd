@@ -129,22 +129,6 @@ for (i in names(ofastas)) {
 # Remove any non-ACTGN nucleotides
 ofastas <- lapply(ofastas, function(x) gsub("^[^>](.*)[^actgn]", "\\1n", x))
 
-# # Reverse Complement ITS1, RPB2 and TEF1
-# # It turns out this didn't help the alignment
-# trc <- c("ITS1", "RPB2", "TEF1")
-# for (i in trc) {
-#   # Collapse sequence to one line
-#   if (length(ofastas[[i]]) > 2) {
-#     x <- ofastas[[i]]
-#     y <- x[2:length(x)]
-#     y <- paste(y, collapse = "")
-#     z <- c(x[1], y)
-#     ofastas[[i]] <- z
-#   }
-#   # Reverse complement and return
-#   x <- DNAString(ofastas[[i]][2])
-#   ofastas[[i]][2] <- as.character(reverseComplement(x))
-# }
 
 # # Cat ITS1 and ITS2 sep by 100 N's and remove ITS2
 # # Removed this step because ITS1 is not aligning to Gonzalez et al even after rev comp
@@ -174,7 +158,7 @@ RetrieveSequencesAsString <- function(charvec){
 }
 
 # Retrieve all sequence into a list
-loci <- colnames(x[,5:11])
+loci <- colnames(x[,6:12])
 gfastas <- list()
 for (i in loci) {
   gfastas[[i]] <- RetrieveSequencesAsString(x[,grep(i, colnames(x))])
@@ -200,7 +184,28 @@ ConvertToLowercase_actgn <- function(gfastas) {
   return(gfastas)
 }
 gfastas <- ConvertToLowercase_actgn(gfastas)
+```
 
+```{r change all names}
+# Create tip labels
+tips <- paste(x$Name, x$Voucher.ID, sep = " ")
+
+# Get names for each of the sequences as list
+hasseq <- apply(x[6:12], 2, function(x) !is.na(x))
+newlabels <- apply(hasseq, 2, function(x) tips[x])
+
+# Reduce labels set to those in gfastas
+newlabels <- newlabels[names(newlabels) %in% names(gfastas)]
+
+# Changes all names in gfastas
+for (i in 1:length(gfastas)) {
+  temp <- tempfile()
+  write(gfastas[[i]], temp)
+  tmp2 <- seqinr::read.fasta(file = temp)
+  temp <- tempfile()
+  seqinr::write.fasta(sequences = tmp2, names = newlabels[[i]], file.out = temp)
+  gfastas[[i]] <- readLines(temp)
+}
 ```
 
 
@@ -225,6 +230,7 @@ for (i in names(grfastas)) {
 ```
 
 ```{r merge Nneomas e14504f fastas with genbank forward and reverse complements}
+# Create a list for "both fastas" and append the genbank string onto Nneoma's
 bfastas <- list()
 for (n in names(gfastas)){
   if (n %in% names(ofastas)) {
@@ -247,6 +253,10 @@ for (n in names(grfastas)){
 ## Alignments for distance checking
 
 ```{r alignment each locus, eval=FALSE}
+#### ALERT !!!
+# This section takes ~ 10 minutes to run
+# Set to eval=FALSE by default
+# 
 # Read in each string as a fasta file
 fastas <- list()
 for (i in 1:length(bfastas)) {
@@ -257,6 +267,7 @@ for (i in 1:length(bfastas)) {
 
 # Align sequences
 alns <- lapply(fastas, ape::muscle)
+names(alns) <- names(bfastas)
 
 # Read in each string as a fasta file
 rfastas <- list()
@@ -290,28 +301,40 @@ for (i in names(fdist)) {
 
 # Plot the results for each alignment
 for (i in names(compdist)) {
+  # Melt each element of the list
   toplot <- compdist[[i]] %>%
     gather(key = "direction", value = "distance" , -taxon)
-  
+  # Plot
   ggplot(toplot, aes(x = taxon, y = distance)) +
     geom_point(aes(color = direction)) +
-    theme_bw() +
     labs(x = "Taxon", y = "Distance",
          title = paste("Forward vs Rev Comp alignments to E14504F: ", i, 
                        sep = "")) +
+    theme(axis.text.x = element_blank())
     ggsave(paste("indiv_alignments/directionComp_", i, ".pdf", sep = ""), 
            height = 4, width = 8)
 }
 ```
 
 ```{r retrieve the optimal direction for each sequence}
+# Input regions of interest
+roi <- c("LSU", "RPB2")
+roi <- names(alns) %in% roi
+
+# subset alignment
+alns <- alns[roi]
+```
+
+Of the regions checked, only TEF1 contained sequences that had reverse complements. I'll make a tree of just LSU and RPB2. Given the variability observed in the RPB2 region, I expect this will sufficiently resolve the tree.
+
+```{r subset to regions of interest}
 
 ```
 
 ```{r remove gaps}
 # Remove gaps present in 30% of the columns
 rmgaps <- lapply(alns, function(x) del.colgapsonly(x, threshold = 0.3))
-names(rmgaps) <- names(bfastas)
+names(rmgaps) <- names(alns)
 # Write alignments to files for visualization in Jalview
 for (i in names(rmgaps)) {
   ape::write.dna(rmgaps[[i]], format = "fasta", file = paste("indiv_alignments/combined_", i, ".afa", sep = ""))
@@ -324,117 +347,8 @@ lapply(rmgaps, function(x) image.DNAbin(x, show.labels = FALSE))
 
 I can't figure out how to add titles in `image.DNAbin()`, but the order is "ITS"  "LSU"  "RPB2" "TEF1" "ATP6". The ITS looks to have a few orgs that might be revcomps, maybe three. I'm not sure how best to identify those and replace them in this format. It looks like the N length is short by ~ 20nt.
 
-
-
-
-```{r find optimal alignment between forward and reverse complement, eval=FALSE}
-# Read in Nneoma's fastas in seqinr format
-ffastas <- list()
-for (f in files) {
-  ffastas[[f]] <- seqinr::read.fasta(file = f)
-}
-names(ffastas) <- names
-
-# Read in Genbank fastas in seqinr format
-ggfastas <- list()
-for (g in 1:length(gfastas)){
-  temp <- tempfile()
-  write(gfastas[[i]], temp)
-  ggfastas[[g]] <- seqinr::read.fasta(file = temp)
-}
-names(ggfastas) <- names(gfastas)
-
-# Make the two lists have the same loci
-# Remove ITS1 (which wasn't aligning well)
-torm <- c("RPB1", "ITS1", "SSU")
-ffastas <- ffastas[-(which(names(ffastas) %in% torm))]
-# Rename ITS2 to ITS
-names(ffastas)[grep("ITS", names(ffastas))] <- "ITS"
-
-
-# Pairwise alignment of Nneoma's sequence and each Gebank, output score
-#~~~~~
-# Parameters for the alignment
-sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
-
-# Convert to lowercase
-colnames(sigma) <- tolower(colnames(sigma))
-rownames(sigma) <- tolower(rownames(sigma))
-# Add in n's to table
-sigma <- cbind(sigma, n = rep(0, nrow(sigma)))
-sigma <- rbind(sigma, n = rep(0, ncol(sigma)))
-
-scores <- list()
-for (i in names(ffastas)) {
-  # Select the matching ggfastas list component as n (grabs both ITS1 and ITS2 as ITS)
-  # n <- names(ggfastas)[grep(i, names(ggfastas))]
-  # # Iterate over all sequences in n
-  for (j in 1:length(ggfastas[[i]])) {
-    x <- ffastas[[i]][[1]]
-    y <- ggfastas[[n]][j][[1]]
-    # Ensure the lengths are equal
-    if (length(y) > length(x)) {
-      y <- y[1:length(x)]
-    } else {
-      x <- x[1:length(y)]
-    }
-    try({tmp <- pairwiseAlignment(x, y, type = "local", substitutionMatrix = sigma,
-                             gapOpening = -2, gapExtension = -8, scoreOnly = TRUE)
-    scores[[i]][j] <- max(tmp)})
-  }
-}
-
-
-x
-y
-i <- "RPB2"
-n <- 
-j <- 4
-y <- ggfastas[[n]][j][[1]]
-ggfastas[[n]]
-y
-
-writeLines(c(ofastas[[4]], gfastas[["LSU"]][1]))
-seqinr::write.fasta(c(ffastas[[4]], ggfastas[["LSU"]][1]), 
-                    names = c(names(ffastas[[4]]), names(ggfastas[["LSU"]][1])),
-                    file.out = temp)
-temp <- readDNAStringSet(temp)
-temp <- msa(temp, "Muscle")
-msaConservationScore(temp, sigma)
-
-sigmanucleotideSubstitutionMatrix(match = 1, mismatch = 0, baseOnly = FALSE, type = "DNA")
-
-temp
-ofastas[[4]][2]
-gfastas[["LSU"]]
-ffastas[[1]]
-names(ggfastas[[1]][2])
-msaConservationScore()
-
-
-
-names(ggfastas)
-names(ffastas)
-ggfastas[["LSU"]]
-tmp <- pairwiseAlignment(x, y, type = "local", scoreOnly = FALSE)
-print(tmp)
-tmp@score
-max(tmp@score)
-hist(tmp@score)
-?pairwiseAlignment
-tmp@score
-j <- 1
-grep(i, names(ggfastas))
-names(ggfastas) %in% i
-names(ggfastas[[1]])
-```
-
-```{r re-align and compare visualizations}
-
-```
-
-
 ```{r substitution models, eval=FALSE}
+
 
 ```
 
@@ -595,7 +509,7 @@ writeLines(c("#!/bin/bash",
              "",
              "cd /project/fas/gerstein/djs88/e14504f",
              "module load Apps/MrBayes/3.2.2",
-             "mb combined_bayes.nex"), fileConn)
+             "mpirun mb combined_bayes.nex"), fileConn)
 close(fileConn)
 
 # Causes a public key error -- have to copy into terminal
@@ -670,3 +584,23 @@ Nice pictures here http://www.apsnet.org/edcenter/intropp/lessons/fungi/Basidiom
 
 # References
 
+### Removed code
+
+```{r removed, eval=FALSE}
+# # Reverse Complement ITS1, RPB2 and TEF1
+# # It turns out this didn't help the alignment
+# trc <- c("ITS1", "RPB2", "TEF1")
+# for (i in trc) {
+#   # Collapse sequence to one line
+#   if (length(ofastas[[i]]) > 2) {
+#     x <- ofastas[[i]]
+#     y <- x[2:length(x)]
+#     y <- paste(y, collapse = "")
+#     z <- c(x[1], y)
+#     ofastas[[i]] <- z
+#   }
+#   # Reverse complement and return
+#   x <- DNAString(ofastas[[i]][2])
+#   ofastas[[i]][2] <- as.character(reverseComplement(x))
+# }
+```
