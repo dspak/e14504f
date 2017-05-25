@@ -1,4 +1,4 @@
->E14504F-LSU 
+>E14504F
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -10,7 +10,7 @@ acgggccaac atgaatttcg accggtggaa aaaggcagag ggaatgtggc acctccgggt
 gtgttatagc cctttgtcag acacgccggt tgggattgag gttcaagcac gcttttgttg
 tgctttgatg ttggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtgaaaaa cccatgcgcg taatgaaag
->DQ917658.1 Thanatephorus cucumeris isolate AFTOL-ID 2022 25S large subunit ribosomal RNA gene, partial sequence
+>Thanatephorus cucumeris CBS 253.29
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -22,7 +22,7 @@ acgggccagc atgaattttg atcagtggaa aaaggcttgg ggaatgtggc accttcgggt
 gtgttatagc cccttgtcac atacattggt tgggattgag gtcttagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtgcaaaa cccgagcgcg taatgaaag
->KC336073.1 Ceratobasidium sp. CBS 129339 25S large subunit ribosomal RNA gene, partial sequence
+>Ceratobasidium sp. CBS 129339
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgccggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac taccggtgct
@@ -34,7 +34,7 @@ acgggccagc atgggtttcg accgatggaa aagggcnggg ggaatgtggc acctccgggt
 gtgttatagc ccccngtcgg atgcgtcggt cgggatcgag gcctcagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtg-aaaa ctcgagcgcg taatgaaag
->DQ278931.1 Ceratobasidium ramicola strain CBS 133.82 18S ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium ramicola CBS 133.82
 caaggtttcc gtaggtgact gcggaagaca ttagaggagt ttggttgtag ---ctggcgg
 gattttctta actgattgtt tcctttggca attttgtgca cgctcatcca cacaca---c
 ctgtgcactt gtgagacaga tgtggggaga accccgtc-- ---------- ---------t
@@ -46,7 +46,7 @@ tgaacgcact tgcgctcctt ggtattc--- ---------- cttggagcat gcct--gttt
 ---ttaattc aattggttcc tcactttggt t----ttgag gttgcagcac acct--gctc
 ctctttgtca ttagc----t ggatctcagt gttatgcttg gttccac--- ----------
 ---------- ---------- ---------- ---------- ---tcggcg
->KP171642.1 Thanatephorus sasakii strain AG-1-IB 28S ribosomal RNA gene, partial sequence
+>Thanatephorus sasakii CBS 206.84
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 cattagttgt ccgagttgta gtctagagaa gcatcatccg cgccggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccggtgct
@@ -58,7 +58,7 @@ acgggccagc atgaattttg accggtgcaa aaggatttgg ggaatgtggc accttcgggt
 gtgttatagc cccttgtcgc atacgccggt tgggattgag gtcttagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgg- ----------
 ---------- ---------- ---------- ---------- ---------
->KP171643.1 Thanatephorus cucumeris strain AG-2-2 IV isolate SA1-1 28S ribosomal RNA gene, partial sequence
+>Thanatephorus cucumeris SA1-1
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggnng
 tgtattctgt ccgagtggta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca aagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -70,7 +70,7 @@ acgggccanc atgaattttg accaatggaa aaaggcttgg ggaatgtggc accttcgggt
 gtgttatagc ccnttgtcac atacattggt tgggattgag g-cttagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtgcaaaa cccgagcgcg aaatgaaa-
->KP171644.1 Thanatephorus cucumeris strain AG-3 PT isolate Rhs1AP 28S ribosomal RNA gene, partial sequence
+>Thanatephorus cucumeris Rhs1AP*
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
@@ -82,7 +82,7 @@ acgggccagc atgaattttg accaatggaa aaag-ctggg ggaatgtggc a-cttcgggt
 gtgttatagc cccttgtcac atacgttggt tgggattgag gtcttagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtgcaaaa cccgagcgcg taatgaaag
->KP171645.1 Thanatephorus cucumeris strain AG-3 PT 28S ribosomal RNA gene, partial sequence
+>Thanatephorus cucumeris CBS 200.25
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
@@ -94,7 +94,7 @@ ntgaaaagcn ctttggannn annnttaaac nntacgtgaa anngttgaaa tggnaaa---
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------- ---------- ---------
->KP171646.1 Thanatephorus sp. AG-5 isolate GM 10 28S ribosomal RNA gene, partial sequence
+>Rhizoctonia sp. GM 10
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tgccagtact
@@ -106,7 +106,7 @@ acgggccagc atgaattttg accaatggaa aaag-ctggg ggaatgtggc accttcgggt
 gtgttatagc cccttgtcat acacgttggt tgggattgag gtcttagcac gctccggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcaagtgttt gggtgcaaaa cccgagcgcg taatgaaag
->AF354096.1 Thanatephorus cucumeris 18S ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence
+>Rhizoctonia sp. 76Rs
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtatgctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -118,7 +118,7 @@ acgggccagc atgaattttg accggtggaa aaagatttgg ggaatgtggc a-cttcgggt
 gtgttatagc cccttgtcac atacatcggt tgggattgag gtcttagcac gcttcggttc
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtgcaaaa cccgagcgcg taatgaaag
->KP171647.1 Thanatephorus sp. AG-8 28S ribosomal RNA gene, partial sequence
+>Thanatephorus sp. CBS 101782
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -130,7 +130,7 @@ acgggccagc atgaattttg accaatggaa aaaggcttgg ggaatgtggc accttcgggt
 gtgttatagc cccttgtcac atacgttggt tgggattgag g------cac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcaagtgttt gggtgcaaaa cccgagcgcg taatgaaag
->KP171648.1 Thanatephorus sp. AG-9 28S ribosomal RNA gene, partial sequence
+>Rhizoctonia solani CBS 970.96
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -142,7 +142,7 @@ acgggccagc atgagttttg accaatggaa aaaggcttgg ggaatgtggc accctcgggt
 gtgttatagc cccttgtcac atacgttggt tgggattgag gtcttagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgg- ----------
 ---------- ---------- ---------- ---------- ---------
->KP171649.1 Ceratobasidium sp. AG-Ba isolate C-484 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium sp. C-484
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaattt-a aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tctt-gaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagatct
@@ -154,7 +154,7 @@ acgggccagc atgaatttcg accggtggaa aaagatttgg ggaatgtggc a-cttcgggt
 gtgttatagc cccttgtcag atacattggt tgggattgag gtcttagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtggaaaa cccgagcgcg aaatgaaag
->AF354091.1 Ceratobasidium sp. AGBo 18S ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium cornigerum SIR-2
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgctggacca tgtacaagtc
 tcttgaa-ta gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
@@ -166,7 +166,7 @@ acgggccagc atgaattttg accgttggaa aaaggcaggg ggaatgtggc a-ctccgggt
 gtgttatagc cccttgtcac acacggcggt tgggattgag gattcagcac gcttctgttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtgctaaa cccatgcgcg taatgaaag
->KP171650.1 Ceratobasidium sp. AG-D 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium cornigerum CBS 438.80
 caaggattcc cctagtaacg gcgagtgaag cg-gaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgccggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccggtgct
@@ -178,7 +178,7 @@ acgggccagc atggatttcg accgttggaa aaaggctggg ggaatgtggc a-cttcgggt
 gtgttatagc cccttgtcac atacatcggt tgggatcgag gcctcagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccnncangat
 caacct-tct gcgantgttt gggtganana tc-ggacgcg caatnaaag
->KP171651.1 Ceratobasidium sp. AG-E 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium cornigerum CBS 137.82
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgaattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -190,7 +190,7 @@ acgggccagc atgagttttg accggtggaa aaagatttgg ggaatgtggc accttcgggt
 gtgttatagc cccttgtcac atacactggt tgggattgag gtcttagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgg- ----------
 ---------- ---------- ---------- ---------- ---------
->KP171652.1 Ceratobasidium sp. AG-G isolate AH-9 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium sp. AH-9
 ---------- -ctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
@@ -202,7 +202,7 @@ acgggccagc atggattttg accggtggaa aaggatttgg ggaatgtggc acctccgggt
 gtgttatagc cccttgtcgc atacatcggt tgggatcgag gtttcagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtgaaaaa cccatgcgcg taatgaaag
->AF354095.1 Ceratobasidium sp. AGQ 18S ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium sp. C-620
 caaggattcc cctagtaacg gcgagtgaag cg-gaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgccggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgcactggac tcccggtgct
@@ -214,7 +214,7 @@ acgggccagc atgaatttcg accgatagaa aagggctggg ggaatgtggc a-cttcgggt
 gtgttatagc cccttgtcgc atgcgtcggt tgggatcgag gcctcagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaagtagtc
 taacatgcct gcga-tgttt gggtgaaaac ccg--acgcg gaatgaaag
->KP171653.1 Ceratobasidium sp. AG-R 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium cornigerum CBS 136.82
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 cttgtgttgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -226,7 +226,7 @@ acgggccagc atgaattttg accagtggaa aaagatttgg ggaatgtggc accttcgggt
 gtgttatagc cccttgtcag atacattggt tgggattgag gtcttagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgg- ----------
 ---------- ---------- ---------- ---------- ---------
->KP171654.1 Ceratobasidium sp. CBS 476.82 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium cornigerum CBS 476.82
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -238,7 +238,7 @@ acgggccagc atgaattttg accagtggaa aaggatttgg ggaatgtggc accttcgggt
 gtgttatagc cctttgtcac atacgctggt tgggattgag gtcttagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgg- ----------
 ---------- ---------- ---------- ---------- ---------
->KP171656.1 Ceratobasidium sp. CBS 148.54 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium cornigerum CBS 148.54
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 --tcacccgt ccgagttgta gtctagagaa gcatcatcta cgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgtt
@@ -250,7 +250,7 @@ acgggccagc atggatttcg accgtcggaa aagggctggg ggaatgtggc actttcgggt
 gtgttatagc cccctgtcgc acacgtcggt tgggatcgag gcctcagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgg- ----------
 ---------- ---------- ---------- ---------- ---------
->KP171655.1 Rhizoctonia endophytica strain DAOM 138188 28S ribosomal RNA gene, partial sequence
+>Rhizoctonia endophytica DAOM 138188
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgctggaccn tgtacaagtc
 tcttggaata gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
@@ -262,7 +262,7 @@ acgggccagc atgagttttg accgttggaa aaaggcaggg ggaatgtggc acctccgggt
 gtgttatagc cccttgtcac acacggcggt tgggattgag gattcagcac gcttctgttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtgttaaa cccatgcgcg taatgaaag
->AF518664.1 Uthatobasidium fusisporum strain HHB-102155-sp. 25S large subunit ribosomal RNA gene, partial sequence
+>Thanatephorus fusisporum AFTOL ID 611
 caaggattcc cctagtaac- gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgcattccgt ccgagttgta gtctagagaa gcgtcatccg cgccggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccggtgct
@@ -274,7 +274,7 @@ acgggccagc atggatttcg accgacggaa aaaggcttgg ggaatgtggc acctccgggt
 gtgttatagc ccctcgtcac acgcgtcggc cgggatcgag gcctcagcac gcttcagttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtggaaaa cccgagcgcg caatgaaag
->DQ898730.1 Botryobasidium simile isolate GEL2348 25S large subunit ribosomal RNA gene, partial sequence
+>Botryobasidium simile GEL2348
 ------ttcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 ctttggccgt ccgagttgta gcctagagaa gtgttttccg cggcggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac ccccgtcgcc
@@ -286,7 +286,7 @@ acgggccagc gtcgattttg gccggcggat aagggtcgga ggaatgtggc tcctcacgga
 gtgttatagc ctctggtcgt acacgtcggc tgggatcgag ctcgcaccac gcctctgtgg
 tgccc--gcg ctggcgtaat ggctttgacc gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtggaaaa cccgggcgcg taatgaaag
->AY745694.1 Clavulina sp. MB03-034 25S large subunit ribosomal RNA gene, partial sequence
+>Clavulina sp. AFTOL ID 667
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggtaa
 ctttggttgc ccgaattgta atctagagaa gcgttttccg tgctggactg tgtacaagtt
 tcctggaacg gaacatcata gagggtgaga atcccgtcct tgacacagac tcccagcact
@@ -298,7 +298,7 @@ acgggccagc gtccatgttg tttgccggaa aaggggtgag agaatgtggc tccttcggga
 gtgttatagc ttttgctcgt atgcggggaa tgatatggag tgtacagcac acttcggtgg
 tgctt--gtg ctggcataat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtggaaaa cccgggcgcg taatgaaag
->AY700199.1 Hydnum albomagnum isolate AFTOL-ID 471 25S large subunit ribosomal RNA gene, partial sequence
+>Hydnum albomagnum AFTOL ID 471
 caaggattcc cctagtaacg gcgagtgaag cgggatgagc tcaaatttaa aatctggtag
 ctttgactgc ccgagttgta atctagagaa gtgttttctg tgctggactg tgttcaagtt
 tcctggaatg gaacatcata gagggtgaga atcccgtcct tgacacagac ttccagtgct
@@ -310,7 +310,7 @@ atgggccagt gttcatgttg attgctggaa aaggggttag ggaatgtggc tcttttggga
 gtgttataac cttggctcat atacagtaat taatatggag tatacagcat gcttcggtgg
 tgctt--gtg ctggcataat ggctttaaat gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcaagtattt gggtgataaa cccgagtgcg taatgaaag
->HQ424243.1 Ceratobasidium ramicola strain Java-11 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium ramicola Java-11
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
@@ -322,7 +322,7 @@ acgggccagc atgaatttcg gccggtggaa aaagatttgg ggaatgtggc accctcgggt
 gtgttatagc cccttgtcag atacactggc tgggattgag gtcttagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtggaaaa cccgagcgcg aaatgaaag
->HQ424241.1 Thanatephorus theobromae strain Sulawesi-11 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium theobromae Sulawesi-11
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagtatcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
@@ -334,7 +334,7 @@ acgggccagc atggattttg accggcggaa aagggcttgg ggaatgtggc acctccgggt
 gtgttatagc cccttgtcgt acacgtcgat tgggatcgag gtttcagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaagc gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtgaaaaa cccgagcgca taatgaaag
->HQ424242.1 Thanatephorus theobromae strain Sulawesi-10 28S ribosomal RNA gene, partial sequence
+>Ceratobasidium theobromae Sulawesi-10
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagtatcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
@@ -346,7 +346,7 @@ acgggccagc atggattttg accggcggaa aagggcttgg ggaatgtggc acctccgggt
 gtgttatagc cccttgtcgt acacgtcgat tgggatcgag gtttcagcac gcttcggttg
 tgctttgatg ctggcgtaat ggctttaagc gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtgaaaaa cccgagcgca taatgaaag
->AY586640.1 Byssomerulius corium 28S ribosomal RNA gene, partial sequence
+>Byssomerulius corium KHL8593
 caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
 ctttggtcgt ccgagttgta ttctagagaa gcgttttccg cgctggaccg tgtacaagtc
 tcttggaata gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -358,7 +358,7 @@ acgggccagc atcagttttg accgcaggaa aaaggccagg gaaatgtggc accttcgggt
 gtgttatagt ccttggttgt atactgtgat tgggactgag gtctcagcac gcttttgttg
 tgcttagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacaaacct gcgagtgttt gggtggtaaa cccgagcgcg caatgaaag
->KX752606.1 Ceriporia sordescens voucher Otto Miettinen 15492.2 (H) small subunit ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and large subunit ribosomal RNA gene, partial sequence
+>Ceriporia sordescens Otto Miettinen 15492.2 (H)
 caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
 ctttggccgt ccgagttgta gtctagagaa gcgtcttccg cgctggaccg tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -370,7 +370,7 @@ acgggccagc atcagtttcg actgcaggag aaaggtcgga ggaatgtggc accttcgggt
 gtgttatagc ctctgactgc atactgtggt tgggactgag gactcagcac gtgcaa-ctg
 tgcttagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggcaaa cccgagcgcg taatgaaag
->LN611130.1 Phlebia sp. FBCC296 genomic DNA sequence contains ITS1, 5.8S rRNA gene, ITS2 and 28S rRNA gene, strain FBCC296
+>Phlebia sp. FBCC296
 caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
 ctttggctgt ccgagttgta gtctggagaa gcgtcttccg cgctggaccg tgtacaagtc
 tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -382,7 +382,7 @@ acgggccagc atcacttttg gttgcgggat aaaggtcgca ggaatgtggc accttcgggt
 gtgttatagc ctgtgattgc ataccgtggc cgggagtgag gactcagcac gcatt-gttg
 tgctcagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggtaaa cccgagcgcg taatgaaag
->LN611121.1 Phlebia sp. FBCC427 genomic DNA sequence contains ITS1, 5.8S rRNA gene, ITS2 and 28S rRNA gene, strain FBCC427
+>Phlebia sp. FBCC427
 caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
 ctttggctgt ccgagttgta gtctggagaa gcgtcttccg cgctggaccg tgtacaagtc
 tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -394,7 +394,7 @@ acgggccagc atcagtttcg gctgcgggac aaaggccaga ggaatgtggc accttcgggt
 gtgttatagc ctctggtcat ataccgtggc tgggactgag gtctcagcac gcctttttcg
 tgcttagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggaaaa cccgagcgcg taatgaaag
->LN611120.1 Phlebia subserialis genomic DNA sequence contains ITS1, 5.8S rRNA gene, ITS2 and 28S rRNA gene, strain FBCC426
+>Phlebia subserialis FBCC426
 caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggtag
 ctttggctgc ccgagttgta atctggagaa gcgctttccg cgctggaccg tgtacaagtc
 tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -406,7 +406,7 @@ acgggccagc atcacttttg gctgcgggaa aaaggtcaga ggaatgtggc accttcgggt
 gtgttatagc ctctggctgt ataccgtggc tgggagtgag gattcagcac gccttcttcg
 tgcttagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggaaaa cccgagcgcg taatgaaag
->JN710564.1 Junghuhnia sp. 3 OM-2011 isolate X232 internal transcribed spacer 1, partial sequence; 5.8S ribosomal RNA gene and internal transcribed spacer 2, complete sequence; and 28S ribosomal RNA gene, partial sequence
+>Junghuhnia sp. X232
 caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggtag
 ccttggttgc ccgagttgta gtctggagaa gcgttttctg tgctggaccg tgtacaagtc
 tcttggaata gagcgtcata gagggtgaga atcccgtctt tgacacggat tgccagtgct
@@ -418,7 +418,7 @@ acgggccagc atcagttttg gtcgttggaa aaagattttg ggaatgtggc accttcgggt
 gtgttatagc ccatagtcat atacaatggc cgggactgag gtctcagcac gctctg-ttg
 tgcttagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggaaaa cccgagcgcg taatgaaag
->DQ915475.1 Burgoa verzuoliana strain ATCC 24040 25S large subunit ribosomal RNA gene, partial sequence
+>Burgoa verzuoliana ATCC 24040
 caaggattcc cctagtaacg gcgagtgaag cgggatgagc tcaaatttaa aatctggtgt
 ctttgggcat ccgagttgta gtctagagaa gcattttccg tgtcggacca tgtacaagtc
 tcctggaacg gagcgtcata gagggtgaga atcccgttct tgacatggac ccccgatgct
@@ -430,7 +430,7 @@ acgggccaac gtcaatgtta accgctggaa aaaggtgtag ggaatgtggc tctttcggga
 gtgttatagc cctatgtcat atgcagtggt cgatattgag ttaacagcac gctttt-tgg
 tgctt--gtg ttggcataat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgtct gcgagtgttt gggtggtaaa cccgagcgcg gaatgaaag
->GU187607.1 Ceraceomyces sublaevis CFMR:FP-101245 28S large subunit ribosomal RNA gene, partial sequence
+>Ceraceomyces sublaevis CFMR:FP-101245
 caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctgacgg
 ttttggccgt tcgagttgta gtctagagaa gtgtcttccg cgccggaccg tgtacaagtc
 tcttggaaca gagcgtcaca gagggtgaga atcccgtctt tgacgcggac taccggtgct
@@ -442,7 +442,7 @@ acgggccagc atcagttttg accgcgggac aaaggtcgag ggaatgtggc accttcgggt
 gtgttatagc cctcggctgt atgccgtgat tgggactgag gactcagcac gcatctgctg
 tgcttagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacaaacat gcgagtgttt gggtggaaaa cccgagcgcg caatgaaag
->KP135277.1 Ceraceomyces americanus strain FP-102188 28S ribosomal RNA gene, partial sequence
+>Ceraceomyces americanus FP-102188
 ------ttcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
 ctttggctgt ccgagttgta gtctggagaa gcgttttccg tgctggaccg tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -454,7 +454,7 @@ acgggccagc atcagttttg gctgcaggat aaaggccaga ggaatgtggc accttcgggt
 gtgttatagc ctctagtcat atactgtggc tgggactgag gtctcagcac gcctttttcg
 tgcttagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggaaaa cccgagcgcg taatgaaag
->KP135279.1 Rhizochaete radicata strain FD-123 28S ribosomal RNA gene, partial sequence
+>Rhizochaete radicata FD-123
 -----attcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
 ctttggctgt ccgagttgta atctggagaa gcgttttccg cactggaccg tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -466,7 +466,7 @@ acgggccagc atcagttttg gctgcgggat aaagatgaga ggaatgtggc atcttagggt
 gtgttatagc ctttgatcat ataccgcggc tgggactgag gtctcagcac gcctttttcg
 tgcttagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggaaaa cccgagcgcg taatgaaag
->KP135250.1 Phanerochaete pseudomagnoliae strain PP25 28S ribosomal RNA gene, partial sequence
+>Phanerochaete pseudomagnoliae PP25
 -------tcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
 ctttggctgt ccgagttgta atctggagaa gcgtcttccg cgctggaccg tgtacaagtc
 tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -478,7 +478,7 @@ acgggccagc atcacttttg gctgcgggaa aaagatcaga ggaatgtggc accttcgggt
 gtgttatagc ctctggttgt ataccgtggc tgggagtgag gtctcagcac gccttattcg
 tgcttagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggaaaa cccgagcgcg taatgaaag
->KP135280.1 Rhizochaete sp. FP-150712 28S ribosomal RNA gene, partial sequence
+>Rhizochaete sp. FP-150712
 ---------c cctagtaact gcgagtgaac cgggaaaagc tcaaatttaa aatctggcag
 ctttggctgt ccgagttgta atctggagaa gcgtcttccg cgctggaccg tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -490,7 +490,7 @@ acgggccagc atcagttttg gctgcgggat aaagatcaga ggaatgtggc accctcgggt
 gtgttatagc ctttggtcat ataccgcggc tgggactgag gtctcagcac gcctttttcg
 tgcttagatg ctggcgtaat ggctttaaac gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggtaaa cccgagcgcg taatgaaag
->JX968282.1 Conocybe singeriana strain WU22129 28S large subunit ribosomal RNA gene, partial sequence
+>Conocybe singeriana WU22129
 ---------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggctg
 ctttggcagt ccgagttgta atctagagaa gtgctatccg cgttggaccg tgtacaagtc
 tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -502,7 +502,7 @@ acgggtcagc atcaattttg atcattggaa aaagttcaga ggaatgtggc atcttcggat
 gtgttatagc ctctgttcgc atacaatggt tgggattgag gtctcagcac gccgcattcg
 tgcttagatg ctggcataat ggctttaatc gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggaaaa cccaagcgcg caatgaaag
->JX968346.1 Conocybe velutipes strain NL-2187 28S large subunit ribosomal RNA gene, partial sequence
+>Conocybe velutipes NL-2187
 ---------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
 ctttggccgt ccgagttgta atctagagaa gtgttatccg cgttggaccg tgtacaagtc
 tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -514,7 +514,7 @@ acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcgggt
 gtgttatagc ctctgttcgc atacaatggt tgggattgag gtctcagcac gccgcattcg
 tgcttagatg ctggcataat ggctttaatc gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggaaaa cccgagcgcg taatgaaag
->JX968340.1 Conocybe microrrhiza strain NL-2180 28S large subunit ribosomal RNA gene, partial sequence
+>Conocybe microrhiza NL-2180
 ---------- -------act gcgagtgaag tgggaaaagc tcaaatttaa aatctggcgg
 ctttggccgt ccgagttgta atctagagaa gtgttatccg cgttggaccg tgtacaagtc
 tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -526,7 +526,7 @@ acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcgggt
 gtgttatagc ctctgttcgc atacaatggt tgggattgag gtctcagcac gccgcattcg
 tgcttagatg ctggcataat ggctttaatc gacccgtctt gaaacacgga ccaaggagtc
 taacatgctt gcgagtgttt gggtggaaaa cccgagcgcg taatgaaag
->JX968293.1 Conocybe leporina strain NL-2380 28S large subunit ribosomal RNA gene, partial sequence
+>Conocybe leporina NL-2380
 ---------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
 ctttggccgt ccgagttgta atctagagaa gtgttatccg cgttggaccg tgtacaagtc
 tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -538,7 +538,7 @@ acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcgggt
 gtgttatagc ctctgttcgc atacaatggt tgggattgag gtctcagcac gccgcattcg
 tgcttagatg ctggcataat ggctttaatc gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggaaaa cccgagcgcg taatgaaag
->JX968281.1 Conocybe inopinata strain WU27544 28S large subunit ribosomal RNA gene, partial sequence
+>Conocybe inopinata WU27544
 ---------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggctg
 ctttggcagt ccgagttgta atctagagaa gtgctatccg cgttggaccg tgtacaagtc
 tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
@@ -550,7 +550,7 @@ acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcggat
 gtgttatagc ctctgtccgt atacaatggt tgggattgag gtctcagcac gccgcattcg
 tgcttagatg ctggcataat ggctttaatc gacccgtctt gaaacacgga ccaaggagtc
 taacatgcct gcgagtgttt gggtggaaaa cccaagcgcg taatgaaag
->FJ212349.1 Sclerotium hydrophilum strain CBS 201.27 28S ribosomal RNA gene, partial sequence
+>Sclerotium hydrophilum CBS 201.27
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -562,7 +562,7 @@ acgggccaac atgaatttcg accggtggaa aaaggcagag ggaatgtggc a-ctccgggt
 gtgttatagc cctttgtcag acacgccggt tgggattgag g--------- ----------
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------- ---------- ---------
->FJ212350.1 Sclerotium hydrophilum strain CBS 385.63 28S ribosomal RNA gene, partial sequence
+>Sclerotium hydrophilum CBS 385.63
 ccaggatttc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact

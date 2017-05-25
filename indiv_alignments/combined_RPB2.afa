@@ -1,4 +1,4 @@
->E14504F-RPB2 
+>E14504F
 aaaaacttgg cgttaatgtc gtgcatatcc gtcgggtctc tgtccgaatt cttggaggaa
 tgggggctgg aaagcctcga ggagaatgcc ------agca gctctcaacc aaggtcttcg
 tcactggctc gggatccatc gcaatgcacc cgtcctggtg aaaacactac atcggctccg
@@ -9,7 +9,7 @@ tcgatttaca cagacgctgg ccgcgtctgc cgcccgctat tcatcg---- ----------
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------
->DQ301727.1 Ceratobasidium sp. CBS 700.82 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Rhizoctonia solani CBS 700.82
 cggggcctat cgttgatgtn gtgcntctcn gttggatctt tgtctgagtt tttggaagag
 tggggcttgg agagcctaga agagaacgtg gcaaccggca actctcgacc aaagtctttg
 tgactggctc ggtattcacc gcgacgctcc taacttggtc aaaaccctac accgattacg
@@ -20,7 +20,7 @@ atcgatactt gacgcagaac tgttatgatc agcatgactc ccgaggatct cgagaactca
 aggcgtatag agggggtatg tttccaacgt gaacgatccc gattgggatc -atctggcac
 cgcgcgtgtc aagagtgtac ccaatatcca cacttggaca cattgcgaga ttcatcccag
 catgattctt ggtatttgtg cgagcatca
->DQ301747.1 Thanatephorus cucumeris strain CBS 206.84 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus sasakii CBS 206.84
 aatgatctag cacagatgcc gagaatcata ctggggtgaa tttcgcagtg tgtccaagta
 tgaatattgg gtacactctt gacgcgtgcc gttccagatg gatcccaatc aggatcgttg
 acattggaga catatccgcc tcgatacgtc catactaatc atgactcttc ttcatcagca
@@ -31,7 +31,7 @@ gacaatacta acttccgaat tgatatggtc catgcgccgc gcggtggtct tgcaggttag
 gagcgtcgcg atgaataccg agccaaacgc cattgacaaa tactttggtc cgccggtcgc
 cacattctct tccaaactct ccaaacccca ttcctcaact cgatgagata aggatccaac
 agatatgcat gacatcaacg acaggtttt
->DQ301730.1 Thanatephorus cucumeris strain CBS 140.82 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus sasakii CBS 140.82
 aaaaacctat cgctgatgtc atgcatctct gttggatctt tatctgagtt tttggaggaa
 tggggtttgg agagcctaga agagaatgtg gcaaccggca actctcgact aaagtgtttg
 tcactggctc ggcatccatc gcgacgctcc caacctagtc aagacgttac accgcttgcg
@@ -42,7 +42,7 @@ attgatgctt gacgcggaac tgtaatgatc agtatgactc ccgaggatct cgagaactcg
 agacgtatcg aggggatatg tctccaatgt taatgatcct gattgggatc catctggcac
 ggcacgcgtc aagagtgtac ccaatatcca cacctggaca cactgcgaaa ttcaccctag
 catgatcctt ggcatttgtg cgagcatta
->DQ301748.1 Thanatephorus cucumeris strain CBS 207.84 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus sasakii CBS 207.84
 aataatctcg cacaaatgcc aaggatcatg ctagggtgaa tttcgcagtg tgtccaggtg
 tggatattgg gtacactctt gacgcgtgcc gtgccagatg gatcccaatc aggatcatta
 acattggaga catatccgcc ccgatacgtc catactnatc attactcctc ttcgtccgcg
@@ -53,7 +53,7 @@ aacaatgcta acttccgaat tgatatggtc catgcgccgc gcggtggtct tgtaggttgg
 gagcgtcgcg atggatgccg agccagacac cattgacaaa cactttagtc cgccggttgc
 cacattctct tctaggctct ccaaacccca ttcctcaact cgataagata aagatccaac
 agagatgcat gacatcagcg ataggtatt
->DQ301751.1 Thanatephorus cucumeris strain CBS 523.96 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus sasakii CBS 523.96
 aataatctcg cacaaatgcc aaggatcatg ctagggtgaa tttcgcagtg tgtccaggtg
 tggatattgg gtacactctt gacgcgtgcc gtgccagatg gatcccaatc aggatcatta
 acattggaga catatccgcc ccgatacgtc catactgatc attactcctc ttcgtccgcg
@@ -64,7 +64,7 @@ aacaatgcta acttccgaat tgatatggtc catgcgccgc gcggtggtct tgtaggttgg
 gagcgtcgcg atggatgccg agccagacac cattgacaaa cactttagtc cgccggttgc
 cacattctct tctaggctct ccaaacccca ttcctcaact cgataggata aagatccaac
 agagatgcat gacatcagcg atagg----
->DQ301755.1 Thanatephorus cucumeris strain SJ07 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus cucumeris SJ07
 aataatcttg cgcaaatacc gaggatcatg ctggggtgaa tctcgcaatg cgtccaagtg
 tggatgttgg gtacactctt gacacgtgct gtgccagacg gatcccaatc agggtcgttg
 acgttggata catacccgcc tcgatacgtc catgctaatc ataactcttc ttcgtccgca
@@ -75,7 +75,7 @@ aacgatgcta acttcagagt tgatgtgatc catacgtcgt tcgatggtct tgcagattag
 gagcgtcgcg gtgaatacca agccagacac cgttaacgaa tactttggtt cgccggtcgc
 cacgttctct tccaagctct ctagacccca ttcctcaact cgatgggata gcgacccaac
 agaaatgcaa gacatcaatg agagatttc
->DQ301734.1 Thanatephorus cucumeris strain AG-22IV RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus cucumeris SA1-1
 aataatctcg cgcaaatacc aaggatcatg ctggggtgga tctcacaatg cgtccaagtg
 tggatgttgg gtacactctt gacgcgtgct gtgccagacg gatcccaatc agggtcattg
 acgttggaca catacccgcc tcgatacgtc catgctaatc ataactcttc ttcgtccgca
@@ -86,7 +86,7 @@ aacgatgcta acttcagagt tgatgtgatc catacgtcgt tcgatggtct tgcagattgg
 gagcgtcgcg gtgaataccg agccagacac cgttaacnaa gactttggtt caccggtcgc
 cacgttctct tccaaactct ctagacccca ttcctcaact cgatgggata gcgacccaac
 agaaatgcaa gacatcaatg agagatttc
->DQ301749.1 Thanatephorus cucumeris strain CBS 208.84 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Rhizoctonia solani CBS 208.84
 ------ctgt cgttgatgtc ttgcatttct gttgggtcac tctctgagtt tttggaggag
 tggggcctgg agagtttgga ggagaatgtg gcaaccggca actctcgacc aaagtgtttg
 ttactggctt ggtattcacc gtgacgcacc taatctggtc aagacattgc atcgattgcg
@@ -97,7 +97,7 @@ atcgatgctc gacgcggaac tgtcatgatt agcatgactc ccgaagatct cgagaactcg
 agacgtatcg aaggggtatg tgtccaacgt taacgatcct gattgggatc -gtctggcac
 agcgcgtgtc aaaagtgtac ccaatatcca cacctggacg cattgcgaga ttcaccccag
 tatgatactt ggtatctgcg caagcatca
->DQ301735.1 Thanatephorus cucumeris strain AG-3 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus cucumeris Rhs1AP*
 aataatcttg cgcaaatacc aaggatcata ctagggtgga tctcgcaatg cgtccaagtg
 tggatgttgg gtacactctt gacacgcgct gtgccagacg ggtcccaatc aggatcattg
 atgttggata tgtatccacc tcgatacgtc catgctaatc atgactcttc ttcgtccgcg
@@ -108,7 +108,7 @@ aacaatgcta acttccgaat tgatgtggtc catacgccgt tcgatggtct tgcaggttag
 gggcgtcgcg gtgaatacca agccagacac cattgacaaa cactttggtc caccggttgc
 cacattttcc tccaaactct ccagccccca ttcctcaact cgataggata gcgacccaac
 agaaatgcaa gacatcaacg acaggtttc
->DQ301746.1 Thanatephorus cucumeris strain CBS 200.25 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus cucumeris CBS 200.25
 aataatcttg cgcaaatacc aaggatcata ctagggtgga tctcgcaatg cgtccaagtg
 tggatgttgg gtacactctt gacacgcgct gtgccagacg ggtcccaatc aggatcattg
 atgttggata tgtatccacc tcgatacgtc catgctaatc atgactcttc ttcgtccgcg
@@ -119,7 +119,7 @@ aacaatgcta acttccgaat tgatgtggtc catacgccgt tcgatggtct tgcaggttag
 gggcgtcgcg gtgaatacca agccagacac cattgacaaa cactttggtc caccggttgc
 cacattttcc tccaaactct ccagccccca ttcctcaact cgataagata gcgacccaac
 agaaatgcaa gacatcaacg acaggtttt
->DQ301754.1 Thanatephorus cucumeris strain SJ02 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus praticola SJ02
 ---------- ---------- ---------- ---------- -----gagtt tttggaggag
 tggggcctgg agagtcttga agaaaatgtg gctactggca attcccaacc aaagtatttg
 tcactggctt ggtattcacc gtgacgctcc taacctggtc aagacgttgc atcggcttcg
@@ -130,7 +130,7 @@ atcgatactc gacgcggaac tgttatgatt agcatgactc cggaagatct cgagaactcg
 aggcgcatcg aggggatacg tgtccaatgt taatgatcct gattgggatc cgtctgggac
 agcgcgcgtc aagagtgtgc ccaacattca tacttggacc cattgcgaaa ttcaccccag
 catgatcctc ggcatttgcg cgagcatta
->DQ301736.1 Thanatephorus cucumeris strain AG-4HGI RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus praticola AH-1
 aataatctgg cgcaaatgcc aaggatcatg ctggggtgaa tttcgcaatg ggtccaagta
 tgaatgttgg gcacgctctt gacgcgcgct gtcccagacg gatcccaatc aggatcatta
 acattggaca cgtatccacc tcgatacgcc catgctaatc ataactcttc ttcgtcagcg
@@ -141,7 +141,7 @@ aacgatgctg acttccgaat tgatgtggtc catacgccga ccgatggtct tgcaggttag
 gagcgtcacg gtgaatacca agccagacac cgttgacaaa tactttggtt cgccagtagc
 cacattttct tcaagactct ccaggcccca ctcctcaact cgatgagata atgacccaac
 ggaaatgcag gacatcaatg acaggtacc
->DQ301738.1 Thanatephorus cucumeris strain AG-4HGIII RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus praticola 187-Rs
 ---------- -gttgatgtc ttgtatatct gttgggtcac tatctgagtt cttggaagag
 tggggcctgg aaagtctgga ggaaaacgtc gcaaccggca attctcgact aaagtattcg
 ttattggctt ggtatccacc gcgacgctcc taatctagtc aagacattgc atcgactgcg
@@ -152,7 +152,7 @@ atcgatactc gatgccgaac cgtcatgatc agtatgaccc ccgaagacct cgagaattca
 aggcgtattg aggggatacg tatctaatgt caatgacccc gattgggatc cgtctggcac
 agcacgtgtt aagagtgtac ccaacatcca cacttggacc cattgcgaaa ttcatcccag
 catgatcctt ggtatctgtg cgagtatta
->DQ301737.1 Thanatephorus cucumeris strain AG-4HGII RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus praticola Rh-165
 aataatctcg cacaaatacc gaggatcatg ctggggtgaa tttcgcaatg ggtccaagtg
 tggatattgg gcacactctt gacacgcgct gtgccagacg gatcccaatc aggatcattt
 acattggaca cgtatccacc tcgatgcgtc catgctgatc ataactcttc ttcgtcagcg
@@ -163,7 +163,7 @@ aacgatgctg acttctgaat tgatgtggtc catacgccta ccgatggtct tgcagattgg
 gggcgtcacg gtgaatacca agccagacac cgttgacaaa cactttggtt cgccagttgc
 cacattttct tcaagactct ccaggcccca ctcctcaact cgatgagata atgacccgac
 agatatgcaa gacatcaacg acagttcta
->DQ301739.1 Thanatephorus cucumeris strain AG-5 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Rhizoctonia sp. GM 10
 gaaaacttgt cgctgatgtc ttgtatttct gttggctcac tatctgagtt cttggaagaa
 tggggtctgg agggtttaga ggaaaatgtg gcgactggta actctcgacc aaagtattcg
 tcactggctt ggtattcatc gcgatgctcc taatctggtg aagacactgc accggttacg
@@ -174,7 +174,7 @@ attgatgctc ga-gcggaac tgtcatgatt agcatgactc ccgaagatct cgagaactcg
 agacgtactg agggggtaca tgtctaatgt taatgatcct gattgggatc tgtctggtac
 agcgcgcgtc aagagtgtac ccaacatcca cacttggaca cattgtgaaa ttcaccctag
 catgatcctc ggtatttgtg caagcatta
->DQ301740.1 Thanatephorus cucumeris strain AG-6HGI RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Rhizoctonia sp. OHT-1-1
 aataatctcg cacatatacc gaggatcatg ctgggatgga tttcgcaatg cgtccaggtg
 tggatgttgg gtacactctt cacgcgcgct gtgccagatg ggtcccaatc aggatcatta
 acgttggaaa catatccgcc tcgatacgcc catgctgatc atgactcttc ttcctccgcg
@@ -185,7 +185,7 @@ aacaatgctg acttccgaat tgatgtggtc catacgtcgt tcggtggtct tgaagattgg
 gtgcgtcacg atgaatacca agccagacgc cgttgacaa- ---------- ----------
 ---------- ---------- ---------a cacct----- ---------- ----------
 ---------- ---------- ---------
->DQ301741.1 Thanatephorus cucumeris strain AG-7 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Rhizoctonia sp. 76Rs
 aatgatctcg cacaaatacc aaggatcatg ctagggtgaa tttcacaatg tgtccaagtg
 tggatgttgg gtacactctt gacgcgcgct gtaccagaca tgtcccaatc aggatcatta
 acattagaca tgtacccgcc gcagtacgtc catgctaatc atgactcctc ttcgtccgcg
@@ -196,7 +196,7 @@ aacaatgcta acttcagagt tgatgtggtc catacgtcgt ccggtggtct tccagattag
 gagcatcgcg atgaatacca agccagacac cattgacgaa tactttggtc caccagtcgc
 cacattttcc tctaaaccct ccagacccca ttcttcaact cgatgggata aggaaccaac
 agaaatgcaa gacatcaacg acagatc--
->DQ301744.1 Thanatephorus cucumeris strain CBS 101.782 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus sp. CBS 101782
 ggtgagctgt cgttcatgtc ttgc-tttct gttgggtcgc tatcgcagtt tt--ggagag
 tggggtctag a-agcttgga ggagaatgtg gcaaccggca actctccacc aaagtatttg
 -cactgggtt g--attcacc gtgaccctcc ---ttcggtc aaacc--tgc -tctattacc
@@ -207,7 +207,7 @@ atcgatgctc gacacggaac tgttatgatt accatgactc ctgaagatct cgagaactcg
 agacgtatcg aggggatatg tgtcccacgt tgatgactct gattgggatc cgtctggcac
 agagcgtgtc attagtgtac ccaacatcca cacttggacg cattgcgaaa tccaacgcca
 tgtgatcctt ggtatttgcg accgcatca
->DQ301742.1 Thanatephorus cucumeris strain AG-9 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Rhizoctonia solani S-21
 aatgatcttg cgcagatacc aagtatcatg ctggggtgaa tctcgcaatg cgtccaagtg
 tggatattgg gtacactttt gacacgcgct gtgccagacg gatcccaatc aggatcgtta
 acgttggaca catatccgcc tcgatacgtc catgctaatc atgactcttc ttcttccgcg
@@ -218,7 +218,7 @@ aacaatgcta acctccgagt taatgtggtc catacgccgt tcgatggtct tgcagattag
 gagcgtcacg atgaataccg agccagacgc cattgacaaa aa-------- ----------
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------
->DQ301752.1 Thanatephorus cucumeris strain CBS 970.96 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Rhizoctonia solani CBS 970.96
 aatgatcttg cgcagatacc aagtatcatg ctggggtgaa tctcgcaatg cgtccaagtg
 tggatattgg gtacactttt gacacgcgct gtgccagacg gatcccaatc aggatcgtta
 acgttggaca catatccgcc tcgatacgcc catgctaatc atgactcttc ttcttccgcg
@@ -229,7 +229,7 @@ aacaatgcta acctccgagt taatgtggtc catacgccgt tcgatggtct tgcagattag
 gagcgtcacg atgaataccg agccagacgc cattgacaaa aactttggtc cgccggttgc
 cacattctcc tccaaactct ccaggcccca ttcctcaatt cgataggaga gagacccaac
 agaaatgcaa gacatcaacg acaggtttt
->DQ301750.1 Thanatephorus cucumeris strain CBS 346.84 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Rhizoctonia solani CBS 346.84
 aataatcttg cgcaaatacc aaggatcata ctagggtgaa tctcgcaatg tgtccaagtg
 tggatgttgg gtacactctt gacacgcgct gtaccagacg gatcccaatc aggatcattg
 acgttggaca catatccgcc tcgatacgtc catgctaatc ataactcttc ttcttccgcg
@@ -240,7 +240,7 @@ aacaatgcta acttccgaat tgatgtggtc catacgccgc tcgatggttt tgcagattgg
 gagcgtcgcg gtgaatacca agccagacgc cattaacaaa tactttggtc caccggtcgc
 cacattttcc tccaaactct ccaagcccca ctcttcaact cgataagata gtgaaccaac
 agaaatgcaa gacattaacg acaggtttc
->DQ301695.1 Ceratobasidium sp. AG-A RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum C-538
 cataacttgg ccttgatgtc gtgtatatct gttggatcat tatctgagtt tttggaggag
 tggggactgg aaagtctcga ggagaacgcc ------agtg gatcccgacc aaggtctttg
 tcactggctc ggaatccatc gcaatgcccc ggtccttgtc aaaactctac accgcctacg
@@ -251,7 +251,7 @@ atcgatgctt gatgctgaac ggtcatgatc agtatgacac ccgaagatct cgagtattct
 cgcagaacag aggggttaca tgtctaatgt caacgaccct gattgggatc cttccggcac
 ggcgcgcgtt aagagcgtcc ccaacgttca cacttggact cactgcgata ----------
 ---------- ---------- ---------
->DQ301696.1 Ceratobasidium sp. AG-Ba RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium sp. C-484
 aataatctag cacatatacc caaaatcatg ctgggatgga tctcgcaatg agtccacgtg
 tggatattag gcacactctt gactcgtgca gtacccgatg ggtcccagtc ggggtcgttg
 acgttggaca tatacccacc gcgacgcgcc catactgatc atgactcttc ttcatcggca
@@ -262,7 +262,7 @@ cacgatactg acctcggagt tgatatggtc catgcgacgc ccggtggttt tccaattcgg
 gagcttcacg atggatcccg agccaaacac cgttgacaaa aaccttggtc ca------gt
 tacgttctcc tcaagactct ctagacccca ctcttcaatt cgatgagaca gagagccaac
 agagatacaa gacatcagtg ctaagtctc
->DQ301723.1 Ceratobasidium sp. CBS 569.83 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium globisporum CBS 569.83
 ----acctgg cgctgatgtc ttgcatctct gttggatctc tttctgaatt cctggaggag
 tgggggctgg aaagccttga agagaacgcg ------agca gtcctcaacc aaagtatttg
 tcactggctt ggaatccatc gcgatgctcc caatctggtc aagacattac accgactacg
@@ -273,7 +273,7 @@ attgatactc gatgcggaac tgtgatgatc agcatgacgc cngacgactt ggaaaactcg
 cggcggactg aagggttata tgtcgaacgt caacgatcct gactgggatc cgtccggaac
 cgcgcgcgtc aagagtgtgc ctaatattca cacttggact cattgcgaga tccatccgag
 tatgatttta gggatttgcg ctagcatca
->DQ301697.1 Ceratobasidium sp. AG-B(o) RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum SIR-2
 aatgatctcg cacagatacc taggatcatg ctagggtgaa tctcgcagtg agtccaagta
 tgaacgttgg ggacgctctt gacgcgcgcc gtgccggaag gatcccagtc agggtcgttg
 acattagaca tgtaaccgcc gctgttctgc catgctgatc atgactcctc ttcatcagca
@@ -284,7 +284,7 @@ aacaatgctg acttcggagt taatgtggtc catgcgtcgt gcggtggttt tgaaggacgg
 gggcattgcg atggattccg agccagacac cattgacaaa gaccttggtc cactgg----
 --cgttctcc tcaagacttt ccagtcccca ctcctcaact cgat------ ----------
 ---------- ---------- ---------
->DQ301707.1 Ceratobasidium sp. CBS 132.82 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum CBS 132.82
 gataatctgg cgcaaatccc caaaatcatg ctcggatgga tctcacaatg agtccaggtg
 tggacattag gcacactctt gacacgcgcc gtgccagatg ggtcccaatc aggatcattg
 acgtttgaca tgtacccgcc actgttcttc catgctnatc atcactcctc ttcgtcngcg
@@ -295,7 +295,7 @@ aacgatgcta acttcggagt tgatgtggtc catacgcctc ccgatggttt tggaggttcg
 gagcgtcgcg gtggatcccg agccagacgc cgttgacgaa gaccttggtt cgcttg----
 --cattctcc tccaaactct caaggcccca ttcctcaatt cgatgcgata aggatccaac
 agaaatgcat gacccgagtg cgaggt---
->DQ301719.1 Ceratobasidium sp. CBS 438.80 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum CBS 438.80
 tgatacctcg cactgg-gtc atg-atttcg tgtggatcct tatcggaatt cctagaggaa
 tggggccttg agagtttgga agagaatgca ------agca gcccccaacc aaggtcttcg
 tcactggctc gggatccacc gcgacgctcc gaacctcgtc aaaactcttc atcgattgag
@@ -306,7 +306,7 @@ atcgatattg gacgcagaac cgtgatgatc agcatgacgc ctgacgatct agagaactcg
 agaagaacag aaggggtaca tgtcaaacgt caatgatcct gattgggacc catctggcac
 ggcgcgtgtc aagagtgtgc ctaatgtcca cacctggact cattgtgaga tccatccgag
 catgattttg gggatttgcg ccagtatta
->DQ301699.1 Ceratobasidium sp. AG-E RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium sp. F-18
 gaaaacttgt cgttgatgtc ttgtatttct gtcgggtctt tatccgagtt cctggaggag
 tggggcctgg aaagcctgga ggaaaatgtg gcaaccggta attctcaacc aaagtattcg
 tcactggctt ggtattcatc gtgacgctcc taatttggtc aaaacattgc accgattacg
@@ -317,7 +317,7 @@ attgatgctc gatgcggaac tgttatgatc agcatgactc ccgaagacct cgaaaactcc
 agacgtattg aagggatatg tatctaatgt caatgaccct gattgggatc cgtctgg---
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------
->DQ301711.1 Ceratobasidium sp. CBS 137.82 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum CBS 137.82
 ---------- ---------c ttgtatttgt gtcgggtctt tatctgagtt cctggaggag
 tggggcctgg aaagcctgga ggaaaatgtg gcaaccggta attctcaacc aaagtattcg
 tcactggctt ggtattcatc gtgacgctcc taatttggtc aaaacattgc accgattacg
@@ -328,7 +328,7 @@ attgatgctc gatgcggaac tgttatgatc agcatgactc ccgaagacct cgaaaactcc
 agacgtattg aagggatatg tatctaatgt caatgaccct gattgggatc -gtctggcac
 agcacgcgtc aagagtgtac ccaacattca cacttggacg cattgcgaaa tccaccctag
 tatgatcctt ggcatttgtg caagcatca
->DQ301700.1 Ceratobasidium sp. AG-F RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium sp. AH-6
 aatgatctcg cacaaatacc aaggatcatg ctggggtgaa tttcgcaatg tgtccaagtg
 tggatgttag gtacactctt gacgcgcgct gtgccagatg gatcccaatc ggggtcatta
 acattcgata tatatccacc ccaatacgtc catgctaatc atgactcctc ttcgtctgcg
@@ -339,7 +339,7 @@ aacaatgctg acttccgagt taatgtggtc catacgccgg tcggtggtct tgtaagttag
 gagcgtcacg gtgaatacca agccagacac cgttgacgaa tactttagtc caccggtcgc
 cacattttct tccaagcttt ccaggcccca ctcctcaact cgatcggata atgatccaac
 ggagatgcaa gacatcagcg acaggtgtc
->DQ301701.1 Ceratobasidium sp. AG-G RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium sp. AH-9
 ---------g cattgatgtc gtgcatatct gtcgggtcat tgtccgagtt cttggaggag
 tggggccttg aaagccttga agagaacgcg ------agcg gctcccgacc aaggtcttcg
 tcactggctc ggtattcacc gtgatgcccc taatcttgtc aagacactac accggctgcg
@@ -350,7 +350,7 @@ attgatgctt gacgctgaac tgtgatgatt agcatgacgc ccgaagatct cgaaaattca
 agacgtaccg aagggatata tgtctaatgt caacgaccct gattgggatc -ttctgggac
 ggcacgagtc aagagtgtcc ctaatattca tacttggacc cactgcgaga ttcaccctag
 tatgatccta ggaatctgcg cgagcatta
->DQ301705.1 Ceratobasidium sp. AG-P RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium sp. C-158
 --aaacttgt cattgatgtc ctgcatttcc gttggttcgt tatccgagtt cttggaggag
 tggggtctag agagtttgga ggaaaatgta gcgaccggca actcgcgacc aaagtattcg
 ttactggctc ggcattcacc gcgatgctcc taatttggtc aaaacgttgc accgattacg
@@ -361,7 +361,7 @@ attgatactc gacgcggaac ggtgatgatc agtatgactc cggaagatct cgagaactcg
 aggcgtattg aagggatata tatccaacgt caatgatccc gattgggatc cgtctgggac
 ggcgcgcgtc a--------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------
->KP171657.1 Ceratobasidium sp. AG-Q isolate C-620 RNA polymerase II second largest subunit (Rpb2) gene, partial cds
+>Ceratobasidium sp. C-620
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------- ---------- ---------- -aagtctttg
 tcattggctc ggaattcacc gcgaagctcc cgaactggtc aagaccttgc atcgtctgag
@@ -372,7 +372,7 @@ attgatcttg gatgcggaac agttatgatc agtatgactc ccgatgatct ggagaactca
 cgacgcatcg agggggtata tgtccaacgt taacgatcct gattgggacc cgtcgggcac
 ggcgcgagtc aagagcgtac ccaatatcca tacctggacc ---------- ----------
 ---------- ---------- ---------
->DQ301710.1 Ceratobasidium sp. CBS 136.82 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum CBS 136.82
 gatgatctcg cgcaaatccc aagtatcata ctaggatgaa tttcgcaatg cgtccaagtg
 tgaatgttag gtacgctctt gacgcgcgct gtaccagacg gatcccaatc aggatcattg
 acgttagaca catatccacc ccgatacgtc catgctgatc ataactcctc ttcgtctgca
@@ -383,7 +383,7 @@ gacaatgctg acttccgaat tgatgtggtc catacgccgc ccggtggtct tggagattgg
 gggcatcacg atgaatacca agccagacac cattgacgaa tactttggtc caccggtcgc
 cacattttcc tccagactct ccaaacccca ttcctcaatt cgataagata atgacccaac
 agaaatgcaa gacatcaacg acagatatc
->DQ301713.1 Ceratobasidium sp. CBS 139.82 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum CBS 139.82
 gatgatctcg cgcaaatccc aagtatcata ctaggatgaa tttcgcaatg cgtccaagtg
 tgaatgttag gtacgctctt gacgcgcgct gtaccagacg gatcccaatc aggatcattg
 acgttagaca catatccacc ccgatacgtc catgctgatc ataactcctc ttcgtctgca
@@ -394,7 +394,7 @@ gacaatgctg acttccgaat tgatgtggtc catacgccgc ccggtggtct tggagattgg
 gggcatcacg atgaatacca agccagacac cattgacgaa tactttggtc caccggtcgc
 cacattttcc tccagactct ccaaacccca ttcctcaatt cgataagata atgacccaac
 agaaatgcaa gacatcaacg acagatgtc
->DQ301709.1 Ceratobasidium sp. CBS 135.82 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum CBS 135.82
 aatgatctcg cacaaatacc aaggatcata ctagggtgaa tttcgcagtg cgtccaagtg
 tggatgttag gtacgctctt gacgcgcgcc gtaccagacg gatcccaatc agggtcatta
 acattggata tgtatccacc acaatacgtc catactaatc atgactcttc ttcgtccgcg
@@ -405,7 +405,7 @@ aacaatgctg acttcggaat tgatgtgatc catacgccgt tcggtggttt tgcaaattgg
 gggcgtcacg atgaatgcca agccagacgc cgttgacgaa tactttggtc cgccggtcgc
 cacattttcc tccagactct ccagacccca ctcctcaatt cgataagata atgatccgac
 ggaaatgcaa gacatcaatg acaagtc--
->DQ301720.1 Ceratobasidium sp. CBS 476.82 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum CBS 476.82
 ---------- ------tgtc atgcgtttcg ggtggatcgt tgtcgga-tt cttggaggag
 tggggattgg agagtcttga agaaaatgtg gcgacgggta actctcgact aaagtgttcg
 tcactggctt ggtattcacc gtgacgcccc caatcttgtc aagacgttgc accgattacg
@@ -416,7 +416,7 @@ atcgatgctc gacgcggaac tgtcatgatt agcatgactc ccgaggatct tgagaactca
 aggcgcatcg agggggtacg tctccaacgt taacgacccc gactgggatc catctggcac
 agcgcgcgtc aagagcgtac ctaacatcca cacctggacg cattgcgaaa ttcatcccag
 tatgattctc ggtatctgtg cgagcatta
->DQ301729.1 Thanatephorus cucumeris strain CBS 293.31 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Thanatephorus sp. CBS 293.31
 tgaaacttat cgttgatgtc ttgcatttcc gttggctcat tgtccgagtt cttggaggaa
 tgggggctag agagtctaga ggagaacgtg gcgaccggta actctcgact aaagtatttg
 ttactggctt ggtattcacc gtgacgctcc taatctggtc aagacactac atcgactacg
@@ -427,7 +427,7 @@ atcgatgctc gatgcggaac tgttatgatt agcatgactc ccgaagatct cgaaaactcg
 agacgcatcg aggggatacg tgtccaacgt taatgatccc gattgggatc cttctggcac
 agcgcgtgtc aagagtgtac ccaacatcca cacttggacg cattgcgaaa tccatcctag
 tatgatcctt ggtatttgcg caagcatta
->DQ301714.1 Ceratobasidium sp. CBS 148.54 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum CBS 148.54
 aatgatctcg cgcaaatccc tagaatcatg ctagggtgga tctcgcaatg agtccaagta
 tggatattcg ggacactctt gactcgcgcc gtcccggatg ggtcccagtc gggatcgttg
 acgttggaca tatatccacc acggtccgcc catgctaatc atcactcctc ttcgtccgca
@@ -438,7 +438,7 @@ aacaatgctg acttcggagt tgatatggtc catgcgccgc ccgatggtct tggagattgg
 gggcatcacg gtgaataccg agccagacgc cgttgacgaa caccttggtc cgcttg----
 --cgttctcc tcaaggctct ccaaccccca ttcctcaatt cgataagaca gggaaccgac
 cgagatgcag gacctcaatg cgag-----
->DQ301724.1 Ceratobasidium sp. CBS 570.83 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium cornigerum CBS 570.83
 ---------- ---------- ------ctcg gtcagctctc tttcggagtt cttggaggag
 tggggcttgg acagtcttga agagaacgtg ------acca accctccacc aaggtctttg
 tcactggctc ggaattcatc gagaggctcc cgagttggtg aagacgttgc atcgactgcg
@@ -449,7 +449,7 @@ atcgattttg gatgcagaac cgtgatgatc agcatgacac ctgacgacct cgagaactcg
 cggcgcattg aggggatata tgtcaaatgt caacgatccc gactgggatc cgtctggtac
 agcacgagtc aagagtgtac ccaatgttca tacctggact cattgcgaaa ttcatcctag
 tatgatcttg ggtatctgtg ctagtatta
->DQ301715.1 Ceratobasidium sp. CBS 154.35 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium noxium CBS 154.35
 aatgatctcg cacagatccc taggatcata ctcggatgga tttcgcagtg cgtccaggta
 tgaacgttag gtacactctt cacccgcgcc gtaccagatg ggtcccaatc ggggtcattg
 acgtttgaca tatatccacc tcggtccgcc catgctaatc atgactcctc ttcgtctgcg
@@ -460,7 +460,7 @@ cactatactg acctcggaat taatgtggtc catccggcgc ccgatggtct tggaggttgg
 gagcatcgcg atggattccg agccagacac cattgacaaa gaccttggtg cactag----
 --cattttcc tccaagctct cgagccccca ttcctcaact cgatgagaca gagacccaac
 agagatacaa gacatcaacg cgag-----
->DQ301725.1 Ceratobasidium sp. CBS 571.83 RNA polymerase II second largest subunit (RPB2) gene, partial sequence
+>Ceratobasidium sphaerosporum CBS 571.83
 ---------- ---------- ---------- ----gatctc tctcggagtt cctggaagag
 tggggtttgg aaagcctcga agagaatgca ------agta gcccccaact aaagtattcg
 tcactggctc ggaatccatc gcgatgctcc caatttggtc aagacgttac accggttgag
@@ -471,7 +471,7 @@ attgatgctt gatgcggaac ggtgatgatc agtatgacgc ccgaggatct ggagaactgg
 cgacggactg aagggagata tgtcgaacgt ggaaaatcgg gactggga-- -accgggtaa
 agaacggggc aacagggaac cgggaatcc- ---------- ---------- ----------
 -gggattcgg aacc------ ---------
->KP171658.1 Rhizoctonia endophytica strain DAOM 138188 RNA polymerase II second largest subunit (Rpb2) gene, partial cds
+>Rhizoctonia endophytica DAOM 138188
 -aaaatttag ccttgatgtc gtgcatatct gttggatcgt tatctgaatt tttggaggag
 tgggggctgg aaagtcttga ggagaatgct ------agtg gatcccgact aaggtcttcg
 tcattggctt gggattcatc gcaacgcccc ggtcctcgtt aaaaccctgc accgtctacg
@@ -482,7 +482,7 @@ attgatgctt gatgctgaac tgtaatgatt agcatgacgc ccgaagatct cgagaattct
 cggcgaacgg agggggtaca tgtctaacgt caatgaccct gactgggatc -ttctgggac
 ggcgcgggtt aagagcgtcc ccaacgttca tacttggact cattgcgaaa tccaccctag
 catgattcta ggcatctgtg cgagcatca
->DQ381842.1 Uthatobasidium fusisporum RNA polymerase II second largest subunit (RPB2) gene, partial cds
+>Thanatephorus fusisporum AFTOL ID 611
 aaaaatctgg cgctaatgtc ctgtatctct gtcggatcnc tttctgagtt cttggaggag
 tgggggctag agagcctcga ggagaacgct ------agca gccctccacc aaagncttcg
 tcattggctt ggaatccatc gcgatgctcc taatctggtc aagacgctgc acaggttgcg
@@ -493,7 +493,7 @@ attgatgctg gatgcggaac tgtgatgatt agcatgacnc ccgatgactt ggagaactcg
 cggcgaaccg aagggataca tgtcgaacgt caacgatcct gactgggatc catctgggac
 tgcgcgagtg aagagtgtac ctaacattca cacatggact cattgcgaga ttcacccaag
 catgattttg gggatctgcg ctagcatta
->DQ381839.1 Tulasnella pruinosa RNA polymerase II second largest subunit (RPB2) gene, partial cds
+>Tulasnella pruinosa AFTOL ID 610
 aagaatctcg ctctcatgtc ctgcatctcc gttggttccc tttccgagtt cttggaggag
 tggggtctcg agccccttga agaacactcc ct------ca acccccaaca aaggtcttcg
 tcattggatg ggcgtccatc gtgacgcgca cgaactcgtc aaaaccctcc gacgtctccg
@@ -504,7 +504,7 @@ atcgatgttg gatgcggaac ggtcatgata tgcatgacgt cagaagatct cgaggcctcc
 gcccgcccga agg----acg agtt---cat ggacgaccct gaattcgatc ---ctgcca-
 --agcgagtc aaagctcaga tgaatgccca tacttggact cactgcgaga tccacccaag
 tatgattctt ggcatctgcg caagcatca
->DQ898770.1 Botryobasidium simile isolate GEL2348 RNA polymerase II subunit (RPB2) gene, partial sequence
+>Botryobasidium simile GEL2348
 aagaatctct ccctcatggc gtgcatttcc gtcggttcgc tatccgagtt cttgcaggag
 tggggtttgg aagggctgga agagaacgcc gcgcaccagg gcaacctaca aaggtcttcg
 tcattggatg ggtatccacc gagatgcccc caatctcgtc aagaccctcc gtcgattacg
@@ -515,7 +515,7 @@ gtggatcttg gatgcggaac ggtcatgatc tgcatgagtt cccaggactt ggaagactca
 cgacagcagt acaggatacg cngcgggtgc tcgcgagacc gagcatgata ---ctggca-
 --cacgagtc aaggctgtca tgaatgcgca cacctggaca cattgcgaga ----------
 ---------- ---------- ---------
->DQ366286.1 Clavulina sp. MB03-034 isolate AFTOL-ID 667 RNA polymerase II second largest subunit (RPB2) gene, partial cds
+>Clavulina sp. AFTOL ID 667
 aaaaatcttt cgcttatggc ctgtatctcg gttggttcta tttctgaatt cctccaggag
 tggggcctcg aaagtcttga ggaaagtgcc ------agcg atcacccacg aaggtattcg
 tgagtggatt ggtgtccatc gcgatgcgcc ttctctcgtt cgaactcttc gtcgcttgcg
@@ -526,7 +526,7 @@ atcgatttta gacgctgaac cgtgatgatc tgtatgacgc ccgatgacct ggangactca
 cgtgcgaatg aggggccacg tttctggagc aggtgcatcg gatcacga-- ----tgttgc
 cgcacgtata cagagcacaa tgcaatctca tgcctggacg cattgcgaga ttcatcccag
 catgatactc ggcatttgtg ccagcataa
->DQ366285.1 Cantharellus cibarius isolate AFTOL-ID 607 RNA polymerase II second largest subunit (RPB2) gene, partial cds
+>Cantharellus cibarius AFTOL ID 607
 aagaatctgt ctctcatggc ttgcatatcc gttggttcaa tctctgaatt cttgcaagag
 tgggggctcg agagtctaga agagaac--- ------agcg ctcacctaca aaagtgttcg
 tgattggtta ggtgtacatc gtgacgctcc caaccttgtc aagactctgc ggcggttgcg
@@ -537,7 +537,7 @@ atcgatgctc gatgcagaac agtcatgatt tgcatgaccc cagatgatct ggagaattc-
 --acgaacta atgggatacg tttccaatgt cggcgcatcg gaccacga-- ----tgtcgc
 agctcgaatc cgtagcacca tgactgcgca tacgtggacc cattgtgaga ttcacccaag
 catgattctg ggcatttgcg ccagcatca
->DQ234553.1 Hydnum albomagnum isolate AFTOL-ID 471 RNA polymerase II second largest subunit (RPB2) gene, partial cds
+>Hydnum albomagnum AFTOL ID 471
 aagaatctct ccctcatggc ttgcatatcc gttgggtcac tttcggagtt ccttcaagaa
 tggggtcttg aaagtctgga agaaaacgca ------aacg cccaccaaca aaggtgttcg
 tcaatggatg ggcgtgcatc gggatgcacc caatctcgtc aagacgcttc gacgcttacg
@@ -548,7 +548,7 @@ atcgatcttg gatgccgaac tgttatgatc tgcatgacgc ctgacgatct cgaaaattcg
 agaactaatc aggggatatg tttcaaatgc tggtgcctct gaccatgat- -----gtagc
 ggttcgcgta cggagcacca tgactgcaca tacttggaca cattgcgaga tccaccctag
 catgatcttg gggatttgcg cgagtataa
->LN611037.1 Phlebia sp. FBCC296 partial RPB2 gene for RNA polymerase II subunit, strain FBCC296
+>Phlebia sp. FBCC296
 caaaacctat cgtcgctatt ctctgctaca gt--ggctac aaccagagct cctgtactac
 cgcagctata tggacctgga gaagaaagcg gcgtacaaca gct------g gaggagttcg
 agaccgacta gggatacact ttgaagcacg cggcctcatc gctccccggt gtcaacggcg
@@ -559,7 +559,7 @@ atcggccttc actgccgacc cgatatcatt agtatgaccc ttggtcgtct gcgaaggtcg
 ctacgatcgt cgggagtccg tctcccagat tctccgtgct gaccatggtc ctccaggcgc
 agaacctact accagcgtct caagcacatg tcgacggatc cactcaggga ggcaacccgt
 cgaaggtcgt agcagnnacg gtggccttc
->LN611031.1 Phlebia sp. FBCC427 partial RPB2 gene for RNA polymerase II subunit, strain FBCC427
+>Phlebia sp. FBCC427
 cagaacccgt tgtcgccatt ctgtgctaca gc--ggctac aatcagagct cctgtattac
 cgcagctaca tggacctgga aaagaaagtg gcgtccagca gct------g gaggagttcg
 agactacgcg cg-acacgct gtgaagcacg cggtctcatc gcccccgggc gtcaacggcg
@@ -570,7 +570,7 @@ atcggcgttc accgcggacc cgacatcatc agcatgacgc ctggtcgtct gcgaaggtcg
 cgacgctcat cgggagagcg tgtccaagtt cctgcagcag gaccacgggc caccgggcgc
 aagacgtact accagcgcct caagcacatg tagacggatc cactccgagg accagtgcag
 atcctcacgc ggcagctgtg -gagggtcg
->KP134934.1 Ceraceomyces americanus strain FP-102188 RNA polymerase II second largest subunit (rpb2) gene, partial cds
+>Ceraceomyces americanus FP-102188
 aaaaacttgt ctctcatggc atgtatctcc gttggctcgc tttccgagtt cttggaggag
 tggggcctgg aatctctgga ggagaacgca -cattcggcg accccc-acg aaggtctttg
 tcactggatg ggtgttcatc gcgatcccgc caacctcgtc aagacgatta agaagctccg
@@ -581,7 +581,7 @@ atagatactg gacgctgaac cgtcatgatc tgtatgaccc ccgaggacct tgatgctncg
 cggttacagc aagggccatg atcctcatac caacgatggc gagttcgact catcgg----
 --cgagattg aaggctgcag cagtcgcaca tttgtacacc cactgcgaga ttcaccctag
 tatgatttta ggtatctgtg cgagtatta
->KP134937.1 Rhizochaete radicata strain FD-123 RNA polymerase II second largest subunit (rpb2) gene, partial cds
+>Rhizochaete radicata FD-123
 aagaacttgt ctctcatggc ttgtatctct gtcggctcac tttccgaatt tttggaggag
 tggggtctag aatctctaga ggagaatgca -cattcggcg acgccc-aca aaggtcttcg
 tcagtggatg ggcgttcacc gtgacccagc caacctcgtc aagacgatta agaagcttcg
@@ -592,7 +592,7 @@ atagatactg gatgccgaac cgtcatgatt tgtatgactc ccgaagatct cgacgctgcg
 cggctacagc acgggtcttg acccccattc caatgacggc gagttcgatc cgtcag----
 --cgagatta aaggctgctc cg-------- -ttgtatacc cattgcgaga ttcacc----
 ---------- ---------- ---------
->KP134956.1 Phanerochaete pseudomagnoliae strain PP25 RNA polymerase II second largest subunit (rpb2) gene, partial cds
+>Phanerochaete pseudomagnoliae PP25
 aagaatctgt cgctcatggc ctgtatctcc gtcggctcca tttctgagtt tctggaagag
 tggggtctcg aatccctgga agagaacgca cattcgagta caccc--acc aaggtgttcg
 tcactggatg ggtgttcacc gcgaccctgc caacttggtc aagacgatca agaagcttcg
@@ -603,7 +603,7 @@ attgatgctg gatgccgaac tgtgatgatc tgcatgacac ctgaggacct tgagaattcg
 cggttacaac agggggattg atcctcatcg tgacgagggc gagttcgacc -gtctg----
 --cgcgattg aagaacttga cgatcgcgca tcaatggaca cattgcgaga tccatcccag
 tatgatcttg ggcatctgcg cgagcatca
->KP192524.1 Tephrocybe striaepilea isolate FR2014091 DNA-dependent RNA polymerase II (RPB2) gene, partial cds
+>Tephrocybe striaepilea BBF:GC0910300
 aaaaatcttg ccctcatggc ctgtatctct gtcggctcct actccgaatt tttagaagaa
 tgggggttag aatctctgga ggagaatgcc ------cact cttccgtacg aaggtgttcg
 tcactggatg ggagtccatc gcgaccccgc aaacctggtg aaaactatca agaaattgcg
@@ -614,7 +614,7 @@ gtcgatcttg gacgcggaac cgttatgatc tctatgactc ccgaggatct cgagaattcc
 cgattgcaac agaatagat- --cctctcgc gaacgatgtg gacttcgacc cagctg----
 --cgcgactt aaagctggca taaattcaca tacgtggaca cattgcgaaa tccacccaag
 catgatcctc ggtatttgtg caagtatca
->KP134936.1 Rhizochaete sp. FP-150712 RNA polymerase II second largest subunit (rpb2) gene, partial cds
+>Rhizochaete sp. FP-150712
 aagaacttat ctctcatggc gtgtatctct gtcggctcac tttctgaatt cttagaagag
 tggggcctgg aatctctgga ggagaacgca -cattcggcg acgccc-acc aaggtcttcg
 ttactggatg ggagttcacc gtgatcctgc caacctcgtc aagacgatta aaaagcttcg

@@ -33,7 +33,7 @@ knitr::opts_chunk$set(message = FALSE)
 # Load the required packages
 list.of.packages <- c("seqinr", "googlesheets", "tidyverse", "httpuv", "rentrez",
                       "ape", "treebase", "ips", "ggtree", "ggtree", "Biostrings",
-                      "msa")
+                      "msa", "phangorn")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 
@@ -208,7 +208,6 @@ for (i in 1:length(gfastas)) {
 }
 ```
 
-
 ```{r reverse complement all sequences}
 # Read in each string to ape as a fasta file
 grfastas <- list()
@@ -252,7 +251,7 @@ for (n in names(grfastas)){
 
 ## Alignments for distance checking
 
-```{r alignment each locus, eval=FALSE}
+```{r alignment each locus}
 #### ALERT !!!
 # This section takes ~ 10 minutes to run
 # Set to eval=FALSE by default
@@ -317,18 +316,18 @@ for (i in names(compdist)) {
 ```
 
 ```{r retrieve the optimal direction for each sequence}
+
+```
+
+Of the regions checked, only TEF1 contained sequences that had reverse complements. I'll make a tree of just LSU and RPB2. Given the variability observed in the RPB2 region, I expect this will sufficiently resolve the tree.
+
+```{r subset to regions of interest}
 # Input regions of interest
 roi <- c("LSU", "RPB2")
 roi <- names(alns) %in% roi
 
 # subset alignment
 alns <- alns[roi]
-```
-
-Of the regions checked, only TEF1 contained sequences that had reverse complements. I'll make a tree of just LSU and RPB2. Given the variability observed in the RPB2 region, I expect this will sufficiently resolve the tree.
-
-```{r subset to regions of interest}
-
 ```
 
 ```{r remove gaps}
@@ -348,20 +347,95 @@ lapply(rmgaps, function(x) image.DNAbin(x, show.labels = FALSE))
 I can't figure out how to add titles in `image.DNAbin()`, but the order is "ITS"  "LSU"  "RPB2" "TEF1" "ATP6". The ITS looks to have a few orgs that might be revcomps, maybe three. I'm not sure how best to identify those and replace them in this format. It looks like the N length is short by ~ 20nt.
 
 ```{r substitution models, eval=FALSE}
+# Get alignment into class pml or phyDat as list inphydat
+inphydat <- list()
+for (i in names(rmgaps)) {
+  temp <- tempfile()
+  ape::write.dna(rmgaps[[i]], format = "fasta", file = temp)
+  inphydat[[i]] <- phangorn::read.phyDat(temp, format = "fasta")
+}
 
+# Check all substitution models for each region
+tests <- lapply(inphydat, function(x) phangorn::modelTest(x, model = "all"))
 
+# Retrieve the best models
+bestmodel <- sapply(tests, function(x) x$Model[which.max(x$logLik)])
+names(bestmodel) <- names(rmgaps)
 ```
 
+The best model for both LSU and RPB2 is GTR+G, therefore I don't have to partition the interleaved dataset.
+
 ```{r individual locus trees, eval=FALSE}
+# Write nexus and phy files for each locus
+
 
 ```
 
 ```{r interleaving, eval=FALSE}
+# Get all names in all alignments
+intnames <- unique(unlist(sapply(rmgaps, rownames)))
 
+# Add a sequence of N's for taxa without that locus
+allns <- list()
+for (i in names(rmgaps)) {
+  # Grab all names NOT in the alignment
+  tmp_names <- intnames[!(intnames %in% rownames(rmgaps[[i]]))]
+  # Create a list of N's for each name equal to alignment length
+  tmp_seqs <-  vector(mode = "list", length = length(tmp_names))
+  for (j in 1:length(tmp_seqs)) {
+    tmp_seqs[[j]] <- rep("n", ncol(rmgaps[[i]]))
+  }
+  # Convert to DNAbin
+  tmp_seqs <- ape::as.DNAbin(tmp_seqs)
+  # Convert to muscle alignment matrix
+  tmp_seqs <- ape::muscle(tmp_seqs)
+  rownames(tmp_seqs) <- tmp_names
+  # Bind to N sequences to that alignment
+  allns[[i]] <- rbind(rmgaps[[i]], tmp_seqs)
+}
+
+# Bind all of the alignments into one
+interleaved <- do.call("cbind", allns)
 ```
 
 ```{r combined tree, eval=FALSE}
+# Create nexus output for mrbayes with GTR+G substitution mode
+mrbayes(interleaved, "bayes/all.nex", nst = 6, rates = "invgamma")
 
+interleaved_rax <- interleaved
+rownames(interleaved_rax) <- gsub(" ", "_", rownames(interleaved_rax))
+rownames(interleaved_rax) <- gsub(":|,|;|\\(|\\)", "_", rownames(interleaved_rax))
+
+# Create phylip output for raxml
+write.phy(interleaved_rax, "raxml/all.phy")
+
+# Write Mr Bayes submission file to move to Grace and run there.
+fileConn <- file("bayes/mrbayes_e14504f_all.sh")
+writeLines(c("#!/bin/bash", 
+             "#SBATCH --ntasks=10 --nodes=1",
+             "#SBATCH --time=12:00:00",
+             "#SBATCH --job-name=mrbayes_e14504f",
+             "#SBATCH --mail-user=daniel.spakowicz@yale.edu",
+             "#SBATCH --mail-type=ALL",
+             "",
+             "# Produced by DS_tree.Rmd",
+             "# Dan Spakowicz",
+             paste("# ", Sys.time(), sep = ""),
+             "# Submission file for the MrBayes analysis of the E14504F tree using the sequencing in the google sheet 'E14504F'",
+             "",
+             "cd /project/fas/gerstein/djs88/e14504f/bayes",
+             "module load Apps/MrBayes/3.2.2",
+             "mpirun mb all.nex"), fileConn)
+close(fileConn)
+
+# Call RAxML (takes ~20 min)
+system({
+  "raxmlHPC-AVX -s raxml/all.phy -m GTRGAMMA -n all_1 -p 12345 -x 12345 -# 100"
+})
+system({
+  "raxmlHPC-AVX -m GTRGAMMA -J MRE -z RAxML_bootstrap.all_1 -n tre"
+})
+?pml
 ```
 
 ## Alternative methods
