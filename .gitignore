@@ -91,3 +91,18 @@ acs-*.bib
 
 # changes
 *.soc
+
+# fasta files
+*.fa
+*.afa
+*.aln
+*.nex*
+*.phy
+*.reduced
+
+# intermediate tree files
+*.t
+*.p
+RAxML*
+*.cxp
+*.tre

@@ -315,15 +315,18 @@ for (i in names(compdist)) {
 }
 ```
 
+
 ```{r retrieve the optimal direction for each sequence}
 
 ```
 
 Of the regions checked, only TEF1 contained sequences that had reverse complements. I'll make a tree of just LSU and RPB2. Given the variability observed in the RPB2 region, I expect this will sufficiently resolve the tree.
 
+Update: indeed the resolution was good, but the closest match was to Sclerotium hydrophilium, which does not contain RPB2 and in many cases does not have LSU. All of the Sclerotium in our table contain ITS, though, so I'll make sure to include that region.
+
 ```{r subset to regions of interest}
 # Input regions of interest
-roi <- c("LSU", "RPB2")
+roi <- c("LSU", "RPB2", "ITS")
 roi <- names(alns) %in% roi
 
 # subset alignment
@@ -371,7 +374,7 @@ The best model for both LSU and RPB2 is GTR+G, therefore I don't have to partiti
 
 ```
 
-```{r interleaving, eval=FALSE}
+```{r interleaving}
 # Get all names in all alignments
 intnames <- unique(unlist(sapply(rmgaps, rownames)))
 
@@ -399,20 +402,19 @@ interleaved <- do.call("cbind", allns)
 ```
 
 ```{r combined tree, eval=FALSE}
-# Create nexus output for mrbayes with GTR+G substitution mode
-mrbayes(interleaved, "bayes/all.nex", nst = 6, rates = "invgamma")
+# Adjust names
+rownames(interleaved) <- make.names(rownames(interleaved))
 
-interleaved_rax <- interleaved
-rownames(interleaved_rax) <- gsub(" ", "_", rownames(interleaved_rax))
-rownames(interleaved_rax) <- gsub(":|,|;|\\(|\\)", "_", rownames(interleaved_rax))
+# Create nexus output for mrbayes with GTR+G substitution mode
+mrbayes(interleaved, "all.nex", nst = 6, rates = "invgamma")
 
 # Create phylip output for raxml
-write.phy(interleaved_rax, "raxml/all.phy")
+write.phy(interleaved, "all.phy")
 
 # Write Mr Bayes submission file to move to Grace and run there.
-fileConn <- file("bayes/mrbayes_e14504f_all.sh")
+fileConn <- file("mrbayes_e14504f_all.sh")
 writeLines(c("#!/bin/bash", 
-             "#SBATCH --ntasks=10 --nodes=1",
+             "#SBATCH --ntasks=4 --nodes=1",
              "#SBATCH --time=12:00:00",
              "#SBATCH --job-name=mrbayes_e14504f",
              "#SBATCH --mail-user=daniel.spakowicz@yale.edu",
@@ -423,19 +425,18 @@ writeLines(c("#!/bin/bash",
              paste("# ", Sys.time(), sep = ""),
              "# Submission file for the MrBayes analysis of the E14504F tree using the sequencing in the google sheet 'E14504F'",
              "",
-             "cd /project/fas/gerstein/djs88/e14504f/bayes",
+             "cd /project/fas/gerstein/djs88/e14504f",
              "module load Apps/MrBayes/3.2.2",
              "mpirun mb all.nex"), fileConn)
 close(fileConn)
 
 # Call RAxML (takes ~20 min)
 system({
-  "raxmlHPC-AVX -s raxml/all.phy -m GTRGAMMA -n all_1 -p 12345 -x 12345 -# 100"
+  "raxmlHPC-AVX -s raxml/all.phy -m GTRGAMMA -n all_1 -f a -# 100 -x 12345 -p 12345"
 })
 system({
   "raxmlHPC-AVX -m GTRGAMMA -J MRE -z RAxML_bootstrap.all_1 -n tre"
 })
-?pml
 ```
 
 ## Alternative methods
@@ -553,8 +554,6 @@ ips::mrbayes(x, "combined_bayes_its2lsu.nex")
 ips::write.phy(x, "combined_raxml_its2lsu.phy")
 ```
 
-
-
 ```{r RAxML, eval=FALSE}
 # Call RAxML (takes ~20 min)
 system({
@@ -657,24 +656,3 @@ Nice pictures here http://www.apsnet.org/edcenter/intropp/lessons/fungi/Basidiom
 # Results and Discussion
 
 # References
-
-### Removed code
-
-```{r removed, eval=FALSE}
-# # Reverse Complement ITS1, RPB2 and TEF1
-# # It turns out this didn't help the alignment
-# trc <- c("ITS1", "RPB2", "TEF1")
-# for (i in trc) {
-#   # Collapse sequence to one line
-#   if (length(ofastas[[i]]) > 2) {
-#     x <- ofastas[[i]]
-#     y <- x[2:length(x)]
-#     y <- paste(y, collapse = "")
-#     z <- c(x[1], y)
-#     ofastas[[i]] <- z
-#   }
-#   # Reverse complement and return
-#   x <- DNAString(ofastas[[i]][2])
-#   ofastas[[i]][2] <- as.character(reverseComplement(x))
-# }
-```

@@ -1,0 +1,234 @@
+---
+title: "E14504F ITS Sequence"
+author: "Daniel Spakowicz"
+date: "5/25/2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE)
+
+# Load the required packages
+list.of.packages <- c("seqinr", "googlesheets", "tidyverse", "httpuv", "rentrez",
+                      "ape", "treebase", "ips", "ggtree", "ggtree", "Biostrings",
+                      "msa", "phangorn")
+new.packages <- list.of.packages[!(list.of.packages %in% 
+                                     installed.packages()[,"Package"])]
+
+# Install missing packages
+if (length(new.packages)) install.packages(new.packages, 
+                                           repos = "http://cran.rstudio.com/")
+# Load required packages
+lapply(list.of.packages, require, character.only = TRUE)
+
+# source("https://bioconductor.org/biocLite.R")
+# biocLite("muscle")
+# biocLite("ggtree")
+# biocLite("msa")
+
+# Set seed
+set.seed(12345)
+```
+
+The purpose of this script is to read in Nneoma's two ITS sequences and output a single sequence in the correct orientation with the appropriate number of N's separating the two inputs.
+
+```{r read fastas as a list of strings}
+files <- list.files(path = "~/Dropbox/Rainforest project/E14504F sequences/", 
+                    pattern = "*.fasta", full.names = TRUE)
+ofastas <- list()
+for (f in files[grep("ITS", files)]) {
+  tmp <- readLines(f)
+  tmp[2:length(tmp)] <- tolower(tmp[2:length(tmp)])
+  ofastas[[f]] <- tmp
+}
+
+
+# Adjust names of list
+CleanPaths <- function(names){
+  tmp <- gsub(".*E14504F? (.*)\\.fasta", "\\1", names)
+  tmp <- gsub(" partial| FULL| ver2", "\\1", tmp)
+  return(tmp)
+}
+names <- CleanPaths(names(ofastas))
+names(ofastas) <- names
+
+# Collapse sequences to one line header, one line sequence
+CollapseTwoLines <- function(fastaString){
+  if (length(fastaString) > 2) {
+    x <- fastaString
+    y <- x[2:length(x)]
+    y <- paste(y, collapse = "")
+    z <- c(x[1], y)
+    return(z)
+  } else {
+    return(fastaString)
+  }
+}
+# Iterate function over the list
+for (i in names(ofastas)) {
+  ofastas[[i]] <- CollapseTwoLines(ofastas[[i]])
+}
+
+# Remove any non-ACTGN nucleotides
+ofastas <- lapply(ofastas, function(x) gsub("^[^>](.*)[^actgn]", "\\1n", x))
+
+```
+
+```{r pull sequences from google sheets and retrieve from Genbank}
+# Load table into dataframe
+sheet <- gs_title("E14504F")
+x <- gs_read(sheet)
+
+# Convert hyphen-only columns to NA
+x <- data.frame(apply(x, 2, function(x) gsub("^-$", NA, x)), as.is = TRUE)
+
+# Take in a character vector of genbank accession numbers and return a fasta 
+# file in ape format
+RetrieveSequencesAsString <- function(charvec){
+  try({
+    string <- entrez_fetch(db = "nucleotide", id = charvec, rettype = "fasta")
+    string <- unlist(strsplit(string, split = "\n"))
+    return(string)
+  }, silent = TRUE)
+}
+
+# Retrieve all sequence into a list
+loci <- "ITS"
+gfastas <- list()
+for (i in loci) {
+  gfastas[[i]] <- RetrieveSequencesAsString(x[,grep(i, colnames(x))])
+}
+# Remove those without any sequences
+gfastas <- gfastas[-(which(sapply(gfastas, class) == "try-error"))]
+
+# Convert all to lowercase (needed for nucleotide substitution matrix)
+# and remove any nucleotides other than actg or n
+seqs <- list()
+ConvertToLowercase_actgn <- function(gfastas) {
+  seqs <- lapply(gfastas, function(x) grep("^[^>]", x))
+  for (i in 1:length(gfastas)) {
+    for (j in 1:length(seqs[[i]])) {
+      tmp <- tolower(gfastas[[i]][seqs[[i]][j]])
+      tmp <- unlist(strsplit(tmp, split = ""))
+      notn <- grep("[^actgn]", tmp)
+      tmp[notn] <- "n" 
+      tmp <- paste(tmp, collapse = "")
+      gfastas[[i]][seqs[[i]]][j] <- tmp
+    }
+  }
+  return(gfastas)
+}
+gfastas <- ConvertToLowercase_actgn(gfastas)
+```
+
+```{r reverse complement all sequences}
+# Read in each string to ape as a fasta file
+grfastas <- list()
+for (i in 1:length(gfastas)) {
+  temp <- tempfile()
+  write(gfastas[[i]], temp)
+  grfastas[[i]] <- ape::read.FASTA(file = temp)
+}
+names(grfastas) <- names(gfastas)
+
+# Reverse complement all sequences
+grfastas <- lapply(grfastas, ape::complement)
+
+# Write each to fasta and read back in as string
+for (i in names(grfastas)) {
+  ape::write.dna(x = grfastas[[i]], temp, format = "fasta")
+  grfastas[[i]] <- readLines(temp)
+}
+```
+
+```{r merge Nneomas e14504f fastas with genbank forward and reverse complements}
+# Create a list for "both fastas" and append the genbank string onto Nneoma's
+bfastas <- list()
+for (n in names(ofastas)){
+    bfastas[[n]] <- c(ofastas[[n]], gfastas[[1]])
+}
+
+brfastas <- list()
+for (n in names(ofastas)){
+    brfastas[[n]] <- c(ofastas[[n]], grfastas[[1]])
+}
+```
+
+```{r alignment each locus}
+#### ALERT !!!
+# This section takes ~ 10 minutes to run
+# Set to eval=FALSE by default
+# 
+# Read in each string as a fasta file
+fastas <- list()
+for (i in 1:length(bfastas)) {
+  temp <- tempfile()
+  write(bfastas[[i]], temp)
+  fastas[[i]] <- ape::read.FASTA(file = temp)
+}
+
+# Align sequences
+alns <- lapply(fastas, ape::muscle)
+names(alns) <- names(bfastas)
+
+# Read in each string as a fasta file
+rfastas <- list()
+for (i in 1:length(brfastas)) {
+  temp <- tempfile()
+  write(brfastas[[i]], temp)
+  rfastas[[i]] <- ape::read.FASTA(file = temp)
+}
+
+# Align sequences
+ralns <- lapply(rfastas, ape::muscle)
+names(ralns) <- names(brfastas)
+```
+
+```{r score the alignments}
+# Distance calculation for each alignment
+fdist <- lapply(alns, function(x) dist.dna(x, as.matrix = TRUE))
+rdist <- lapply(ralns, function(x) dist.dna(x, as.matrix = TRUE))
+names(fdist) <- names(rdist) <- names(ofastas)
+
+# Retrieve the E14504F distance (when it's in the sequence)
+compdist <- list()
+for (i in names(fdist)) {
+  # f <- fdist[[i]][,grep("E14504F", colnames(fdist[[i]]))]
+  # r <- rdist[[i]][,grep("E14504F", colnames(rdist[[i]]))]
+  f <- fdist[[i]][,1]
+  r <- rdist[[i]][,1]
+  f <- data.frame(taxon = rownames(fdist[[i]]), forward = f)
+  r <- data.frame(taxon = rownames(rdist[[i]]), revcomp = r)
+  compdist[[i]] <- full_join(f, r, by = "taxon")
+}
+
+# Plot the results for each alignment
+for (i in names(compdist)) {
+  # Melt each element of the list
+  toplot <- compdist[[i]] %>%
+    gather(key = "direction", value = "distance" , -taxon)
+  # Plot
+  ggplot(toplot, aes(x = taxon, y = distance)) +
+    geom_point(aes(color = direction)) +
+    labs(x = "Taxon", y = "Distance",
+         title = paste("Forward vs Rev Comp alignments to E14504F: ", i, 
+                       sep = "")) +
+    theme(axis.text.x = element_blank())
+    ggsave(paste("indiv_alignments/directionComp_", i, ".pdf", sep = ""), 
+           height = 4, width = 8)
+}
+```
+
+These figures show that the forward direction of ITS1 and ITS2 are consistent with the majority of sequences. I'll write it to a file with an N spacer for the 5.8S region
+
+```{r combine its1 and its2}
+# Cat ITS1 and ITS2 sep by 100 N's and remove ITS2
+ofastas[["ITS"]] <- paste(ofastas[["ITS1"]][2], paste(rep("N", 120), collapse = ""),
+                       ofastas[["ITS2"]][2], sep = "")
+ofastas[["ITS"]] <- c(">E14504F", ofastas[["ITS"]][1])
+
+# Write output to file
+fileConn <- file("../E14504F sequences/E14504F ITS.fasta")
+writeLines(text = ofastas[["ITS"]], fileConn)
+close(fileConn)
+```
