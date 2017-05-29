@@ -9,7 +9,7 @@ gaacttcgat ttacacagac gctggccgcg tctgccgccc gctattcatc g---------
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------- -------
->Rhizoctonia solani CBS 700.82
+>Rhizoctonia solani CBS700.82
 ---------- ----ctatcg ttgatgtngt gcntctcngt tggatctttg tctgagtttt
 tggaagagtg gggcttggag agcctagaag agcgtgcaac cggcaactct cgaccaaagt
 ctttgtgaat ggctcggtat tcaccgcgac gctcctaact tggtcaaaac cctacaccga
@@ -20,7 +20,7 @@ gcgtaatcga tacttgacgc agaactgtta tgatcagcat gactcccgag gatctcgaga
 actcaaggcg tatagagggg gtatgtttcc aacgtgaacg atcccgattg ggatc-atct
 ggcaccgcgc gtgtcaagag tgtacccaat atccacactt ggacacattg cgagattcat
 cccagcatga ttcttggtat ttgtgcgagc atcatcc
->Thanatephorus sasakii CBS 206.84
+>Thanatephorus sasakii CBS206.84
 gggaatggaa tgatctagca cagatgccga gaatcatact ggggtgaatt tcgcagtgtg
 tccaagtatg aatattggac actcttgacg cgtgccttcc agatggatcc caatcaggat
 cgttgacatt ggagacatat ccgcctcgat acgtccatac taatcatgac tcttcttcat
@@ -31,7 +31,7 @@ tcacggacaa tactaacttc cgaattgata tggtccatgc gccgcgcggt ggtcttgcag
 gttaggagcg tcgcgatgaa taccgagcca aacgccattg acaaatactt tggtccgccg
 gtcgccacat tctcttccaa actctccaaa ccccattcct caactcgatg agataaggat
 ccaacagata tgcatgacat caacgacagg tttttac
->Thanatephorus sasakii CBS 140.82
+>Thanatephorus sasakii CBS140.82
 gttctcgtaa aaacctatcg ctgatgtcat gcatctctgt tggatcttta tctgagtttt
 tggaggaatg gggtttggag agcctagaag agtgtgcaac cggcaactct cgactaaagt
 gtttgtcaat ggctcggcat ccatcgcgac gctcccaacc tagtcaagac gttacaccgc
@@ -42,7 +42,7 @@ gcgtaattga tgcttgacgc ggaactgtaa tgatcagtat gactcccgag gatctcgaga
 actcgagacg tatcgagggg atatgtctcc aatgttaatg atcctgattg ggatccatct
 ggcacggcac gcgtcaagag tgtacccaat atccacacct ggacacactg cgaaattcac
 cctagcatga tccttggcat ttgtgcgagc attattc
->Thanatephorus sasakii CBS 207.84
+>Thanatephorus sasakii CBS207.84
 gggaacggaa taatctcgca caaatgccaa ggatcatgct agggtgaatt tcgcagtgtg
 tccaggtgtg gatattggac actcttgacg cgtgcctgcc agatggatcc caatcaggat
 cattaacatt ggagacatat ccgccccgat acgtccatac tnatcattac tcctcttcgt
@@ -53,7 +53,7 @@ tcacgaacaa tgctaacttc cgaattgata tggtccatgc gccgcgcggt ggtcttgtag
 gttgggagcg tcgcgatgga tgccgagcca gacaccattg acaaacactt tagtccgccg
 gttgccacat tctcttctag gctctccaaa ccccattcct caactcgata agataaagat
 ccaacagaga tgcatgacat cagcgatagg tatttac
->Thanatephorus sasakii CBS 523.96
+>Thanatephorus sasakii CBS523.96
 gggaacggaa taatctcgca caaatgccaa ggatcatgct agggtgaatt tcgcagtgtg
 tccaggtgtg gatattggac actcttgacg cgtgcctgcc agatggatcc caatcaggat
 cattaacatt ggagacatat ccgccccgat acgtccatac tgatcattac tcctcttcgt
@@ -86,7 +86,7 @@ tcgcgaacga tgctaacttc agagttgatg tgatccatac gtcgttcgat ggtcttgcag
 attgggagcg tcgcggtgaa taccgagcca gacaccgtta acnaagactt tggttcaccg
 gtcgccacgt tctcttccaa actctctaga ccccattcct caactcgatg ggatagcgac
 ccaacagaaa tgcaagacat caatgagaga tttcacc
->Rhizoctonia solani CBS 208.84
+>Rhizoctonia solani CBS208.84
 ----ctggtg gtacctgtcg ttgatgtctt gcatttctgt tgggtcactc tctgagtttt
 tggaggagtg gggcctggag agtttggagg agtgtgcaac cggcaactct cgaccaaagt
 gtttgttaat ggcttggtat tcaccgtgac gcacctaatc tggtcaagac attgcatcga
@@ -108,7 +108,7 @@ tcgcgaacaa tgctaacttc cgaattgatg tggtccatac gccgttcgat ggtcttgcag
 gttaggggcg tcgcggtgaa taccaagcca gacaccattg acaaacactt tggtccaccg
 gttgccacat tttcctccaa actctccagc ccccattcct caactcgata ggatagcgac
 ccaacagaaa tgcaagacat caacgacagg -tttcac
->Thanatephorus cucumeris CBS 200.25
+>Thanatephorus cucumeris CBS200.25
 gggaatggaa taatcttgcg caaataccaa ggatcatact agggtggatc tcgcaatgcg
 tccaagtgtg gatgttggac actcttgaca cgcgcttgcc agacgggtcc caatcaggat
 cattgatgtt ggatatgtat ccacctcgat acgtccatgc taatcatgac tcttcttcgt
@@ -163,7 +163,7 @@ tcgcgaacga tgctgacttc tgaattgatg tggtccatac gcctaccgat ggtcttgcag
 attgggggcg tcacggtgaa taccaagcca gacaccgttg acaaacactt tggttcgcca
 gttgccacat tttcttcaag actctccagg ccccactcct caactcgatg agataatgac
 ccgacagata tgcaagacat caacgacagt tctaact
->Rhizoctonia sp. GM 10
+>Rhizoctonia sp. GM10
 agtctatgga aaacttgtcg ctgatgtctt gtatttctgt tggctcacta tctgagttct
 tggaagaatg gggtctggag ggtttagagg aatgtgcgac tggtaactct cgaccaaagt
 attcgtcaat ggcttggtat tcatcgcgat gctcctaatc tggtgaagac actgcaccgg
@@ -196,7 +196,7 @@ tcgcgaacaa tgctaacttc agagttgatg tggtccatac gtcgtccggt ggtcttccag
 attaggagca tcgcgatgaa taccaagcca gacaccattg acgaatactt tggtccacca
 gtcgccacat tttcctctaa accctccaga ccccattctt caactcgatg ggataaggaa
 ccaacagaaa tgcaagacat caacgacaga tc-----
->Thanatephorus sp. CBS 101782
+>Thanatephorus sp. CBS101782
 attcctctgg tgagctgtcg ttcatgtctt gc-tttctgt tgggtcgcta tcgcagtttt
 --ggagagtg gggtctaga- agcttggagg agtgtgcaac cggcaactct ccaccaaagt
 atttg-caat gggttg--at tcaccgtgac cctcc---tt cggtcaaacc --tgc-tcta
@@ -218,7 +218,7 @@ tcgcgaacaa tgctaacctc cgagttaatg tggtccatac gccgttcgat ggtcttgcag
 attaggagcg tcacgatgaa taccgagcca gacgccattg acaaaaa--- ----------
 ---------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------- -------
->Rhizoctonia solani CBS 970.96
+>Rhizoctonia solani CBS970.96
 ggaaacggaa tgatcttgcg cagataccaa gtatcatgct ggggtgaatc tcgcaatgcg
 tccaagtgtg gatattggac acttttgaca cgcgcttgcc agacggatcc caatcaggat
 cgttaacgtt ggacacatat ccgcctcgat acgcccatgc taatcatgac tcttcttctt
@@ -229,7 +229,7 @@ tcgcgaacaa tgctaacctc cgagttaatg tggtccatac gccgttcgat ggtcttgcag
 attaggagcg tcacgatgaa taccgagcca gacgccattg acaaaaactt tggtccgccg
 gttgccacat tctcctccaa actctccagg ccccattcct caattcgata ggagagagac
 ccaacagaaa tgcaagacat caacgacagg ttttcac
->Rhizoctonia solani CBS 346.84
+>Rhizoctonia solani CBS346.84
 gggaacggaa taatcttgcg caaataccaa ggatcatact agggtgaatc tcgcaatgtg
 tccaagtgtg gatgttggac actcttgaca cgcgcttacc agacggatcc caatcaggat
 cattgacgtt ggacacatat ccgcctcgat acgtccatgc taatcataac tcttcttctt
@@ -262,7 +262,7 @@ tctcgcacga tactgacctc ggagttgata tggtccatgc gacgcccggt ggttttccaa
 ttcgggagct tcacgatgga tcccgagcca aacaccgttg acaaaaacct tggtcca---
 ---gttacgt tctcctcaag actctctaga ccccactctt caattcgatg agacagagag
 ccaacagaga tacaagacat cagtgctaag tctcaca
->Ceratobasidium globisporum CBS 569.83
+>Ceratobasidium globisporum CBS569.83
 ---------- --acctggcg ctgatgtctt gcatctctgt tggatctctt tctgaattcc
 tggaggagtg ggggctggaa agccttgaag agcgcg---- -agcagtcct caaccaaagt
 atttgtcaat ggcttggaat ccatcgcgat gctcccaatc tggtcaagac attacaccga
@@ -284,7 +284,7 @@ tcgcgaacaa tgctgacttc ggagttaatg tggtccatgc gtcgtgcggt ggttttgaag
 gacgggggca ttgcgatgga ttccgagcca gacaccattg acaaagacct tggtccactg
 g------cgt tctcctcaag actttccagt ccccactcct caactcgat- ----------
 ---------- ---------- ---------- -------
->Ceratobasidium cornigerum CBS 438.80
+>Ceratobasidium cornigerum CBS438.80
 ---cggtttg atacctcgca ctgg-gtcat g-atttcgtg tggatcctta tcggaattcc
 tagaggaatg gggccttgag agtttggaag agtgca---- -agcagcccc caaccaaggt
 cttcgtcaat ggctcgggat ccaccgcgac gctccgaacc tcgtcaaaac tcttcatcga
@@ -306,7 +306,7 @@ gtgtaattga tgctcgatgc ggaactgtta tgatcagcat gactcccgaa gacctcgaaa
 actccagacg tattgaaggg atatgtatct aatgtcaatg accctgattg ggatccgtct
 gg-------- ---------- ---------- ---------- ---------- ----------
 ---------- ---------- ---------- -------
->Ceratobasidium cornigerum CBS 137.82
+>Ceratobasidium cornigerum CBS137.82
 ---------- ---------- -------ctt gtatttgtgt cgggtcttta tctgagttcc
 tggaggagtg gggcctggaa agcctggagg aatgtgcaac cggtaattct caaccaaagt
 attcgtcaat ggcttggtat tcatcgtgac gctcctaatt tggtcaaaac attgcaccga
@@ -361,7 +361,7 @@ gtgtcattga tcttggatgc ggaacagtta tgatcagtat gactcccgat gatctggaga
 actcacgacg catcgagggg gtatatgtcc aacgttaacg atcctgattg ggacccgtcg
 ggcacggcgc gagtcaagag cgtacccaat atccatacct ggacc----- ----------
 ---------- ---------- ---------- -------
->Ceratobasidium cornigerum CBS 136.82
+>Ceratobasidium cornigerum CBS136.82
 gggaatggga tgatctcgcg caaatcccaa gtatcatact aggatgaatt tcgcaatgcg
 tccaagtgtg aatgttagac gctcttgacg cgcgcttacc agacggatcc caatcaggat
 cattgacgtt agacacatat ccaccccgat acgtccatgc tgatcataac tcctcttcgt
@@ -372,7 +372,7 @@ tcacggacaa tgctgacttc cgaattgatg tggtccatac gccgcccggt ggtcttggag
 attgggggca tcacgatgaa taccaagcca gacaccattg acgaatactt tggtccaccg
 gtcgccacat tttcctccag actctccaaa ccccattcct caattcgata agataatgac
 ccaacagaaa tgcaagacat caacgacaga tatcacc
->Ceratobasidium cornigerum CBS 139.82
+>Ceratobasidium cornigerum CBS139.82
 gggaatggga tgatctcgcg caaatcccaa gtatcatact aggatgaatt tcgcaatgcg
 tccaagtgtg aatgttagac gctcttgacg cgcgcttacc agacggatcc caatcaggat
 cattgacgtt agacacatat ccaccccgat acgtccatgc tgatcataac tcctcttcgt
@@ -383,7 +383,7 @@ tcacggacaa tgctgacttc cgaattgatg tggtccatac gccgcccggt ggtcttggag
 attgggggca tcacgatgaa taccaagcca gacaccattg acgaatactt tggtccaccg
 gtcgccacat tttcctccag actctccaaa ccccattcct caattcgata agataatgac
 ccaacagaaa tgcaagacat caacgacaga tgtcacc
->Ceratobasidium cornigerum CBS 135.82
+>Ceratobasidium cornigerum CBS135.82
 gggaacggaa tgatctcgca caaataccaa ggatcatact agggtgaatt tcgcagtgcg
 tccaagtgtg gatgttagac gctcttgacg cgcgcctacc agacggatcc caatcagggt
 cattaacatt ggatatgtat ccaccacaat acgtccatac taatcatgac tcttcttcgt
@@ -394,7 +394,7 @@ tcgcgaacaa tgctgacttc ggaattgatg tgatccatac gccgttcggt ggttttgcaa
 attgggggcg tcacgatgaa tgccaagcca gacgccgttg acgaatactt tggtccgccg
 gtcgccacat tttcctccag actctccaga ccccactcct caattcgata agataatgat
 ccgacggaaa tgcaagacat caatgacaag tc-----
->Ceratobasidium cornigerum CBS 476.82
+>Ceratobasidium cornigerum CBS476.82
 ---------- ---------- ----tgtcat gcgtttcggg tggatcgttg tcgga-ttct
 tggaggagtg gggattggag agtcttgaag aatgtgcgac gggtaactct cgactaaagt
 gttcgtcaat ggcttggtat tcaccgtgac gcccccaatc ttgtcaagac gttgcaccga
@@ -405,7 +405,7 @@ gtgtaatcga tgctcgacgc ggaactgtca tgattagcat gactcccgag gatcttgaga
 actcaaggcg catcgagggg gtacgtctcc aacgttaacg accccgactg ggatccatct
 ggcacagcgc gcgtcaagag cgtacctaac atccacacct ggacgcattg cgaaattcat
 cccagtatga ttctcggtat ctgtgcgagc attattc
->Thanatephorus sp. CBS 293.31
+>Thanatephorus sp. CBS293.31
 cggtctggtg aaacttatcg ttgatgtctt gcatttccgt tggctcattg tccgagttct
 tggaggaatg ggggctagag agtctagagg agcgtgcgac cggtaactct cgactaaagt
 atttgttaat ggcttggtat tcaccgtgac gctcctaatc tggtcaagac actacatcga
@@ -416,7 +416,7 @@ gtgtgatcga tgctcgatgc ggaactgtta tgattagcat gactcccgaa gatctcgaaa
 actcgagacg catcgagggg atacgtgtcc aacgttaatg atcccgattg ggatccttct
 ggcacagcgc gtgtcaagag tgtacccaac atccacactt ggacgcattg cgaaatccat
 cctagtatga tccttggtat ttgcgcaagc attattc
->Ceratobasidium cornigerum CBS 148.54
+>Ceratobasidium cornigerum CBS148.54
 gggaaaggaa tgatctcgcg caaatcccta gaatcatgct agggtggatc tcgcaatgag
 tccaagtatg gatattcgac actcttgact cgcgcctccc ggatgggtcc cagtcgggat
 cgttgacgtt ggacatatat ccaccacggt ccgcccatgc taatcatcac tcctcttcgt
@@ -427,7 +427,7 @@ tcgcgaacaa tgctgacttc ggagttgata tggtccatgc gccgcccgat ggtcttggag
 attgggggca tcacggtgaa taccgagcca gacgccgttg acgaacacct tggtccgctt
 g------cgt tctcctcaag gctctccaac ccccattcct caattcgata agacagggaa
 ccgaccgaga tgcaggacct caatgcgag- -------
->Ceratobasidium cornigerum CBS 570.83
+>Ceratobasidium cornigerum CBS570.83
 ---------- ---------- ---------- ----ctcggt cagctctctt tcggagttct
 tggaggagtg gggcttggac agtcttgaag agcgtg---- -accaaccct ccaccaaggt
 ctttgtcaat ggctcggaat tcatcgagag gctcccgagt tggtgaagac gttgcatcga
@@ -438,7 +438,7 @@ gtgttatcga ttttggatgc agaaccgtga tgatcagcat gacacctgac gacctcgaga
 actcgcggcg cattgagggg atatatgtca aatgtcaacg atcccgactg ggatccgtct
 ggtacagcac gagtcaagag tgtacccaat gttcatacct ggactcattg cgaaattcat
 cctagtatga tcttgggtat ctgtgctagt attattc
->Ceratobasidium noxium CBS 154.35
+>Ceratobasidium noxium CBS154.35
 gggaaaggaa tgatctcgca cagatcccta ggatcatact cggatggatt tcgcagtgcg
 tccaggtatg aacgttagac actcttcacc cgcgcctacc agatgggtcc caatcggggt
 cattgacgtt tgacatatat ccacctcggt ccgcccatgc taatcatgac tcctcttcgt
@@ -449,7 +449,7 @@ tcgcgcacta tactgacctc ggaattaatg tggtccatcc ggcgcccgat ggtcttggag
 gttgggagca tcgcgatgga ttccgagcca gacaccattg acaaagacct tggtgcacta
 g------cat tttcctccaa gctctcgagc ccccattcct caactcgatg agacagagac
 ccaacagaga tacaagacat caacgcgagt ccccgag
->Ceratobasidium sphaerosporum CBS 571.83
+>Ceratobasidium sphaerosporum CBS571.83
 ---------- ---------- ---------- ---------- --gatctctc tcggagttcc
 tggaagagtg gggtttggaa agcctcgaag agtgca---- -agtagcccc caactaaagt
 attcgtcaat ggctcggaat ccatcgcgat gctcccaatt tggtcaagac gttacaccgg
@@ -460,7 +460,7 @@ gggtcattga tgcttgatgc ggaacggtga tgatcagtat gacgcccgag gatctggaga
 actggcgacg gactgaaggg agatatgtcg aacgtggaaa atcgggactg gga---accg
 ggtaaagaac ggggcaacag ggaaccggga atcc------ ---------- ----------
 ------ggga ttcggaacc- ---------- -------
->Rhizoctonia endophytica DAOM 138188
+>Rhizoctonia endophytica DAOM138188
 ---------a aaatttagcc ttgatgtcgt gcatatctgt tggatcgtta tctgaatttt
 tggaggagtg ggggctggaa agtcttgagg agtgct---- -agtggatcc cgactaaggt
 cttcgtcaat ggcttgggat tcatcgcaac gccccggtcc tcgttaaaac cctgcaccgt
@@ -471,7 +471,7 @@ gcgtcattga tgcttgatgc tgaactgtaa tgattagcat gacgcccgaa gatctcgaga
 attctcggcg aacggagggg gtacatgtct aacgtcaatg accctgactg ggatct-tct
 gggacggcgc gggttaagag cgtccccaac gttcatactt ggactcattg cgaaatccac
 cctagcatga ttctaggcat ctgtgcgagc atcattc
->Thanatephorus fusisporum AFTOL ID 611
+>Thanatephorus fusisporum AFTOL611
 gtctcgtcaa aaatctggcg ctaatgtcct gtatctctgt cggatcnctt tctgagttct
 tggaggagtg ggggctagag agcctcgagg agcgct---- -agcagccct ccaccaaagn
 cttcgtcaat ggcttggaat ccatcgcgat gctcctaatc tggtcaagac gctgcacagg
@@ -482,7 +482,7 @@ gcgttattga tgctggatgc ggaactgtga tgattagcat gacncccgat gacttggaga
 actcgcggcg aaccgaaggg atacatgtcg aacgtcaacg atcctgactg ggatccatct
 gggactgcgc gagtgaagag tgtacctaac attcacacat ggactcattg cgagattcac
 ccaagcatga ttttggggat ctgcgctagc attattc
->Tulasnella pruinosa AFTOL ID 610
+>Tulasnella pruinosa AFTOL610
 gtctcgtcaa gaatctcgct ctcatgtcct gcatctccgt tggttccctt tccgagttct
 tggaggagtg gggtctcgag ccccttgaag aacact---c cctcaacccc caacaaaggt
 cttcgtcaat ggatgggcgt ccatcgtgac gcgcacgaac tcgtcaaaac cctccgacgt
@@ -504,7 +504,7 @@ gtgtggtgga tcttggatgc ggaacggtca tgatctgcat gagttcccag gacttggaag
 actcacgaca gcagtacagg atacgcngcg ggtgctcgcg agaccgagca tgata---ct
 ggca---cac gagtcaaggc tgtcatgaat gcgcacacct ggacacattg cgaga-----
 ---------- ---------- ---------- -------
->Clavulina sp. AFTOL ID 667
+>Clavulina sp. AFTOL667
 gacttgtcaa aaatctttcg cttatggcct gtatctcggt tggttctatt tctgaattcc
 tccaggagtg gggcctcgaa agtcttgagg aatgcc---- -agcgatcac ccacgaaggt
 attcgtgaat ggattggtgt ccatcgcgat gcgccttctc tcgttcgaac tcttcgtcgc
@@ -515,7 +515,7 @@ gcgttatcga ttttagacgc tgaaccgtga tgatctgtat gacgcccgat gacctggang
 actcacgtgc gaatgagggg ccacgtttct ggagcaggtg catcggatca cga------t
 gttgccgcac gtatacagag cacaatgcaa tctcatgcct ggacgcattg cgagattcat
 cccagcatga tactcggcat ttgtgccagc ataatac
->Cantharellus cibarius AFTOL ID 607
+>Cantharellus cibarius AFTOL607
 gtctagtaaa gaatctgtct ctcatggctt gcatatccgt tggttcaatc tctgaattct
 tgcaagagtg ggggctcgag agtctagaag agc------- -agcgctcac ctacaaaagt
 gttcgtgaat ggttaggtgt acatcgtgac gctcccaacc ttgtcaagac tctgcggcgg
@@ -526,7 +526,7 @@ gtgtcatcga tgctcgatgc agaacagtca tgatttgcat gaccccagat gatctggaga
 attc---acg aactaatggg atacgtttcc aatgtcggcg catcggacca cga------t
 gtcgcagctc gaatccgtag caccatgact gcgcatacgt ggacccattg tgagattcac
 ccaagcatga ttctgggcat ttgcgccagc atcattc
->Hydnum albomagnum AFTOL ID 471
+>Hydnum albomagnum AFTOL471
 gactcgttaa gaatctctcc ctcatggctt gcatatccgt tgggtcactt tcggagttcc
 ttcaagaatg gggtcttgaa agtctggaag aacgca---- -aacgcccac caacaaaggt
 gttcgtcaat ggatgggcgt gcatcgggat gcacccaatc tcgtcaagac gcttcgacgc

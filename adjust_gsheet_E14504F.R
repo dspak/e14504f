@@ -15,7 +15,7 @@ if (length(new.packages)) install.packages(new.packages,
 # Load required packages
 lapply(list.of.packages, require, character.only = TRUE)
 
-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Load table into dataframe
 sheet <- gs_title("E14504F")
@@ -24,6 +24,9 @@ x <- gs_read(sheet)
 # Convert hyphen-only columns to NA
 x <- data.frame(apply(x, 2, function(x) gsub("^-$", NA, x)), as.is = TRUE)
 
+#######################
+# Reformat names
+# 
 # Create a vector of names
 names <- x$Name
 
@@ -48,3 +51,23 @@ gs_edit_cells(sheet, ws = "Sheet1", anchor = "A2", byrow = FALSE,
 
 gs_edit_cells(sheet, ws = "Sheet1", anchor = "B2", byrow = FALSE,
               input = alt.names)
+
+#######################
+# Reformat Voucher ID's
+
+# Create a vector of Voucher IDs
+ids <- x$Voucher.ID
+
+# Remove "ID" in AFTOL ID 
+ids <- gsub(" ID ", " ", ids)
+
+ids <- gsub("Otto Miettinen 15492.2 (H)", "Miettinen 15492.2", ids,
+            fixed = TRUE)
+
+# Remove spaces
+ids <- gsub(" ", "", ids)
+
+# Push changes to gsheet
+gs_edit_cells(sheet, ws = "Sheet1", anchor = "C2", byrow = FALSE,
+              input = ids)
+
