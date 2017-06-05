@@ -33,7 +33,7 @@ knitr::opts_chunk$set(message = FALSE)
 # Load the required packages
 list.of.packages <- c("seqinr", "googlesheets", "tidyverse", "httpuv", "rentrez",
                       "ape", "treebase", "ips", "ggtree", "ggtree", "Biostrings",
-                      "msa", "phangorn", "ggrepel")
+                      "msa", "phangorn", "ggrepel", "phytools")
 new.packages <- list.of.packages[!(list.of.packages %in% 
                                      installed.packages()[,"Package"])]
 
@@ -373,34 +373,57 @@ names(bestmodel) <- names(rmgaps)
 
 The best model for both LSU and RPB2 is GTR+G, therefore I don't have to partition the interleaved dataset.
 
-```{r individual locus trees, eval=FALSE}
+```{r individual locus trees}
+# Convert to phyDat format
 tophydat <- lapply(rmgaps, phyDat)
+
+# Create a distance matrix
 onetree <- lapply(tophydat, dist.ml)
+
+# Create neighbor-joining tree
 ot <- lapply(onetree, NJ)
+
+# Maximum Likelihood on the NJ tree with the alignment
 ot.ml <- list()
 for (i in names(ot)) {
     ot.ml[[i]] <- pml(ot[[i]], tophydat[[i]])
 }
-optim.ml <- list()
-for (i in names(ot)) {
-    optim.ml[[i]] <- optim.pml(ot.ml[[i]], model = "GTR", rearrangement = "stochastic")
-}
-bs <- list()
-for (i in names(ot)){
-  bs[[i]] <- bootstrap.pml(optim.ml[[i]], bs=100, optNni=TRUE, multicore=TRUE, control = pml.control(trace=0))
-}
+
+# Apply GTR+G model
+optim.ml <- lapply(ot.ml, function(x) optim.pml(x, model = "GTR", 
+                                                rearrangement = "stochastic", 
+                                                optGamma = TRUE))
+
+# Bootstrap replicates
+bs <- lapply(optim.ml, function(x) bootstrap.pml(x, bs = 100, optNni = TRUE, 
+                                                 multicore = TRUE, 
+                                                 control = pml.control(trace = 0)))
+# Make into tree plotting file
 trees <- list()
 for (i in names(ot)) {
   trees[[i]] <- plotBS(optim.ml[[i]]$tree, bs[[i]], p = 20, type = "p")
 }
+
+# If root taxa are present, reroot, else make an unrooted tree
 for (i in names(trees)) {
-  df <- as.data.frame(trees[[i]])
-  ggtree(df) +
-    geom_tiplab(size=3) +
-    geom_text2(aes(subset = !isTip, label = label), size = 3, hjust = 1.1, vjust = -0.5) +
-    labs(title = paste("E14505F single locus tree: ", i, sep = "")) +
-    xlim(0, max(df$x, na.rm = TRUE) + (max(df$x, na.rm = TRUE)*0.3)) +
-    ggsave(paste("singleLocusTree_", i, ".pdf", sep = ""), height = 11, width = 8.0)
+  if ("Tulasnella pruinosa AFTOL610" %in% trees[[i]]$tip.label) {
+    tree <- root(trees[[i]], outgroup = "Tulasnella pruinosa AFTOL610", resolve.root = FALSE)
+    df <- as.data.frame(tree)
+    ggtree(df) +
+      geom_tiplab(size = 3) +
+      geom_text2(aes(subset = !isTip, label = label), size = 3, hjust = 1.1, vjust = -0.5) +
+      labs(title = paste("E14505F single locus tree: ", i, sep = "")) +
+      xlim(0, max(df$x, na.rm = TRUE) + (max(df$x, na.rm = TRUE)*0.3)) +
+      ggsave(paste("singleLocusTree_", i, ".pdf", sep = ""), height = 11, width = 8.0)
+  } else {
+    df <- as.data.frame(trees[[i]])
+    ggtree(df) +
+      geom_tiplab(size=3) +
+      geom_text2(aes(subset = !isTip, label = label), size = 3, hjust = 1.1, vjust = -0.5) +
+      labs(title = paste("E14505F single locus tree: ", i, sep = "")) +
+      xlim(0, max(df$x, na.rm = TRUE) + (max(df$x, na.rm = TRUE)*0.3)) +
+      ggsave(paste("singleLocusTree_", i, ".pdf", sep = ""), height = 11, width = 8.0)
+  }
 }
 ```
 
@@ -431,7 +454,7 @@ for (i in names(rmgaps)) {
 interleaved <- do.call("cbind", allns)
 ```
 
-```{r combined tree, eval=FALSE}
+```{r combined tree}
 # Adjust names
 rownames(interleaved) <- make.names(rownames(interleaved))
 
@@ -541,7 +564,7 @@ e145_itslsu <- its2_lsu_Ns(ofastas)
 writeLines(e145_itslsu, "e14504f_gonzalez_itslsu.fa")
 ```
 
-```{r align to alignment with muscle}
+```{r align to alignment with muscle, eval=FALSE}
 # System call for muscle (arg isn't available in the R version yet)
 system({
   "muscle -profile -in1 gonzalez_phylogenetic_2016.afa -in2 e14504f_gonzalez_allloci.fa -out combined.afa"
@@ -573,7 +596,7 @@ y <- gsub("y", "n", y)
 writeLines(y, "combined_raxml.phy")
 ```
 
-```{r subset gonzalex el al alignment to its2 and lsu}
+```{r subset gonzalex el al alignment to its2 and lsu, eval=FALSE}
 # Read in fasta file
 x <- seqinr::read.fasta("combined.afa")
 # Subset to aligned coordinates
@@ -601,7 +624,7 @@ ips::mrbayes(x, "combined_bayes_its2lsu.nex")
 ips::write.phy(x, "combined_raxml_its2lsu.phy")
 ```
 
-```{r RAxML, eval=FALSE}
+```{r RAxML, eval=FALSE, eval=FALSE}
 # Call RAxML (takes ~20 min)
 system({
   "raxmlHPC-AVX -s combined_raxml.phy -m GTRGAMMA -n comb_1 -p 12345 -x 12345 -# 100"
@@ -612,7 +635,7 @@ system({
 
 ```
 
-```{r bayes submission file}
+```{r bayes submission file, eval=FALSE}
 # Write Mr Bayes submission file to move to Grace and run there.
 fileConn <- file("mrbayes_e14504f_gonzalez.sh")
 writeLines(c("#!/bin/bash", 
@@ -649,7 +672,7 @@ close(fileConn)
 # })
 ```
 
-```{r tree visualization}
+```{r tree visualization, eval=FALSE}
 z <- read.tree("~/Documents/projects_notbackedup/e14504f/RAxML_MajorityRuleExtendedConsensusTree.tre")
 ggplot(z) +
   ggtree::geom_tree(layout = "circular") +

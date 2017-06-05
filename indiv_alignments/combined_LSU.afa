@@ -7,153 +7,105 @@ ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
 atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
 tgaagtcagt cgcgttctct gggattcagc cttgcttttg cttggtgcat ttcctagtct
 acgggccaac atgaatttcg accggtggaa aaaggcagag ggaatgtggc acctccgggt
-gtgttatagc cctttgtcag acacgccggt tgggattgag gttcaagtgc acgcttttgt
-tgtgctttga tgttggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgaaa aacccatgcg cgtaatgaaa g
->Thanatephorus cucumeris CBS253.29
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
-tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+gtgttatagc cctttgtcag acacgccggt tgggattgag gtttcaagca cgcttttgtt
+gtgctttgat gttggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtgaaaa acccatgcgc gtaatgaaag tgaaagttgg
+gaacccttca cggggggcac cgacgcccgg accagacctt ctgtgacgga tccgaggtag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gcatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atgtgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagttt tatgagcctt ggggttgaaa caaccttaac ttattctcaa actttaaata
+tgtaagctc
+>Botryobasidium simile GEL2348
+------ttcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
+tctttgccgt ccgagttgta gcctagagaa gtgttttccg cggcggacca tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac ccccgtcgcc
+ctgcgatgca ctctcgaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
 ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc cttgcttttg cttggtgcat ttcctagtct
-acgggccagc atgaattttg atcagtggaa aaaggcttgg ggaatgtggc accttcgggt
-gtgttatagc cccttgtcac atacattggt tgggattgag gtcttagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgcaa aacccgagcg cgtaatgaaa g
->Ceratobasidium sp. CBS129339
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
-tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgccggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac taccggtgct
-ttgcgttgtg ctctcgacga gtcgagttgt ttgggaatgc agctcaaaac gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttggaa tggaaacgct
-tgaagtcagt cgcgttctcc gggattcagc cttgcttctg cttggtgcac ttcccggtct
-acgggccagc atgggtttcg accgatggaa aagggcnggg ggaatgtggc acctccgggt
-gtgttatagc ccccngtcgg atgcgtcggt cgggatcgag gcctcagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgaaa actc-gagcg cgtaatgaaa g
->Thanatephorus sasakii CBS206.84
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
-cattagttgt ccgagttgta gtctagagaa gcatcatccg cgccggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccggtgct
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
-acgggccagc atgaattttg accggtgcaa aaggatttgg ggaatgtggc accttcgggt
-gtgttatagc cccttgtcgc atacgccggt tgggattgag gtcttagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg g---------
----------- ---------- ---------- ---------- ---------- -
->Thanatephorus cucumeris SA1-1
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggnng
-tgtattctgt ccgagtggta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tcttggaaca aagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc ct-gcttttg cttggtgcat ttcc-ggtct
-acgggccanc atgaattttg accaatggaa aaaggcttgg ggaatgtggc accttcgggt
-gtgttatagc ccnttgtcac atacattggt tgggattgag g-cttagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgcaa aacccgagcg cgaaatgaaa -
->Thanatephorus cucumeris Rhs1AP
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
-tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt nncgttctct gggattcagc cttgcttttg cttggtgcat ttcctagtct
-acgggccagc atgaattttg accaatggaa aaag-ctggg ggaatgtggc a-cttcgggt
-gtgttatagc cccttgtcac atacgttggt tgggattgag gtcttagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgcaa aacccgagcg cgtaatgaaa g
->Thanatephorus cucumeris CBS200.25
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
-tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaannt tggngagaga ncgatagcga nnaagtaccg ngagggaaag
-ntgaaaagcn ctttggannn annnttaaac nntacgtgaa anngttgaaa tggnaaa---
+atgaaaagca ctttggaaag agagtcaaac agtacgtgaa attgttaaaa gggaaacgat
+caaagtcagt cgcgtctgct gggattcagc cttgcttccg cttggcgcat ttcccggtct
+acgggccagc gtcgattttg gccggcggat aagggtcgga ggaatgtggc tcctcacgga
+gtgttatagc ctctggtcgt acacgtcggc tgggatcgag cctcgcagca cgcctctgtg
+gtgccc--gc gctggcgtaa tggctttgac cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtggaaa acccgggcgc gtaatgaaag tgatggttgg
+gaactt---- cggggggcac cgacgcccgt ggcagaccta ttgtgacgca cacgaggcag
+agcatgcatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accat----- ---------- ---------- ----------
 ---------- ---------- ---------- ---------- ---------- ----------
----------- ---------- ---------- ---------- ---------- ----------
----------- ---------- ---------- ---------- ---------- ----------
----------- ---------- ---------- ---------- ---------- ----------
----------- ---------- ---------- ---------- ---------- -
->Rhizoctonia sp. GM10
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
-tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tgccagtact
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+---------
+>Burgoa verzuoliana ATCC24040
+caaggattcc cctagtaacg gcgagtgaag cgggatgagc tcaaatttaa aatctggtgt
+cctttggcat ccgagttgta gtctagagaa gcattttccg tgtcggacca tgtacaagtc
+tcctggaacg gagcgtcata gagggtgaga atcccgttct tgacatggac ccccgatgct
+ttgtgatgtg ctctcaaaga gtcgagttgt ttgggattgc agctcaaaat gggaggtaaa
+ttccttctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgttaaaa gggaaacgat
+tgaagtcagt cgcgtctgct tggactcagc cttacttcgg tttggtgcat ttccttgtag
+acgggccaac gtcaatgtta accgctggaa aaaggtgtag ggaatgtggc tctttcggga
+gtgttatagc cctatgtcat atgcagtggt cgatattgag tgtaacagca cgcttttgtg
+gtgctt--gt gttggcataa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtggtaa acccgagcgc ggaatgaaag tgatagctgg
+gaatcttgca aaagaggcac cggcgccccg agctgatctt ctgtgacgca tcggaggtag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gaatagggcg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagttt tatggacctt ggggatgaaa catccttaat ctattctcaa actttaaata
+tgtaagctc
+>Byssomerulius corium KHL8593
+caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
+-ctttgtcgt ccgagttgta ttctagagaa gcgttttccg cgctggaccg tgtacaagtc
+tcttggaata gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
 ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt --cgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
-acgggccagc atgaattttg accaatggaa aaag-ctggg ggaatgtggc accttcgggt
-gtgttatagc cccttgtcat acacgttggt tgggattgag gtcttagtgc acgctccggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcaagtgt ttgggtgcaa aacccgagcg cgtaatgaaa g
->Rhizoctonia sp. 76Rs
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
-tgtatgctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cgcgttagct acaactcagc caggc--ttg cttggtgcac tttgtagttg
+acgggccagc atcagttttg accgcaggaa aaaggccagg gaaatgtggc accttcgggt
+gtgttatagt ccttggttgt atactgtgat tgggactgag gctctcagca cgcttttgtt
+gtgcttggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacaaacc tgcgagtgtt tgggtggtaa acccgagcgc gcaatgaaag tgaaagttgg
+gatcctgtcg tggggagcac cgacgcccgg accagacctt ctgtgacgga tctgcggtag
+agcatgtttg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaaganc
+>Ceraceomyces americanus FP-102188
+------ttcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
+tctttgctgt ccgagttgta gtctggagaa gcgttttccg tgctggaccg tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
 ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt c-cgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
-acgggccagc atgaattttg accggtggaa aaagatttgg ggaatgtggc a-cttcgggt
-gtgttatagc cccttgtcac atacatcggt tgggattgag gtcttagtgc acgcttcggt
-tctgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgcaa aacccgagcg cgtaatgaaa g
->Thanatephorus sp. CBS101782
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
-tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cgcgtttgct agtgctcagc ctgtcttttg actggtgcac ttactagtga
+acgggccagc atcagttttg gctgcaggat aaaggccaga ggaatgtggc accttcgggt
+gtgttatagc ctctagtcat atactgtggc tgggactgag gatctcagca cgcctttatc
+gtgcttggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggaaa acccgagcgc gtaatgaaag tgaaagttgg
+gactctgtcg tggagggcac cgacgcccgg accagaccta ctgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Ceraceomyces sublaevis CFMR:FP-101245
+caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctgacgg
+t-tttgccgt tcgagttgta gtctagagaa gtgtcttccg cgccggaccg tgtacaagtc
+tcttggaaca gagcgtcaca gagggtgaga atcccgtctt tgacgcggac taccggtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
 ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc cttgcttttg cttggtgcat ttcccggtct
-acgggccagc atgaattttg accaatggaa aaaggcttgg ggaatgtggc accttcgggt
-gtgttatagc cccttgtcac atacgttggt tgggattgag g-------gc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcaagtgt ttgggtgcaa aacccgagcg cgtaatgaaa g
->Rhizoctonia solani CBS970.96
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
-tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggactcagc cttgcttttg cttggtgtat ttcctagtct
-acgggccagc atgagttttg accaatggaa aaaggcttgg ggaatgtggc accctcgggt
-gtgttatagc cccttgtcac atacgttggt tgggattgag gtcttagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg g---------
----------- ---------- ---------- ---------- ---------- -
->Ceratobasidium sp. C-484
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaattt-a aatctggcag
-tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tctt-gaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagatct
-ttg---tgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
-acgggccagc atgaatttcg accggtggaa aaagatttgg ggaatgtggc a-cttcgggt
-gtgttatagc cccttgtcag atacattggt tgggattgag gtcttagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtggaa aacccgagcg cgaaatgaaa g
->Ceratobasidium cornigerum SIR-2
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
-tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgctggacca tgtacaagtc
-tcttga-ata gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc cttgattatg cttggtgcat ttcctagtct
-acgggccagc atgaattttg accgttggaa aaaggcaggg ggaatgtggc a-ctccgggt
-gtgttatagc cccttgtcac acacggcggt tgggattgga gattcagtgc acgcttctgt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgcta aacccatgcg cgtaatgaaa g
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cgcgtcgtct agaactcagc cttgc-attg cttggtgcat tttctagtcg
+acgggccagc atcagttttg accgcgggac aaaggtcgag ggaatgtggc accttcgggt
+gtgttatagc cctcggctgt atgccgtgat tgggactgag gaactcagca cgcatctgct
+gtgcttggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacaaaca tgcgagtgtt tgggtggaaa acccgagcgc gcaatgaaag tgaaagttgg
+gatcctgtcg cggggagcac cgacgcccgg gccagacctt ctgtgacggc tccgcggtag
+agcaggtttg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
 >Ceratobasidium cornigerum CBS438.80
 caaggattcc cctagtaacg gcgagtgaag c-ggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgccggacca tgtacaagtc
@@ -163,9 +115,15 @@ ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
 atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgat
 tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
 acgggccagc atggatttcg accgttggaa aaaggctggg ggaatgtggc a-cttcgggt
-gtgttatagc cccttgtcac atacatcggt tgggatcgag gcctcagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccnncang
-atcaacct-t ctgcgantgt ttgggtgana natc-ggacg cgcaatnaaa g
+gtgttatagc cccttgtcac atacatcggt tgggatcgag gacctcagca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accnncanga
+tcaacct-tc tgcgantgtt tgggtganan a-tcggacgc gcaatnaaag ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------
 >Ceratobasidium cornigerum CBS137.82
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgaattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
@@ -175,45 +133,15 @@ ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
 atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
 tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
 acgggccagc atgagttttg accggtggaa aaagatttgg ggaatgtggc accttcgggt
-gtgttatagc cccttgtcac atacactggt tgggattgag gtcttagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg g---------
----------- ---------- ---------- ---------- ---------- -
->Ceratobasidium sp. AH-9
----------- -ctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
-tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagttt
-acgggccagc atggattttg accggtggaa aaggatttgg ggaatgtggc acctccgggt
-gtgttatagc cccttgtcgc atacatcggt tgggatcgag gtttcagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgaaa aacccatgcg cgtaatgaaa g
->Ceratobasidium sp. C-620
-caaggattcc cctagtaacg gcgagtgaag c-ggaagagc tcaaatttaa aatctggcgg
-tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgccggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgcactggac tcccggtgct
-ttgcgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
-acgggccagc atgaatttcg accgatagaa aagggctggg ggaatgtggc a-cttcgggt
-gtgttatagc cccttgtcgc atgcgtcggt tgggatcgag gcctcagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaagtag
-tctaacatgc ctgcga-tgt ttgggtgaaa acccg--acg cggaatgaaa g
->Ceratobasidium cornigerum CBS136.82
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
-cttgtgttgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
-acgggccagc atgaattttg accagtggaa aaagatttgg ggaatgtggc accttcgggt
-gtgttatagc cccttgtcag atacattggt tgggattgag gtcttagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg g---------
----------- ---------- ---------- ---------- ---------- -
+gtgttatagc cccttgtcac atacactggt tgggattgag g-tcttagca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------
 >Ceratobasidium cornigerum CBS476.82
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
@@ -223,81 +151,15 @@ ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtacca tgagggaaag
 atgaaaagca ctttggaggg agagttaaac agtacgtgaa attgttgaaa tggaaacgct
 tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
 acgggccagc atgaattttg accagtggaa aaggatttgg ggaatgtggc accttcgggt
-gtgttatagc cctttgtcac atacgctggt tgggattgag gtcttagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg g---------
----------- ---------- ---------- ---------- ---------- -
->Ceratobasidium cornigerum CBS148.54
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
---tcacccgt ccgagttgta gtctagagaa gcatcatcta cgctggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgtt
-ctgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc cttgnttttg cttggtgcat ttcctagtct
-acgggccagc atggatttcg accgtcggaa aagggctggg ggaatgtggc actttcgggt
-gtgttatagc cccctgtcgc acacgtcggt tgggatcgag gcctcagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg g---------
----------- ---------- ---------- ---------- ---------- -
->Rhizoctonia endophytica DAOM138188
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
-tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgctggaccn tgtacaagtc
-tcttggaata gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
-ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
-acgggccagc atgagttttg accgttggaa aaaggcaggg ggaatgtggc acctccgggt
-gtgttatagc cccttgtcac acacggcggt tgggattgag gattcagtgc acgcttctgt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgtta aacccatgcg cgtaatgaaa g
->Thanatephorus fusisporum AFTOL611
-caaggattcc cctagtaac- gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
-tgcattccgt ccgagttgta gtctagagaa gcgtcatccg cgccggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccggtgct
-ttgcgttgcg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaac gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
-tgaagtcagt cgcgttctct gggattcagc ctcgcttctg cttggtgcat ttcctagtct
-acgggccagc atggatttcg accgacggaa aaaggcttgg ggaatgtggc acctccgggt
-gtgttatagc ccctcgtcac acgcgtcggc cgggatcgag gcctcagtgc acgcttcagt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtggaa aacccgagcg cgcaatgaaa g
->Botryobasidium simile GEL2348
-------ttcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
-ctttggccgt ccgagttgta gcctagagaa gtgttttccg cggcggacca tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac ccccgtcgcc
-ctgcgatgca ctctcgaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagtcaaac agtacgtgaa attgttaaaa gggaaacgat
-caaagtcagt cgcgtctgct gggattcagc cttgcttccg cttggcgcat ttcccggtct
-acgggccagc gtcgattttg gccggcggat aagggtcgga ggaatgtggc tcctcacgga
-gtgttatagc ctctggtcgt acacgtcggc tgggatcgag ctcgcacggc acgcctctgt
-ggtgccc--g cgctggcgta atggctttga ccgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtggaa aacccgggcg cgtaatgaaa g
->Clavulina sp. AFTOL667
-caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggtaa
-ctttggttgc ccgaattgta atctagagaa gcgttttccg tgctggactg tgtacaagtt
-tcctggaacg gaacatcata gagggtgaga atcccgtcct tgacacagac tcccagcact
-ttgcgatgcg ctctcgacga gtcgagttgt ttgggattgc agctcaaaat gggaggtaaa
-ttccttctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgttaaaa gggaaacgct
-tgaagtcagt cgcgtttgct tggactcagc cttacttcgg tttggtgcat ttccttgtag
-acgggccagc gtccatgttg tttgccggaa aaggggtgag agaatgtggc tccttcggga
-gtgttatagc ttttgctcgt atgcggggaa tgatatggag -tggtacagc acacttcggt
-ggtgctt--g tgctggcata atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtggaa aacccgggcg cgtaatgaaa g
->Hydnum albomagnum AFTOL471
-caaggattcc cctagtaacg gcgagtgaag cgggatgagc tcaaatttaa aatctggtag
-ctttgactgc ccgagttgta atctagagaa gtgttttctg tgctggactg tgttcaagtt
-tcctggaatg gaacatcata gagggtgaga atcccgtcct tgacacagac ttccagtgct
-atgtgatgca ctctcaacga gtcgagttgt ttgggattgc agctcaaaat gggaggtaaa
-ttccttctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgttaaaa gggaaacaat
-tgaagtcagt tgcatctatt tggactcagc cttactttgg tttggtgcat ttccttgtag
-atgggccagt gttcatgttg attgctggaa aaggggttag ggaatgtggc tcttttggga
-gtgttataac cttggctcat atacagtaat taatatggag -tgatacagc atgcttcggt
-ggtgctt--g tgctggcata atggctttaa atgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcaagtat ttgggtgata aacccgagtg cgtaatgaaa g
+gtgttatagc cctttgtcac atacgctggt tgggattgag g-tcttagca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------
 >Ceratobasidium ramicola Java-11
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
@@ -307,9 +169,69 @@ ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
 atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
 tgaagtcagt cgcgttctct gggattcagc cttgcttctg catggtgcat ttcctagtct
 acgggccagc atgaatttcg gccggtggaa aaagatttgg ggaatgtggc accctcgggt
-gtgttatagc cccttgtcag atacactggc tgggattgag gtcttagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtggaa aacccgagcg cgaaatgaaa g
+gtgttatagc cccttgtcag atacactggc tgggattgag g-tcttagca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtggaaa acccgagcgc gaaatgaaag tgataagttg
+ggacctcgca agaggggcac cgacgcccgg accagacctt ctgtgacgga tccgaggtag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gcatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atgtgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagttt tatgagcctt ggggttgaaa caaccttaac ttattctcaa actttaaata
+tgtaagctc
+>Ceratobasidium sp. CBS129339
+caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
+tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgccggacca tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac taccggtgct
+ttgcgttgtg ctctcgacga gtcgagttgt ttgggaatgc agctcaaaac gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttggaa tggaaacgct
+tgaagtcagt cgcgttctcc gggattcagc cttgcttctg cttggtgcac ttcccggtct
+acgggccagc atgggtttcg accgatggaa aagggcnggg ggaatgtggc acctccgggt
+gtgttatagc ccccngtcgg atgcgtcggt cgggatcgag gacctcagca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtg-aaa actcgagcgc gtaatgaaag tgatagttgg
+gaacctctcg cgaggggcac cgacgcccgg accagacctt ctgtgacgga tccgaggtag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gcatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atgtgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagttt tatgagcctt ggggttgaaa caaccttaac ttattctcaa actttaaata
+tgtaagctc
+>Ceratobasidium sp. AH-9
+---------- -ctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
+tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
+ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
+tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagttt
+acgggccagc atggattttg accggtggaa aaggatttgg ggaatgtggc acctccgggt
+gtgttatagc cccttgtcgc atacatcggt tgggatcgag g-tttcagca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtgaaaa acccatgcgc gtaatgaaag ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------
+>Ceratobasidium sp. C-620
+caaggattcc cctagtaacg gcgagtgaag c-ggaagagc tcaaatttaa aatctggcgg
+tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgccggacca tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgcactggac tcccggtgct
+ttgcgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
+tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
+acgggccagc atgaatttcg accgatagaa aagggctggg ggaatgtggc a-cttcgggt
+gtgttatagc cccttgtcgc atgcgtcggt tgggatcgag gacctcagca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaagtagt
+ctaacatgcc tgcga-tgtt tgggtgaaaa cccg--acgc ggaatgaaag tgattgttgg
+gaa-ctctcg cgaggggcac cgacgcccgg accagacctt ctgtgacgga tccgaggtag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gcatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atgtgggtat
+aggggngaaa gactaatcgc nccat----- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------
 >Ceratobasidium theobromae Sulawesi-11
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
@@ -319,9 +241,15 @@ ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
 atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
 tgaagtcagt cgcgttctct gggactcagc cttgcttttg cttggtgcat ttcctagtct
 acgggccagc atggattttg accggcggaa aagggcttgg ggaatgtggc acctccgggt
-gtgttatagc cccttgtcgt acacgtcgat tgggatcgag gtttcagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa gcgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgaaa aacccgagcg cataatgaaa g
+gtgttatagc cccttgtcgt acacgtcgat tgggatcgag gatttcagca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaag cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtgaaaa acccgagcgc ataatgaaag tgatagttgg
+gaacctcttt agaggggcac cgacgcccgg accagacctt ctgtgacgga tccgaggtag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gcatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atgtgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagttt tatgagcctt ggggttgaaa caaccttaac ttattctcaa actttaaata
+tgtaagctc
 >Ceratobasidium theobromae Sulawesi-10
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
 tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
@@ -331,214 +259,16 @@ ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
 atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
 tgaagtcagt cgcgttctct gggactcagc cttgcttttg cttggtgcat ttcctagtct
 acgggccagc atggattttg accggcggaa aagggcttgg ggaatgtggc acctccgggt
-gtgttatagc cccttgtcgt acacgtcgat tgggatcgag gtttcagtgc acgcttcggt
-tgtgctttga tgctggcgta atggctttaa gcgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtgaaa aacccgagcg cataatgaaa g
->Byssomerulius corium KHL8593
-caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
-ctttggtcgt ccgagttgta ttctagagaa gcgttttccg cgctggaccg tgtacaagtc
-tcttggaata gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cgcgttagct acaactcagc caggc--ttg cttggtgcac tttgtagttg
-acgggccagc atcagttttg accgcaggaa aaaggccagg gaaatgtggc accttcgggt
-gtgttatagt ccttggttgt atactgtgat tgggactgag gtctcagcac gctttt--gt
-tgtgcttgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacaaac ctgcgagtgt ttgggtggta aacccgagcg cgcaatgaaa g
->Ceriporia sordescens Miettinen15492.2
-caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
-ctttggccgt ccgagttgta gtctagagaa gcgtcttccg cgctggaccg tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cgcgtcagtc agaactcagc cttgcctcgg ctcggtgcac tttctgattg
-acgggccagc atcagtttcg actgcaggag aaaggtcgga ggaatgtggc accttcgggt
-gtgttatagc ctctgactgc atactgtggt tgggactgag gactcagcac gtgcaaa--c
-tgtgcttgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggca aacccgagcg cgtaatgaaa g
->Phlebia sp. FBCC296
-caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
-ctttggctgt ccgagttgta gtctggagaa gcgtcttccg cgctggaccg tgtacaagtc
-tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtgaa
-ctccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cgcgtttgct agaactcagc ctggcttttg cttggtgcat tttctagtaa
-acgggccagc atcacttttg gttgcgggat aaaggtcgca ggaatgtggc accttcgggt
-gtgttatagc ctgtgattgc ataccgtggc cgggagtgag gactcagcac gcatt----t
-tgtgctcgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggta aacccgagcg cgtaatgaaa g
->Phlebia sp. FBCC427
-caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
-ctttggctgt ccgagttgta gtctggagaa gcgtcttccg cgctggaccg tgtacaagtc
-tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cgcgtttgct agaactcagc ctggcttttg cttggtgcat tttctagtaa
-acgggccagc atcagtttcg gctgcgggac aaaggccaga ggaatgtggc accttcgggt
-gtgttatagc ctctggtcat ataccgtggc tgggactgag gtctcagcac gcctttatgt
-cgtgcttgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggaa aacccgagcg cgtaatgaaa g
->Phlebia subserialis FBCC426
-caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggtag
-ctttggctgc ccgagttgta atctggagaa gcgctttccg cgctggaccg tgtacaagtc
-tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcgaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ctccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cgcgtttgct aggactcagc cttgcctcgg cttggtgcat ttcctagtaa
-acgggccagc atcacttttg gctgcgggaa aaaggtcaga ggaatgtggc accttcgggt
-gtgttatagc ctctggctgt ataccgtggc tgggagtgag gattcagcac gccttcatgt
-cgtgcttgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggaa aacccgagcg cgtaatgaaa g
->Junghuhnia sp. X232
-caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggtag
-ccttggttgc ccgagttgta gtctggagaa gcgttttctg tgctggaccg tgtacaagtc
-tcttggaata gagcgtcata gagggtgaga atcccgtctt tgacacggat tgccagtgct
-atgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgttgaaa gggaaacgct
-tgaagtcagt cgcgtcctct agaactcagc ctggcttttg cttggtgcat tttctagttg
-acgggccagc atcagttttg gtcgttggaa aaagattttg ggaatgtggc accttcgggt
-gtgttatagc ccatagtcat atacaatggc cgggactgag gtctcagcac gctctg---t
-tgtgcttgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggaa aacccgagcg cgtaatgaaa g
->Burgoa verzuoliana ATCC24040
-caaggattcc cctagtaacg gcgagtgaag cgggatgagc tcaaatttaa aatctggtgt
-ctttgggcat ccgagttgta gtctagagaa gcattttccg tgtcggacca tgtacaagtc
-tcctggaacg gagcgtcata gagggtgaga atcccgttct tgacatggac ccccgatgct
-ttgtgatgtg ctctcaaaga gtcgagttgt ttgggattgc agctcaaaat gggaggtaaa
-ttccttctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgttaaaa gggaaacgat
-tgaagtcagt cgcgtctgct tggactcagc cttacttcgg tttggtgcat ttccttgtag
-acgggccaac gtcaatgtta accgctggaa aaaggtgtag ggaatgtggc tctttcggga
-gtgttatagc cctatgtcat atgcagtggt cgatattgag -tgtaacagc acgcttttgt
-ggtgctt--g tgttggcata atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgt ctgcgagtgt ttgggtggta aacccgagcg cggaatgaaa g
->Ceraceomyces sublaevis CFMR:FP-101245
-caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctgacgg
-ttttggccgt tcgagttgta gtctagagaa gtgtcttccg cgccggaccg tgtacaagtc
-tcttggaaca gagcgtcaca gagggtgaga atcccgtctt tgacgcggac taccggtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cgcgtcgtct agaactcagc cttgc-attg cttggtgcat tttctagtcg
-acgggccagc atcagttttg accgcgggac aaaggtcgag ggaatgtggc accttcgggt
-gtgttatagc cctcggctgt atgccgtgat tgggactgag gactcagcac gcatct--gc
-tgtgcttgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacaaac atgcgagtgt ttgggtggaa aacccgagcg cgcaatgaaa g
->Ceraceomyces americanus FP-102188
-------ttcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
-ctttggctgt ccgagttgta gtctggagaa gcgttttccg tgctggaccg tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cgcgtttgct agtgctcagc ctgtcttttg actggtgcac ttactagtga
-acgggccagc atcagttttg gctgcaggat aaaggccaga ggaatgtggc accttcgggt
-gtgttatagc ctctagtcat atactgtggc tgggactgag gtctcagcac gcctttatgt
-cgtgcttgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggaa aacccgagcg cgtaatgaaa g
->Rhizochaete radicata FD-123
------attcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
-ctttggctgt ccgagttgta atctggagaa gcgttttccg cactggaccg tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cgcgtctgct agtactcagc ctgtcttttg actggtgcat ttacttgtgg
-acgggccagc atcagttttg gctgcgggat aaagatgaga ggaatgtggc atcttagggt
-gtgttatagc ctttgatcat ataccgcggc tgggactgag gtctcagcac gcctttatgt
-cgtgcttgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggaa aacccgagcg cgtaatgaaa g
->Phanerochaete pseudomagnoliae PP25
--------tcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
-ctttggctgt ccgagttgta atctggagaa gcgtcttccg cgctggaccg tgtacaagtc
-tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ctccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cgcgtctgct aggactcagc cttgcctcgg cttggtgcac ttcctagtag
-acgggccagc atcacttttg gctgcgggaa aaagatcaga ggaatgtggc accttcgggt
-gtgttatagc ctctggttgt ataccgtggc tgggagtgag gtctcagcac gccttatggt
-cgtgcttgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggaa aacccgagcg cgtaatgaaa g
->Rhizochaete sp. FP-150712
----------c cctagtaact gcgagtgaac cgggaaaagc tcaaatttaa aatctggcag
-ctttggctgt ccgagttgta atctggagaa gcgtcttccg cgctggaccg tgtacaagtc
-tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cgcgtttgct agtactcagc ctgtcttttg actggtgcat ttacttgtga
-acgggccagc atcagttttg gctgcgggat aaagatcaga ggaatgtggc accctcgggt
-gtgttatagc ctttggtcat ataccgcggc tgggactgag gtctcagcac gcctttatgt
-cgtgcttgga tgctggcgta atggctttaa acgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggta aacccgagcg cgtaatgaaa g
->Conocybe singeriana WU22129
----------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggctg
-ctttggcagt ccgagttgta atctagagaa gtgctatccg cgttggaccg tgtacaagtc
-tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatacg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagaa ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cacgttggct agaaatcaac cttgcttttg ctgggcgtac tttctggtta
-acgggtcagc atcaattttg atcattggaa aaagttcaga ggaatgtggc atcttcggat
-gtgttatagc ctctgttcgc atacaatggt tgggattgag gtctcagcac gccgcaaggt
-cgtgcttgga tgctggcata atggctttaa tcgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggaa aacccaagcg cgcaatgaaa g
->Conocybe velutipes NL-2187
----------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
-ctttggccgt ccgagttgta atctagagaa gtgttatccg cgttggaccg tgtacaagtc
-tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctctaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagaa ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cacgttggct agaaatcaac cttgcttttg ctgggcgtac tttctggtca
-acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcgggt
-gtgttatagc ctctgttcgc atacaatggt tgggattgag gtctcagcac gccgcaaggt
-cgtgcttgga tgctggcata atggctttaa tcgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggaa aacccgagcg cgtaatgaaa g
->Conocybe microrhiza NL-2180
----------- -------act gcgagtgaag tgggaaaagc tcaaatttaa aatctggcgg
-ctttggccgt ccgagttgta atctagagaa gtgttatccg cgttggaccg tgtacaagtc
-tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctctaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagaa ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cacgttggct agaaatcaac cttgcttttg ctgggcgtac tttctggtta
-acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcgggt
-gtgttatagc ctctgttcgc atacaatggt tgggattgag gtctcagcac gccgcaaggt
-cgtgcttgga tgctggcata atggctttaa tcgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ttgcgagtgt ttgggtggaa aacccgagcg cgtaatgaaa g
->Conocybe leporina NL-2380
----------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
-ctttggccgt ccgagttgta atctagagaa gtgttatccg cgttggaccg tgtacaagtc
-tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctctaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagaa ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cacgttggct agaaatcaac cttgcttttg ctgggcgtac tttctggtta
-acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcgggt
-gtgttatagc ctctgttcgc atacaatggt tgggattgag gtctcagcac gccgcaaggt
-cgtgcttgga tgctggcata atggctttaa tcgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggaa aacccgagcg cgtaatgaaa g
->Conocybe inopinata WU27544
----------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggctg
-ctttggcagt ccgagttgta atctagagaa gtgctatccg cgttggaccg tgtacaagtc
-tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
-ttgtgatacg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
-ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
-atgaaaagaa ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
-tgaagtcagt cacgttggct agaaatcaac cttgcttttg ctgggcgtac tttctggtta
-acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcggat
-gtgttatagc ctctgtccgt atacaatggt tgggattgag gtctcagcac gccgcaaggt
-cgtgcttgga tgctggcata atggctttaa tcgacccgtc ttgaaacacg gaccaaggag
-tctaacatgc ctgcgagtgt ttgggtggaa aacccaagcg cgtaatgaaa g
->Sclerotium hydrophilum CBS201.27
+gtgttatagc cccttgtcgt acacgtcgat tgggatcgag gatttcagca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaag cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtgaaaa acccgagcgc ataatgaaag tgatagttgg
+gaacctcttt agaggggcac cgacgcccgg accagacctt ctgtgacgga tccgaggtag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gcatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atgtgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagttt tatgagcctt ggggttgaaa caaccttaac ttattctcaa actttaaata
+tgtaagctc
+>Ceratorhiza hydrophila CBS201.27
 caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -549,8 +279,14 @@ tgaagtcagt cgcgttctct gggattcagc cttgc-tttg cttggtgcat ttcctagtct
 acgggccaac atgaatttcg accggtggaa aaaggcagag ggaatgtggc a-ctccgggt
 gtgttatagc cctttgtcag acacgccggt tgggattgag g--------- ----------
 ---------- ---------- ---------- ---------- ---------- ----------
----------- ---------- ---------- ---------- ---------- -
->Sclerotium hydrophilum CBS385.63
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------
+>Ceratorhiza hydrophila CBS385.63
 ccaggatttc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
 tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
 tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
@@ -561,4 +297,370 @@ tgaagtcagt cgcgttctct gggattcagc tttg-ttttg cttggtgcat ttcctagtct
 acgggccaac atgaatttcg accggtggaa aaaggcagag ggaatgtggc acctccgggt
 gtgttatagc cctttgtcag acacgccggt tgggattgag g--------- ----------
 ---------- ---------- ---------- ---------- ---------- ----------
----------- ---------- ---------- ---------- ---------- -
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------
+>Ceriporia sordescens Miettinen15492.2
+caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
+tctttgccgt ccgagttgta gtctagagaa gcgtcttccg cgctggaccg tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cgcgtcagtc agaactcagc cttgcctcgg ctcggtgcac tttctgattg
+acgggccagc atcagtttcg actgcaggag aaaggtcgga ggaatgtggc accttcgggt
+gtgttatagc ctctgactgc atactgtggt tgggactgag gaactcagca cgtgcaaact
+gtgcttggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggcaa acccgagcgc gtaatgaaag tgaaagttgg
+gattctgtcg tggagagcac ngacgcccgg accagacctt ctgtgacgga tctgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Clavulina sp. AFTOL667
+caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggtaa
+tctttgttgc ccgaattgta atctagagaa gcgttttccg tgctggactg tgtacaagtt
+tcctggaacg gaacatcata gagggtgaga atcccgtcct tgacacagac tcccagcact
+ttgcgatgcg ctctcgacga gtcgagttgt ttgggattgc agctcaaaat gggaggtaaa
+ttccttctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgttaaaa gggaaacgct
+tgaagtcagt cgcgtttgct tggactcagc cttacttcgg tttggtgcat ttccttgtag
+acgggccagc gtccatgttg tttgccggaa aaggggtgag agaatgtggc tccttcggga
+gtgttatagc ttttgctcgt atgcggggaa tgatatggag tggtacagca cacttcggtg
+gtgctt--gt gctggcataa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtggaaa acccgggcgc gtaatgaaag tgatggctgg
+gaaccttccg ggggaggcac cggcgccccg agctgacctt ctgtgacgca tcggaggcag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gaatagggcg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagttt tatggacctt ggggatgaaa catccttaat ctattctcaa actttaaata
+tgtaagctc
+>Conocybe inopinata WU27544
+---------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggctg
+tctttgcagt ccgagttgta atctagagaa gtgctatccg cgttggaccg tgtacaagtc
+tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatacg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagaa ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cacgttggct agaaatcaac cttgcttttg ctgggcgtac tttctggtta
+acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcggat
+gtgttatagc ctctgtccgt atacaatggt tgggattgag gatctcagca cgccgcaatc
+gtgcttggat gctggcataa tggctttaat cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggaaa acccaagcgc gtaatgaaag tgaaagttga
+gatcctgtca tggggagcat cgacgcccgg accagacctt ttgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Conocybe leporina NL-2380
+---------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
+tctttgccgt ccgagttgta atctagagaa gtgttatccg cgttggaccg tgtacaagtc
+tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctctaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagaa ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cacgttggct agaaatcaac cttgcttttg ctgggcgtac tttctggtta
+acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcgggt
+gtgttatagc ctctgttcgc atacaatggt tgggattgag gatctcagca cgccgcaatc
+gtgcttggat gctggcataa tggctttaat cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggaaa acccgagcgc gtaatgaaag tgaaagttga
+gatcctgtcg tggggagcat cgacgcccgg accagacctt ttgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Conocybe microrhiza NL-2180
+---------- -------act gcgagtgaag tgggaaaagc tcaaatttaa aatctggcgg
+tctttgccgt ccgagttgta atctagagaa gtgttatccg cgttggaccg tgtacaagtc
+tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctctaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagaa ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cacgttggct agaaatcaac cttgcttttg ctgggcgtac tttctggtta
+acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcgggt
+gtgttatagc ctctgttcgc atacaatggt tgggattgag gatctcagca cgccgcaatc
+gtgcttggat gctggcataa tggctttaat cgacccgtct tgaaacacgg accaaggagt
+ctaacatgct tgcgagtgtt tgggtggaaa acccgagcgc gtaatgaaag tgaaagttga
+gatcctgtcg tggggagcat cgacgcccgg accagacctt ttgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Conocybe singeriana WU22129
+---------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggctg
+tctttgcagt ccgagttgta atctagagaa gtgctatccg cgttggaccg tgtacaagtc
+tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatacg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagaa ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cacgttggct agaaatcaac cttgcttttg ctgggcgtac tttctggtta
+acgggtcagc atcaattttg atcattggaa aaagttcaga ggaatgtggc atcttcggat
+gtgttatagc ctctgttcgc atacaatggt tgggattgag gatctcagca cgccgcaatc
+gtgcttggat gctggcataa tggctttaat cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggaaa acccaagcgc gcaatgaaag tgaaagttga
+gatcctgtca tggggagcat cgacgcccgg accagacctt ttgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Conocybe velutipes NL-2187
+---------- -------act gcgagtgaag cgggaaaagc tcaaatttaa aatctggcgg
+tctttgccgt ccgagttgta atctagagaa gtgttatccg cgttggaccg tgtacaagtc
+tcctggaatg gagcatcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctctaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagaa ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cacgttggct agaaatcaac cttgcttttg ctgggcgtac tttctggtca
+acgggtcagc atcaattttg accattggaa aaagttcaga ggaatgtggc atcttcgggt
+gtgttatagc ctctgttcgc atacaatggt tgggattgag gatctcagca cgccgcaatc
+gtgcttggat gctggcataa tggctttaat cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggaaa acccgagcgc gtaatgaaag tgaaagttga
+gatcctgtcg tggggagcat cgacgcccgg accagacctt ttgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Hydnum albomagnum AFTOL471
+caaggattcc cctagtaacg gcgagtgaag cgggatgagc tcaaatttaa aatctggtag
+tctttactgc ccgagttgta atctagagaa gtgttttctg tgctggactg tgttcaagtt
+tcctggaatg gaacatcata gagggtgaga atcccgtcct tgacacagac ttccagtgct
+atgtgatgca ctctcaacga gtcgagttgt ttgggattgc agctcaaaat gggaggtaaa
+ttccttctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgttaaaa gggaaacaat
+tgaagtcagt tgcatctatt tggactcagc cttactttgg tttggtgcat ttccttgtag
+atgggccagt gttcatgttg attgctggaa aaggggttag ggaatgtggc tcttttggga
+gtgttataac cttggctcat atacagtaat taatatggag tgatacagca tgcttcggtg
+gtgctt--gt gctggcataa tggctttaaa tgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcaagtatt tgggtgataa acccgagtgc gtaatgaaag taatagctgg
+gaacctgcag aggggggcac cagtgccccg agcggatctt ttgtgatgca tcggaggtag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttgtcagttt tatggacctt ggggatgaaa catccttaat ctattctcaa actttaaata
+tgtaagctc
+>Junghuhnia sp. X232
+caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggtag
+-ccttgttgc ccgagttgta gtctggagaa gcgttttctg tgctggaccg tgtacaagtc
+tcttggaata gagcgtcata gagggtgaga atcccgtctt tgacacggat tgccagtgct
+atgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgttgaaa gggaaacgct
+tgaagtcagt cgcgtcctct agaactcagc ctggcttttg cttggtgcat tttctagttg
+acgggccagc atcagttttg gtcgttggaa aaagattttg ggaatgtggc accttcgggt
+gtgttatagc ccatagtcat atacaatggc cgggactgag gatctcagca cgctctg-tt
+gtgcttggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggaaa acccgagcgc gtaatgaaag tgaaagttgg
+gatcctgtcg tggggagcac cgacgcccag accagacctt ctgtgacggc tctgcggttg
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttgtcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Phanerochaete pseudomagnoliae PP25
+-------tcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
+-ctttgctgt ccgagttgta atctggagaa gcgtcttccg cgctggaccg tgtacaagtc
+tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ctccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cgcgtctgct aggactcagc cttgcctcgg cttggtgcac ttcctagtag
+acgggccagc atcacttttg gctgcgggaa aaagatcaga ggaatgtggc accttcgggt
+gtgttatagc ctctggttgt ataccgtggc tgggagtgag gatctcagca cgccttagtc
+gtgcttggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggaaa acccgagcgc gtaatgaaag tgaaagttgg
+gattctgtcg tggagagcac cgacgcccgg accagacctt ctgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Phlebia sp. FBCC296
+caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
+tctttgctgt ccgagttgta gtctggagaa gcgtcttccg cgctggaccg tgtacaagtc
+tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtgaa
+ctccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cgcgtttgct agaactcagc ctggcttttg cttggtgcat tttctagtaa
+acgggccagc atcacttttg gttgcgggat aaaggtcgca ggaatgtggc accttcgggt
+gtgttatagc ctgtgattgc ataccgtggc cgggagtgag gaactcagca cgcatt--tt
+gtgctcggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggtaa acccgagcgc gtaatgaaag tgaaagttgg
+gactctgtcg tggagggcac cgacgcccgg accagacctt ctgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Phlebia sp. FBCC427
+caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
+tctttgctgt ccgagttgta gtctggagaa gcgtcttccg cgctggaccg tgtacaagtc
+tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cgcgtttgct agaactcagc ctggcttttg cttggtgcat tttctagtaa
+acgggccagc atcagtttcg gctgcgggac aaaggccaga ggaatgtggc accttcgggt
+gtgttatagc ctctggtcat ataccgtggc tgggactgag gatctcagca cgcctttatc
+gtgcttggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggaaa acccgagcgc gtaatgaaag tgaaagttgg
+gactctgtcg tggaaggcac cgacgcccgg accagaccta ctgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Phlebia subserialis FBCC426
+caaggattcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggtag
+tctttgctgc ccgagttgta atctggagaa gcgctttccg cgctggaccg tgtacaagtc
+tcctggaacg gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcgaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ctccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cgcgtttgct aggactcagc cttgcctcgg cttggtgcat ttcctagtaa
+acgggccagc atcacttttg gctgcgggaa aaaggtcaga ggaatgtggc accttcgggt
+gtgttatagc ctctggctgt ataccgtggc tgggagtgag gaattcagca cgccttcatc
+gtgcttggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggaaa acccgagcgc gtaatgaaag tgatagttgg
+gactctgtcg tggagggcac cgacgcccgg accagacctt ctgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Rhizochaete radicata FD-123
+-----attcc cctagtaact gcgagtgaag cgggaaaagc tcaaatttaa aatctggcag
+tctttgctgt ccgagttgta atctggagaa gcgttttccg cactggaccg tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cgcgtctgct agtactcagc ctgtcttttg actggtgcat ttacttgtgg
+acgggccagc atcagttttg gctgcgggat aaagatgaga ggaatgtggc atcttagggt
+gtgttatagc ctttgatcat ataccgcggc tgggactgag gatctcagca cgcctttatc
+gtgcttggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggaaa acccgagcgc gtaatgaaag tgaaagttgg
+gactctgtcg tggagggcac cgacgcccgg accagacctt ctgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Rhizochaete sp. FP-150712
+---------c cctagtaact gcgagtgaac cgggaaaagc tcaaatttaa aatctggcag
+tctttgctgt ccgagttgta atctggagaa gcgtcttccg cgctggaccg tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtctt tgacacggac taccagtgct
+ttgtgatgcg ctctcaaaga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggaaag agagttaaac agtacgtgaa attgctgaaa gggaaacgct
+tgaagtcagt cgcgtttgct agtactcagc ctgtcttttg actggtgcat ttacttgtga
+acgggccagc atcagttttg gctgcgggat aaagatcaga ggaatgtggc accctcgggt
+gtgttatagc ctttggtcat ataccgcggc tgggactgag gatctcagca cgcctttatc
+gtgcttggat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgcc tgcgagtgtt tgggtggtaa acccgagcgc gtaatgaaag taaaagttgg
+gactctgtcg tggagggcac cgacgcccgg accagacctt ctgtgacgga tccgcggtag
+agcatgtatg ttgggacccg aaagatggtg aactatgcct gaatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atttgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagatt tatgggcctt ggggttgaaa caaccttaac ctattctcaa actttaaata
+tgtaagaac
+>Rhizoctonia endophytica DAOM138188
+caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
+tgtattccgt ccgagttgta gtctagagaa gcatcatccg cgctggaccn tgtacaagtc
+tcttggaata gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtgct
+ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
+tgaagtcagt cgcgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
+acgggccagc atgagttttg accgttggaa aaaggcaggg ggaatgtggc acctccgggt
+gtgttatagc cccttgtcac acacggcggt tgggattgag g-attcagca cgcttctgtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtgttaa acccatgcgc gtaatgaaag ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------
+>Rhizoctonia sp. GM10
+caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
+tgtattccgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tgccagtact
+ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
+tgaagtcagt --cgttctct gggattcagc cttgcttctg cttggtgcat ttcctagtct
+acgggccagc atgaattttg accaatggaa aaag-ctggg ggaatgtggc accttcgggt
+gtgttatagc cccttgtcat acacgttggt tgggattgag g-tcttagca cgctccggtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcaagtgtt tgggtgcaaa acccgagcgc gtaatgaaag ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------
+>Thanatephorus cucumeris CBS253.29
+caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
+tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
+ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
+tgaagtcagt cgcgttctct gggattcagc cttgcttttg cttggtgcat ttcctagtct
+acgggccagc atgaattttg atcagtggaa aaaggcttgg ggaatgtggc accttcgggt
+gtgttatagc cccttgtcac atacattggt tgggattgag g-tcttagca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtgcaaa acccgagcgc gtaatgaaag tgatagttgg
+gaacctcatt agaggggcac cgacgcccgg accagacctt ctgtgacgga tccgaggtag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gcatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atgtgggtat
+aggggcgaaa gactaatcga accatctagt agctggttcc tgccgaagtt tccctcagga
+ttatcagttt tatgagcctt ggggttgaaa caaccttaac ttattctcaa actttaaata
+tgtaagctc
+>Thanatephorus fusisporum AFTOL611
+caaggattcc cctagtaac- gcgagtgaag cgggaagagc tcaaatttaa aatctggcgg
+tgcattccgt ccgagttgta gtctagagaa gcgtcatccg cgccggacca tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccggtgct
+ttgcgttgcg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaac gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
+tgaagtcagt cgcgttctct gggattcagc ctcgcttctg cttggtgcat ttcctagtct
+acgggccagc atggatttcg accgacggaa aaaggcttgg ggaatgtggc acctccgggt
+gtgttatagc ccctcgtcac acgcgtcggc cgggatcgag gacctcagca cgcttcagtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcgagtgtt tgggtggaaa acccgagcgc gcaatgaaag tgataagttg
+ggacctctca cggggggcac cgacgcccgg accagacctt ctgtgacgga tccgaggtag
+agcatatatg ttgggacccg aaagatggtg aactatgcct gcatagggtg aagccagagg
+aaactctggt ggaggctcgt agcgattctg acgtgcaaat cgatcgtcaa atgtgggtat
+aggggcgaaa gactaatcga accatttggt gaatgctact cggtgaggcg tccgaaagga
+ttatcagcct agtgagcgtt gaggttgcga cactatcaaa ttgcggggac atcctaaagc
+ttttgcgac
+>Thanatephorus sp. CBS101782
+caaggattcc cctagtaacg gcgagtgaag cgggaagagc tcaaatttaa aatctggcag
+tgtattctgt ccgagttgta gtctagagaa gcatcatccg tgctggacca tgtacaagtc
+tcttggaaca gagcgtcata gagggtgaga atcccgtcct tgacatggac tcccagtact
+ttgtgttgtg ctctcaacga gtcgagttgt ttgggaatgc agctcaaaat gggtggtaaa
+ttccatctaa agctaaatat tggcgagaga ccgatagcga acaagtaccg tgagggaaag
+atgaaaagca ctttggagag agagttaaac agtacgtgaa attgttgaaa tggaaacgct
+tgaagtcagt cgcgttctct gggattcagc cttgcttttg cttggtgcat ttcccggtct
+acgggccagc atgaattttg accaatggaa aaaggcttgg ggaatgtggc accttcgggt
+gtgttatagc cccttgtcac atacgttggt tgggattgag g------gca cgcttcggtt
+gtgctttgat gctggcgtaa tggctttaaa cgacccgtct tgaaacacgg accaaggagt
+ctaacatgtc tgcaagtgtt tgggtgcaaa acccgagcgc gtaatgaaag ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------- ---------- ---------- ---------- ---------- ----------
+---------
