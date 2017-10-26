@@ -48,6 +48,8 @@ lapply(list.of.packages, require, character.only = TRUE)
 # biocLite("ggtree")
 # biocLite("msa")
 
+
+
 # Set seed
 set.seed(12345)
 ```
@@ -355,6 +357,7 @@ lapply(rmgaps, function(x) image.DNAbin(x, show.labels = FALSE))
 I can't figure out how to add titles in `image.DNAbin()`, but the order is "ITS"  "LSU"  "RPB2" "TEF1" "ATP6". The ITS looks to have a few orgs that might be revcomps, maybe three. I'm not sure how best to identify those and replace them in this format. It looks like the N length is short by ~ 20nt.
 
 ```{r substitution models}
+# ALERT! This section takes about 10 min to run
 # Get alignment into class pml or phyDat as list inphydat
 inphydat <- list()
 for (i in names(rmgaps)) {
@@ -404,27 +407,46 @@ for (i in names(ot)) {
   trees[[i]] <- plotBS(optim.ml[[i]]$tree, bs[[i]], p = 20, type = "p")
 }
 
+plot(trees[[1]])
+
+i <- names(trees)[2]
+
+as.dendrogram(trees[[1]])
+
+plot.phylo(trees[[1]])
+
+
+
 # If root taxa are present, reroot, else make an unrooted tree
+# There's some funky xlimit spacing here - I couldn't figure out a way to make 
+# it scale with the branch lengths or something in the tree object
+PlotSingleLocusTree <- function(tree, i) {
+  p <- ggtree(tree) +
+    geom_tiplab(size = 3) +
+    geom_text2(aes(subset = !isTip, label = label), 
+               size = 2, hjust = 1.1, vjust = -0.5) +
+    labs(title = paste("E14505F single locus tree: ", i, sep = ""))
+    if (sum(tree$edge.length) > 1) {
+      p <- p + xlim_tree(1.1)
+    } else {
+      p <- p + xlim_tree(0.3)
+    }
+  p <- p + ggsave(paste("singleLocusTree_", i, ".pdf", sep = ""),
+                  height = 9, width = 6.5) 
+}
+
 for (i in names(trees)) {
   if ("Tulasnella pruinosa AFTOL610" %in% trees[[i]]$tip.label) {
-    tree <- root(trees[[i]], outgroup = "Tulasnella pruinosa AFTOL610", resolve.root = FALSE)
-    df <- as.data.frame(tree)
-    ggtree(df) +
-      geom_tiplab(size = 3) +
-      geom_text2(aes(subset = !isTip, label = label), size = 3, hjust = 1.1, vjust = -0.5) +
-      labs(title = paste("E14505F single locus tree: ", i, sep = "")) +
-      xlim(0, max(df$x, na.rm = TRUE) + (max(df$x, na.rm = TRUE)*0.3)) +
-      ggsave(paste("singleLocusTree_", i, ".pdf", sep = ""), height = 11, width = 8.0)
+    tree <- root(trees[[i]], outgroup = "Tulasnella pruinosa AFTOL610", 
+                 resolve.root = FALSE, edgelabel = TRUE)
+    PlotSingleLocusTree(tree, i)
   } else {
-    df <- as.data.frame(trees[[i]])
-    ggtree(df) +
-      geom_tiplab(size=3) +
-      geom_text2(aes(subset = !isTip, label = label), size = 3, hjust = 1.1, vjust = -0.5) +
-      labs(title = paste("E14505F single locus tree: ", i, sep = "")) +
-      xlim(0, max(df$x, na.rm = TRUE) + (max(df$x, na.rm = TRUE)*0.3)) +
-      ggsave(paste("singleLocusTree_", i, ".pdf", sep = ""), height = 11, width = 8.0)
+    tree <- unroot(trees[[i]])
+    PlotSingleLocusTree(tree, i)
   }
 }
+
+# save(trees, file = "single-locus-trees.RData")
 ```
 
 ```{r interleaving}
@@ -492,7 +514,7 @@ system({
   paste("raxmlHPC-AVX -s all.phy -m GTRGAMMA -n all_", maxiter+1, " -f a -# 100 -x 12345 -p 12345", sep = "")
 })
 system({
-  paste("raxmlHPC-AVX -m GTRGAMMA -J MRE -z RAxML_bootstrap.all_", maxiter+1, " -n tre", sep = "")
+  paste("raxmlHPC-AVX -m GTRGAMMA -J MRE -z RAxML_bootstrap.all_", maxiter+1, " -n tre", maxiter+1, sep = "")
 })
 ```
 
