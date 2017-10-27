@@ -43,57 +43,29 @@ if (length(new.packages)) install.packages(new.packages,
 # Load required packages
 lapply(list.of.packages, require, character.only = TRUE)
 
-# source("https://bioconductor.org/biocLite.R")
-# biocLite("muscle")
-# biocLite("ggtree")
-# biocLite("msa")
-
-
-
 # Set seed
 set.seed(12345)
 ```
 
-# Introduction
+Herein are the methods for the phylogenetic analysis of isolate E14504F.
 
-This is the script used to build a tree for Nneoma's fungus and assign its taxonomy.
+# DNA isolation and sequencing
 
-I started by rolling through the databases from the recent review http://jcm.asm.org/content/55/4/1011.full to check if any would be useful for this project.
+E14504F was grown on potato dextrose broth for 14 days, after which the mycelium was harvested and the genomic DNA purified using a DNeasy Plant Mini Kit (Qiagen; Hilden, Germany) according to the manufacturer’s protocols. The ITS, LSU and RPB2 loci were amplified using GoTaq Flexi (Promega; Madison, WI) and standard primers (Table S1). Amplicons were sequenced at the W.M. Keck Facility at Yale University in forward and reverse directions. Consensus sequences were generated and manually curated for consistency using the Staden package v2.0.0b8 [@bonfield_new_1995] and were deposited in GenBank.
 
-* BOLD systems http://v4.boldsystems.org/index.php/IDS_OpenIdEngine only have ITS identification.
-* Looks like this is a good place for morphological features https://aftol.umn.edu/ and can even make a nexus file to include in the tree -- but aftol has been lost? (goes to godaddy website...)
-* BROAD doesn't have an identification portal
-* EZBioCloud doesn't have a fungal id section
-* FungiDB is just genomics
-* UNITE is just ITS
-* IndexFungorum doesn't have an id search (but could be useful for morphology)
-* CBS can be searched directly for LSU and there are lots of good hits. However, I'd rather find a paper that has gone through the effort of identifying isolates with multiple loci
-* SILVA has an LSU search https://www.arb-silva.de/ 
-** Identity: 43.61, LCA tax SILVA: None
-** SSU Iden: 99.37, LCA tax. SILVA: None
-* RDP http://rdp.cme.msu.edu/classifier/ 
-  * E14504F-LSU     Root(100%) Fungi(100%) Basidiomycota(100%) Agaricomycetes(100%) Cantharellales(100%) Ceratobasidiaceae(100%) Thanatephorus(100%)
+# Database comparisons
 
-The RDP result is strong, with 100% confidence in the genus Thanatephorus. The CBS searches also found organisms of either Thanatephorus (telomorph) or Rhizoctonia (anamorph). This will very likely be the genus to which E14504F belongs. In addition, Nneoma and I found a few papers that deal with isolates of Rhizoctonia/Thanatephorus:
+Searching the LSU and SSU sequences against the SILVA database returned no taxonomic assignments. Searching the LSU sequence against the Ribosomal Database Project revealed 100% confidence in the genus _Thanatephorus_, within the family Ceratobasidiaceae, order Canthrellales. This genus had been recently circumscribed by Gonzalez et al in an effort to clarify the Rhizoctonia, an anamorphic genus found to be polyphyletic by molecular methods. The BOLD Systems database search of the ITS sequence revealed a 92% Similarity to _Sclerotium hydrophilum_, in the order Agaricales. The UNITE database ITS search resulted in equiprobable matches to _Thanetephorus cucumeris_ as well as another genus in the Ceratobasidiaceae, _Ceratorhiza hydrophila_. To clarify the discrepancy between these databases, representatives from each of the clades for which voucher specimens were available in public repositories and were associated with a publication were retrieved from GenBank for multi-locus phylogenetic comparison. 
 
-* [@gonzalez_ribosomal_2001] has a bunch of Thanatephorus isolates with genbank accession numbers for ITS and 28S, but nothing outside the genus (which is necessary to demonstrate the circumscription in this case).
-* [@tupac_otero_diversity_2002] just have ITS and have several genera that were isolated from orchids. It's more orchid-centric than fungus-centric.
-* [@lopez-chavez_proteomic_2016] defines a Thanatephorus isolate using ITS alone. The tree shows weak node support separating Thanatephorus from Ceratobasidium, but clearly their isolate is closest to a Thana. 
-* [@gonzalez_phylogenetic_2016] does a really nice job of creating a multi-locus tree. This should be the model going forward. 
+# Phylogenetic analysis
 
-# Methods
+A phylogenetic tree showing the relationship of E14504F to other fungi was constructed using internal transcribed spacer (ITS), large ribosomal subunit (LSU) and RNA polymerase II (RPB2) sequences (Table S2). Sequences were aligned using the muscle implementaion within the ape package [@paradis_ape:_2004] in R [@r_foundation_for_statistical_computing_vienna_austria._r_2017] and gaps in more than 30% of the alignments were removed. Appropriate substitutions models were chosen for each alignment using the modelTest implentation in the phangorn package v2.2.0 [@schliep_phangorn:_2010]. For each locus individually, maximum likelihood trees using the GTR+G model were seeded with a neighbor-joining tree and then 100 bootstrap replicated performed. The loci were then interleaved and a tree contructed using RAxML v8.2.10 [@stamatakis_raxml_2014-1]. Trees were visualized using ggtree and ggplot2.
 
-I converted the table of genbank accession numbers from [@gonzalez_phylogenetic_2016] to a google spreadsheet. 
-
-Here are the files that Nneoma created using the Staden package (pregap & gap). As soon as these have genbank accession numbers I'll add them to the table so that they can be pulled with the other sequences from the table and remove this code block and the merge code block.
-
-## Version notes
-ITS1, RPB2 and TEF1 did not align well with the Gonzalez et al set [-@gonzalez_phylogenetic_2016]. Reverse complement and re-check the alignment. 
 
 ## Read in fastas
 
 ```{r read fastas as a list of strings}
-files <- list.files(path = "~/Dropbox/Rainforest project/E14504F sequences/", 
+files <- list.files(path = "../E14504F sequences/", 
                     pattern = "*.fasta", full.names = TRUE)
 ofastas <- list()
 for (f in files) {
@@ -130,15 +102,6 @@ for (i in names(ofastas)) {
 
 # Remove any non-ACTGN nucleotides
 ofastas <- lapply(ofastas, function(x) gsub("^[^>](.*)[^actgn]", "\\1n", x))
-
-
-# # Cat ITS1 and ITS2 sep by 100 N's and remove ITS2
-# # Removed this step because ITS1 is not aligning to Gonzalez et al even after rev comp
-# its <- grep("ITS", names(ofastas))
-# ofastas[[its[1]]] <- c(ofastas[[its[1]]], paste(rep("N", 100), collapse = ""), 
-#                        ofastas[[its[2]]][2])
-# ofastas <- ofastas[-its[2]]
-# names(ofastas)[grep("ITS", names(ofastas))] <- "ITS"
 ```
 
 ```{r pull sequences from google sheets and retrieve from Genbank}
@@ -230,7 +193,7 @@ for (i in names(grfastas)) {
 }
 ```
 
-```{r merge Nneomas e14504f fastas with genbank forward and reverse complements}
+```{r merge e14504f fastas with genbank forward and reverse complements}
 # Create a list for "both fastas" and append the genbank string onto Nneoma's
 bfastas <- list()
 for (n in names(gfastas)){
@@ -317,10 +280,6 @@ for (i in names(compdist)) {
 }
 ```
 
-```{r retrieve the optimal direction for each sequence}
-
-```
-
 Of the regions checked, only TEF1 contained sequences that had reverse complements. I'll make a tree of just LSU and RPB2. Given the variability observed in the RPB2 region, I expect this will sufficiently resolve the tree.
 
 Update: indeed the resolution was good, but the closest match was to Sclerotium hydrophilium, which does not contain RPB2 and in many cases does not have LSU. All of the Sclerotium in our table contain ITS, though, so I'll make sure to include that region.
@@ -333,12 +292,6 @@ roi <- names(alns) %in% roi
 # subset alignment
 alns <- alns[roi]
 ```
-
-```{r terminal gaps as n}
-# Not sure this is necessary, clustalw doesn't penalize terminal gaps but I 
-# can't find if muscle does
-```
-
 
 ```{r remove gaps}
 # Remove gaps present in 30% of the columns
@@ -519,15 +472,44 @@ system({
 ```
 
 ```{r final tree}
-raxml <- read.raxml(paste("RAxML_bipartitionsBranchLabels.all_", maxiter+1, sep = ""))
-ggtree(raxml) +
-    geom_tiplab(size=3) +
-    geom_text2(aes(label=bootstrap), size = 3, hjust = 1.1, vjust = -0.5) +
-    # geom_text2(aes(subset = !isTip, label = label), size = 3, hjust = 1.1, vjust = -0.5) +
-    # labs(title = paste("E14505F single locus tree: ", i, sep = "")) +
-    xlim(0, 1.2) +
-    ggsave("all_interleaved.pdf", height = 11, width = 8.0)
-  # geom_label_repel(aes(label=bootstrap, fill=bootstrap))
+t <- read.tree(paste("RAxML_bipartitions.all_", maxiter+1, sep = ""))
+
+int <- root(t, outgroup = "Tulasnella.pruinosa.AFTOL610", 
+     resolve.root = FALSE, edgelabel = TRUE)
+
+cleanTipLabels <- function(tiplabels) {
+  x <- gsub("([a-z])\\.([a-z|A-Z])", "\\1 \\2", tiplabels)
+  y <- gsub("..", ". ", x, fixed = TRUE)
+  return(y)
+}
+
+int$tip.label <- cleanTipLabels(int$tip.label)
+
+ggtree(int) +
+  geom_tiplab(size=2) +
+  geom_text2(aes(subset = !isTip, label = label), 
+             size = 2, hjust = 1.1, vjust = -0.5) +
+  xlim_tree(1.1)
+
+# Create an annotation data frame
+annot <- data.frame(label = int$tip.label,
+           group = "1", stringsAsFactors = FALSE)
+annot[grep("E145", annot$label),] <- c("E14504F", "2")
+annot$group <- as.factor(annot$group)
+
+# Add tip label annotation
+p %<+% annot + 
+  geom_tiplab(aes(color = group), size = 2) +
+  scale_color_manual(values = c("black", "red")) +
+  geom_hilight(76, fill = "steelblue", alpha = 0.1, extend = 0.28) +
+  geom_hilight(95, fill = "steelblue", alpha = 0.2, extend = 0.34) +
+  geom_cladelabel(node=76, label="Ceratobasidium",  
+                  offset = 0.28, fontsize = 4) +
+  geom_cladelabel(node=95, label="Ceratorhiza hydrophila", 
+                  offset = 0.34, fontsize = 4) +
+  ggsave("all_interleaved.pdf", height = 4.75, width = 7.5)
+
+
 ```
 
 
@@ -746,5 +728,29 @@ Nice pictures here http://www.apsnet.org/edcenter/intropp/lessons/fungi/Basidiom
 
 
 # Results and Discussion
+
+
+I started by rolling through the databases from the recent review http://jcm.asm.org/content/55/4/1011.full to check if any would be useful for this project.
+
+* BOLD systems http://v4.boldsystems.org/index.php/IDS_OpenIdEngine only have ITS identification.
+* Looks like this is a good place for morphological features https://aftol.umn.edu/ and can even make a nexus file to include in the tree -- but aftol has been lost? (goes to godaddy website...)
+* BROAD doesn't have an identification portal
+* EZBioCloud doesn't have a fungal id section
+* FungiDB is just genomics
+* UNITE is just ITS
+* IndexFungorum doesn't have an id search (but could be useful for morphology)
+* CBS can be searched directly for LSU and there are lots of good hits. However, I'd rather find a paper that has gone through the effort of identifying isolates with multiple loci
+* SILVA has an LSU search https://www.arb-silva.de/ 
+** Identity: 43.61, LCA tax SILVA: None
+** SSU Iden: 99.37, LCA tax. SILVA: None
+* RDP http://rdp.cme.msu.edu/classifier/ 
+  * E14504F-LSU     Root(100%) Fungi(100%) Basidiomycota(100%) Agaricomycetes(100%) Cantharellales(100%) Ceratobasidiaceae(100%) Thanatephorus(100%)
+
+The RDP result is strong, with 100% confidence in the genus Thanatephorus. The CBS searches also found organisms of either Thanatephorus (telomorph) or Rhizoctonia (anamorph). This will very likely be the genus to which E14504F belongs. In addition, Nneoma and I found a few papers that deal with isolates of Rhizoctonia/Thanatephorus:
+
+* [@gonzalez_ribosomal_2001] has a bunch of Thanatephorus isolates with genbank accession numbers for ITS and 28S, but nothing outside the genus (which is necessary to demonstrate the circumscription in this case).
+* [@tupac_otero_diversity_2002] just have ITS and have several genera that were isolated from orchids. It's more orchid-centric than fungus-centric.
+* [@lopez-chavez_proteomic_2016] defines a Thanatephorus isolate using ITS alone. The tree shows weak node support separating Thanatephorus from Ceratobasidium, but clearly their isolate is closest to a Thana. 
+* [@gonzalez_phylogenetic_2016] does a really nice job of creating a multi-locus tree. This should be the model going forward. 
 
 # References
