@@ -1,30 +1,19 @@
 ---
-output: 
-  pdf_document:
-    latex_engine: xelatex
-    citation_package: natbib
-    keep_tex: true
-    fig_caption: true
-    # latex_engine: pdflatex
-    # template: svm-latex-ms.tex
 title: "Taxonomic assignment of endophytic isolate E14504F"
-author: Dan Spakowicz
-# - name: Nneoma Adaku
-#   affiliation: 
-# - name: Daniel J Spakowicz
-#   affiliation: Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT
-# - name: Scott Strobel
-#   affiliation: Department of Molecular Biophysics and Biochemistry; Yale University, New Haven, CT
-# - name: Faye Rogers
-#   affiliation: 
-# abstract: ""
-# keywords: "asthma, microbiome, RNAseq, metatranscriptomics"
+author: "Dan Spakowicz"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  word_document: default
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    keep_tex: yes
+    latex_engine: xelatex
+fontsize: 11pt
 geometry: margin=1in
 fontfamily: mathpazo
-fontsize: 11pt
 spacing: double
-bibliography: Nneoma.bib
+bibliography: e14504f.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -55,14 +44,14 @@ E14504F was grown on potato dextrose broth for 14 days, after which the mycelium
 
 # Database comparisons
 
-Searching the LSU and SSU sequences against the SILVA database returned no taxonomic assignments. Searching the LSU sequence against the Ribosomal Database Project revealed 100% confidence in the genus _Thanatephorus_, within the family Ceratobasidiaceae, order Canthrellales. This genus had been recently circumscribed by Gonzalez et al in an effort to clarify the Rhizoctonia, an anamorphic genus found to be polyphyletic by molecular methods. The BOLD Systems database search of the ITS sequence revealed a 92% Similarity to _Sclerotium hydrophilum_, in the order Agaricales. The UNITE database ITS search resulted in equiprobable matches to _Thanetephorus cucumeris_ as well as another genus in the Ceratobasidiaceae, _Ceratorhiza hydrophila_. To clarify the discrepancy between these databases, representatives from each of the clades for which voucher specimens were available in public repositories and were associated with a publication were retrieved from GenBank for multi-locus phylogenetic comparison. 
+DNA sequences were classified by comparison to several curated online databases, recently reviewed by Prakash et al.[-@prakash_online_2017]. Searching the LSU sequence against the SILVA database returned no taxonomic assignments above confidence threshold. Searching the LSU sequence against the Ribosomal Database Project returned 100% confidence in the genus _Thanatephorus_, within the family Ceratobasidiaceae, order Canthrellales. This genus had been recently circumscribed by Gonzalez et al in an effort to clarify the Rhizoctonia, an anamorphic genus found to be polyphyletic by molecular methods. The BOLD Systems database search of the ITS sequence returned 92% similarity to _Sclerotium hydrophilum_, in the order Agaricales. The UNITE database ITS search resulted in equiprobable matches to _Thanetephorus cucumeris_ as well as another genus in the Ceratobasidiaceae, _Ceratorhiza hydrophila_. To clarify the discrepancy between these databases, representatives from each of the clades were retrieved for single multi-locus phylogenetic analysis.
+
 
 # Phylogenetic analysis
 
-A phylogenetic tree showing the relationship of E14504F to other fungi was constructed using internal transcribed spacer (ITS), large ribosomal subunit (LSU) and RNA polymerase II (RPB2) sequences (Table S2). Sequences were aligned using the muscle implementaion within the ape package [@paradis_ape:_2004] in R [@r_foundation_for_statistical_computing_vienna_austria._r_2017] and gaps in more than 30% of the alignments were removed. Appropriate substitutions models were chosen for each alignment using the modelTest implentation in the phangorn package v2.2.0 [@schliep_phangorn:_2010]. For each locus individually, maximum likelihood trees using the GTR+G model were seeded with a neighbor-joining tree and then 100 bootstrap replicated performed. The loci were then interleaved and a tree contructed using RAxML v8.2.10 [@stamatakis_raxml_2014-1]. Trees were visualized using ggtree and ggplot2.
+A phylogenetic tree showing the relationship of E14504F to other fungi was constructed using internal transcribed spacer (ITS), large ribosomal subunit (LSU) and RNA polymerase II (RPB2) sequences (Table S2). Comparison sequences were included if voucher specimens of the organism are available in public repositories and the sequence is associated with a publication. Sequences were aligned using muscle [@edgar_muscle:_2004] within the ape package v4.1 [@paradis_ape:_2004]. Sites with gaps in more than 30% of the alignments were removed. Optimal substitution models were identified for each alignment using modelTest [@darriba_jmodeltest_2012] in the phangorn package v2.2.0 [@schliep_phangorn:_2010]. For each locus, a neighbor-joining tree was optimized by maximum likelihood method using a GTR+G model and then 100 bootstrap replicates performed. The loci were then interleaved and a tree contructed using RAxML v8.2.10 [@stamatakis_raxml_2014-1] and visualized using ggtree v1.8.2 [@yu_ggtree:_2017]. All analyses were performed with R v3.4.2 [@r_foundation_for_statistical_computing_vienna_austria._r_2017] in RStudio v1.1.383 [@rstudio_team_rstudio:_2016]. All sequences used in the study, as well as the individual locus and interleaved trees, are available through TreeBase (treebase.org) XXXXXXX. The code used to generate the trees is available at https://github.com/dspak/e14504f. 
 
-
-## Read in fastas
+# Code
 
 ```{r read fastas as a list of strings}
 files <- list.files(path = "../E14504F sequences/", 
@@ -307,8 +296,6 @@ for (i in names(rmgaps)) {
 lapply(rmgaps, function(x) image.DNAbin(x, show.labels = FALSE))
 ```
 
-I can't figure out how to add titles in `image.DNAbin()`, but the order is "ITS"  "LSU"  "RPB2" "TEF1" "ATP6". The ITS looks to have a few orgs that might be revcomps, maybe three. I'm not sure how best to identify those and replace them in this format. It looks like the N length is short by ~ 20nt.
-
 ```{r substitution models}
 # ALERT! This section takes about 10 min to run
 # Get alignment into class pml or phyDat as list inphydat
@@ -326,8 +313,6 @@ tests <- lapply(inphydat, function(x) phangorn::modelTest(x, model = "all"))
 bestmodel <- sapply(tests, function(x) x$Model[which.max(x$logLik)])
 names(bestmodel) <- names(rmgaps)
 ```
-
-The best model for both LSU and RPB2 is GTR+G, therefore I don't have to partition the interleaved dataset.
 
 ```{r individual locus trees}
 # Convert to phyDat format
@@ -359,16 +344,6 @@ trees <- list()
 for (i in names(ot)) {
   trees[[i]] <- plotBS(optim.ml[[i]]$tree, bs[[i]], p = 20, type = "p")
 }
-
-plot(trees[[1]])
-
-i <- names(trees)[2]
-
-as.dendrogram(trees[[1]])
-
-plot.phylo(trees[[1]])
-
-
 
 # If root taxa are present, reroot, else make an unrooted tree
 # There's some funky xlimit spacing here - I couldn't figure out a way to make 
@@ -433,31 +408,6 @@ interleaved <- do.call("cbind", allns)
 # Adjust names
 rownames(interleaved) <- make.names(rownames(interleaved))
 
-# Create nexus output for mrbayes with GTR+G substitution mode
-mrbayes(interleaved, "all.nex", nst = 6, rates = "invgamma")
-
-# Create phylip output for raxml
-write.phy(interleaved, "all.phy")
-
-# Write Mr Bayes submission file to move to Grace and run there.
-fileConn <- file("mrbayes_e14504f_all.sh")
-writeLines(c("#!/bin/bash", 
-             "#SBATCH --ntasks=4 --nodes=1",
-             "#SBATCH --time=12:00:00",
-             "#SBATCH --job-name=mrbayes_e14504f",
-             "#SBATCH --mail-user=daniel.spakowicz@yale.edu",
-             "#SBATCH --mail-type=ALL",
-             "",
-             "# Produced by DS_tree.Rmd",
-             "# Dan Spakowicz",
-             paste("# ", Sys.time(), sep = ""),
-             "# Submission file for the MrBayes analysis of the E14504F tree using the sequencing in the google sheet 'E14504F'",
-             "",
-             "cd /project/fas/gerstein/djs88/e14504f",
-             "module load Apps/MrBayes/3.2.2",
-             "mpirun mb all.nex"), fileConn)
-close(fileConn)
-
 # Create a new file for RAxML (find the largest existing file and add one)
 ls <- list.files(pattern = ".*all_\\d+")
 maxiter <- max(as.numeric(gsub(".*all_(\\d+)", "\\1", ls)))
@@ -485,11 +435,11 @@ cleanTipLabels <- function(tiplabels) {
 
 int$tip.label <- cleanTipLabels(int$tip.label)
 
-ggtree(int) +
-  geom_tiplab(size=2) +
-  geom_text2(aes(subset = !isTip, label = label), 
+p <- ggtree(int) +
+      geom_tiplab(size=2) +
+      geom_text2(aes(subset = !isTip, label = label), 
              size = 2, hjust = 1.1, vjust = -0.5) +
-  xlim_tree(1.1)
+      xlim_tree(1.1)
 
 # Create an annotation data frame
 annot <- data.frame(label = int$tip.label,
@@ -503,254 +453,12 @@ p %<+% annot +
   scale_color_manual(values = c("black", "red")) +
   geom_hilight(76, fill = "steelblue", alpha = 0.1, extend = 0.28) +
   geom_hilight(95, fill = "steelblue", alpha = 0.2, extend = 0.34) +
-  geom_cladelabel(node=76, label="Ceratobasidium",  
+  geom_cladelabel(node = 76, label = "Ceratobasidium",  
                   offset = 0.28, fontsize = 4) +
-  geom_cladelabel(node=95, label="Ceratorhiza hydrophila", 
+  geom_cladelabel(node = 95, label = "Ceratorhiza hydrophila", 
                   offset = 0.34, fontsize = 4) +
   ggsave("all_interleaved.pdf", height = 4.75, width = 7.5)
 
-
 ```
-
-
-## Alternative methods
-
-* retreive Treebase file and add E14504F sequences to those alignments
-** This is becoming increasingly attractive given the seemingly large fraction of reverse complements observed. Particularly now that the ITS1 and ITS2 sequences are available, all sections except atp6 would be usable. It's worth taking the time to explore how to add one more sequence onto an existing alignment in R.
-
-However, upon completing this it appears the sequenced regions of ITS1, RPB2 and TEF1 are quite (and quite surprisingly) distinct. This includes checking alignments with both directions of those sequences (forward and reverse complements). Strangely, The RPB2 alignment looks fine when done with just that locus, though about half of the sequences look to be reverse complemented. Looks like we may have to go back to the drawing board (which is above, and possibly with new sequences).
-
-```{r treebase, eval=FALSE}
-# Retrieve Gonzalez study
-# Retd from https://treebase.org/treebase-web/search/study/matrices.html?id=15006 on 12 May 2017
-nexlines <- readLines("1_1489744745_5LOCI_Cantharelloid_Ceratobasidiaceae.nexorg")
-
-ConvertNexusToAln <- function(nexlines){
-  start <- grep("MATRIX", nexlines)+1
-  end <- min(grep("END;", nexlines[start:length(nexlines)], fixed = TRUE))
-  aln <- nexlines[start : ((start + end)-3)]
-  aln <- gsub("^\t", ">", aln)
-  aln <- unlist(strsplit(aln, split = " {2,}"))
-  aln <- gsub(" ", "_", aln)
-  aln <- gsub("'", "", aln)
-  return(aln)
-}
-aln <- ConvertNexusToAln(nexlines)
-
-# Write alignment to file
-writeLines(aln, "gonzalez_phylogenetic_2016.afa")
-
-# Concatenate E14504F fastas for alignment
-# order is partition Names = 4 : ITSLSU , RPB2 , EF1a , ATP6;
-SingleFasta <- function(ofasta){
-  e145 <- c(ofastas[["ITS"]], ofastas[["LSU"]], 
-            ofastas[["RPB2"]], ofastas[["TEF1"]])
-  e145 <- e145[-grep(">", e145)]
-  e145 <- c(">E14504F", e145)
-  return(e145)
-}
-e145 <- SingleFasta(ofastas)
-writeLines(e145, "e14504f_gonzalez_allloci.fa")
-
-its2_lsu_Ns <- function(ofastas) {
-  e145 <- c(paste(rep("N", nchar(ofastas[["ITS1"]][2])), collapse = ""),
-            paste(rep("N", 100), collapse = ""),
-            ofastas[["ITS2"]], 
-            paste(rep("N", 100), collapse = ""),
-            ofastas[["LSU"]], 
-            paste(rep("N", nchar(ofastas[["RPB2"]][2])), collapse = ""),
-            paste(rep("N", nchar(ofastas[["TEF1"]][2])), collapse = ""))
-  e145 <- e145[-grep(">", e145)]
-  e145 <- c(">E14504F", e145)
-  return(e145)
-}
-e145_itslsu <- its2_lsu_Ns(ofastas)
-writeLines(e145_itslsu, "e14504f_gonzalez_itslsu.fa")
-```
-
-```{r align to alignment with muscle, eval=FALSE}
-# System call for muscle (arg isn't available in the R version yet)
-system({
-  "muscle -profile -in1 gonzalez_phylogenetic_2016.afa -in2 e14504f_gonzalez_allloci.fa -out combined.afa"
-})
-system({
-  "muscle -profile -in1 gonzalez_phylogenetic_2016.afa -in2 e14504f_gonzalez_itslsu.fa -out combined.afa"
-})
-
-# This step adds ~1k characters onto the alignment... not sure what it's 
-# doing and the documentation is terrible
-# system({
-#   "muscle -in combined.afa -out refined.afa -refine"
-# })
-
-# Convert to nexus
-newaln <- read.fasta("combined.afa")
-write.nexus.data(newaln, "combined.nex", interleaved = FALSE)
-
-# Append a mr bayes block at the end of the nexus file
-x <- read.nex("combined.nex")
-mrbayes(x, "combined_bayes.nex")
-
-# Write phylip file for raxml tree
-write.phy(x, "combined_raxml.phy")
-# Read in phy file to file "y" in sequence 4
-y <- readLines("combined_raxml.phy")
-y <- gsub("y", "n", y)
-# Re-write phy file
-writeLines(y, "combined_raxml.phy")
-```
-
-```{r subset gonzalex el al alignment to its2 and lsu, eval=FALSE}
-# Read in fasta file
-x <- seqinr::read.fasta("combined.afa")
-# Subset to aligned coordinates
-# Found these coordinates by visualizing with Jalview, looking for where E14504F 
-# matches the other alignments
-y <- lapply(x, function(x) x[286:1343])
-# Write output to file to bring into ape for gap cleaning
-seqinr::write.fasta(sequences = y, names = names(y), nbchar = 80, 
-                    file.out = "combined_its2lsu.fa")
-
-# Read into ape for gap cleaning
-y <- seqinr::read.alignment("combined_its2lsu.fa", format = "fasta")
-# Remove gaps
-y <- ape::del.colgapsonly(y, threshold = 0.3)
-# Write output
-y <- ape::write.dna(y, format = "fasta", file = "combined_its2lsu.fa")
-
-# Write input files for bayes and raxml
-# Read into ips
-x <- ips::read.fas(x = "combined_its2lsu.fa")
-# Append a mr bayes block at the end of the nexus file
-ips::mrbayes(x, "combined_bayes_its2lsu.nex")
-
-# Write phylip file for raxml tree
-ips::write.phy(x, "combined_raxml_its2lsu.phy")
-```
-
-```{r RAxML, eval=FALSE, eval=FALSE}
-# Call RAxML (takes ~20 min)
-system({
-  "raxmlHPC-AVX -s combined_raxml.phy -m GTRGAMMA -n comb_1 -p 12345 -x 12345 -# 100"
-})
-system({
-  "raxmlHPC-AVX -m GTRGAMMA -J MRE -z RAxML_bootstrap.comb_1 -n tre"
-})
-
-```
-
-```{r bayes submission file, eval=FALSE}
-# Write Mr Bayes submission file to move to Grace and run there.
-fileConn <- file("mrbayes_e14504f_gonzalez.sh")
-writeLines(c("#!/bin/bash", 
-             "#SBATCH --ntasks=10 --nodes=1",
-             "#SBATCH --time=12:00:00",
-             "#SBATCH --job-name=mrbayes_e14504f",
-             "#SBATCH --mail-user=daniel.spakowicz@yale.edu",
-             "#SBATCH --mail-type=ALL",
-             "",
-             "# Produced by DS_tree.Rmd",
-             "# Dan Spakowicz",
-             "# 14 May 2017",
-             "# Submission file for the MrBayes analysis of the E14504F tree, using [@gonzalez_phylogenetic_2016] alignment as a reference",
-             "",
-             "cd /project/fas/gerstein/djs88/e14504f",
-             "module load Apps/MrBayes/3.2.2",
-             "mpirun mb combined_bayes.nex"), fileConn)
-close(fileConn)
-
-# Causes a public key error -- have to copy into terminal
-# system({
-#   "scp /Users/danielspakowicz/Dropbox/Rainforest\ project/tree/combined_bayes.nex djs88@grace-next.hpc.yale.edu:/project/fas/gerstein/djs88/e14504f/"
-# })
-# system({
-#   "scp /Users/danielspakowicz/Dropbox/Rainforest\ project/tree/mrbayes_e14504f_gonzalez.sh djs88@grace-next.hpc.yale.edu:/gpfs/home/fas/gerstein/djs88/myscripts/projects/e14504f/"
-# })
-
-```
-
-```{r, eval=FALSE}
-# WARNING : This step takes ~5 hours. Set to eval=FALSE by default
-# system({
-#   "mb combined_bayes.nex"
-# })
-```
-
-```{r tree visualization, eval=FALSE}
-z <- read.tree("~/Documents/projects_notbackedup/e14504f/RAxML_MajorityRuleExtendedConsensusTree.tre")
-ggplot(z) +
-  ggtree::geom_tree(layout = "circular") +
-  ggtree::geom_tiplab(size = 2)
-
-z <- read.tree("~/Documents/projects_notbackedup/e14504f/RAxML_MajorityRuleConsensusTree.tre2")
-ggplot(z) +
-  ggtree::geom_tree(layout = "circular") +
-  ggtree::geom_tiplab(size = 2)
-
-z <- read.tree("~/Documents/projects_notbackedup/e14504f/RAxML_StrictConsensusTree.tre3")
-ggplot(z) +
-  ggtree::geom_tree(layout = "circular") +
-  ggtree::geom_tiplab(size = 2)
-
-z <- read.tree("~/Documents/projects_notbackedup/e14504f/RAxML_MajorityRuleExtendedConsensusTree.tre4")
-ggplot(z) +
-  ggtree::geom_tree(layout = "circular") +
-  ggtree::geom_tiplab(size = 2)
-
-z <- read.tree("~/Documents/projects_notbackedup/e14504f/combined_bayes_its2lsu.nex.con.tre")
-ggplot(z) +
-  ggtree::geom_tree(layout = "circular") +
-  ggtree::geom_tiplab(size = 2)
-```
-
-
-After a few segmentation faults I decided to push this to grace to run there, and just have it write the slurm submission and scp the files from this script. 
-
-## Morphological analysis
-https://aftol.umn.edu/species/Thanatephorus_cucumeris 
-
-Look for uniperforate septa with swollen margin 
-
-Have to distinguish it from other members of Ceratobasidaceae, namely https://aftol.umn.edu/species/Ceratobasidium_cornigerum
-
-Oh damn they're very similar. Looks like the difference is determined by electron microscopy, in the substructure of the pore cap. Namely, Ceratobasidium has a cap with uniform electron-dense contents and Thanatephorus has a cap with three internal layers (central electron-dense layer between two less electron dense layers). Well that's not super helpful. 
-
-Directly copied from wikipedia
->> R. solani does not produce spores, hence is identified only from mycelial characteristics or DNA analysis. Its hyphal cells are multinucleated. It produces white to deep brown mycelium when grown on an artificial medium. The hyphae are 4–15 μm wide and tend to branch at right angles. A septum near each hyphal branch and a slight constriction at the branch are diagnostic. R. solani is subdivided into anastomosis groups based on hyphal fusion between compatible strains.[12][13] 
-
-The teleomorph of R. solani is Thanatephorus cucumeris. It forms club-shaped basidia with four apical sterigmata on which oval, hyaline basidiospores are borne.
-
-Nice pictures here http://www.apsnet.org/edcenter/intropp/lessons/fungi/Basidiomycetes/Pages/Rhizoctonia.aspx
-"Rhizoctonia species can be divided into two groups based on the number of nuclei present in cells of the hyphae. This characteristic can be assessed by staining hyphae with a fluorescent dye that binds specifically to the DNA in the nucleus. Binucleate Rhizoctonia species have two nuclei in each cell (Figure 23). Rhizoctonia cerealis is the only binucleate species that causes turfgrass disease. Multinucleate species have three or more nuclei in each cell (Figure 24). Rhizoctonia solani, R. zeae, and R. oryzae are multinucleate species."
-
-"Rhizoctonia solani forms colonies on potato dextrose agar (PDA) that range in color from buff to black (Figure 25). Sclerotia are produced on the surface of cultures after 4 to 6 weeks, and are irregularly shaped, light tan to black, and usually >1 mm (0.04 in.) in width (Figure 26). The optimum temperature for growth of R. solani in pure culture ranges from 18ºC (64.4ºF) to 28ºC (82.4ºF). This species is divided into 11 AGs. Isolates in AGs 1 and 2 are commonly associated with turfgrass disease."
-
-
-
-# Results and Discussion
-
-
-I started by rolling through the databases from the recent review http://jcm.asm.org/content/55/4/1011.full to check if any would be useful for this project.
-
-* BOLD systems http://v4.boldsystems.org/index.php/IDS_OpenIdEngine only have ITS identification.
-* Looks like this is a good place for morphological features https://aftol.umn.edu/ and can even make a nexus file to include in the tree -- but aftol has been lost? (goes to godaddy website...)
-* BROAD doesn't have an identification portal
-* EZBioCloud doesn't have a fungal id section
-* FungiDB is just genomics
-* UNITE is just ITS
-* IndexFungorum doesn't have an id search (but could be useful for morphology)
-* CBS can be searched directly for LSU and there are lots of good hits. However, I'd rather find a paper that has gone through the effort of identifying isolates with multiple loci
-* SILVA has an LSU search https://www.arb-silva.de/ 
-** Identity: 43.61, LCA tax SILVA: None
-** SSU Iden: 99.37, LCA tax. SILVA: None
-* RDP http://rdp.cme.msu.edu/classifier/ 
-  * E14504F-LSU     Root(100%) Fungi(100%) Basidiomycota(100%) Agaricomycetes(100%) Cantharellales(100%) Ceratobasidiaceae(100%) Thanatephorus(100%)
-
-The RDP result is strong, with 100% confidence in the genus Thanatephorus. The CBS searches also found organisms of either Thanatephorus (telomorph) or Rhizoctonia (anamorph). This will very likely be the genus to which E14504F belongs. In addition, Nneoma and I found a few papers that deal with isolates of Rhizoctonia/Thanatephorus:
-
-* [@gonzalez_ribosomal_2001] has a bunch of Thanatephorus isolates with genbank accession numbers for ITS and 28S, but nothing outside the genus (which is necessary to demonstrate the circumscription in this case).
-* [@tupac_otero_diversity_2002] just have ITS and have several genera that were isolated from orchids. It's more orchid-centric than fungus-centric.
-* [@lopez-chavez_proteomic_2016] defines a Thanatephorus isolate using ITS alone. The tree shows weak node support separating Thanatephorus from Ceratobasidium, but clearly their isolate is closest to a Thana. 
-* [@gonzalez_phylogenetic_2016] does a really nice job of creating a multi-locus tree. This should be the model going forward. 
 
 # References

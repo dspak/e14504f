@@ -7,7 +7,7 @@
 
 # Produced by DS_tree.Rmd
 # Dan Spakowicz
-# 2017-10-26 10:31:26
+# 2017-10-27 13:55:14
 # Submission file for the MrBayes analysis of the E14504F tree using the sequencing in the google sheet 'E14504F'
 
 cd /project/fas/gerstein/djs88/e14504f
